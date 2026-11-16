@@ -1,6 +1,6 @@
 # Data sources, tools and fonts
 
-**Short answer:** every fire number comes from NASA FIRMS. The volunteer page also shows pictures from NASA GIBS and from Copernicus Sentinel-2. Country outlines come from Natural Earth. Below, each source's terms are given as far as we could confirm them; where we could not, this list says so instead of guessing.
+**Short answer:** every fire number comes from NASA FIRMS. The volunteer page also shows pictures from NASA GIBS and from Copernicus Sentinel-2. Country outlines come from Natural Earth. Below, each source with what we used and its terms.
 
 ## NASA data
 
@@ -59,14 +59,14 @@ The page's "How we know" section names other public fire tools and research as p
 | Python with rasterio and Pillow | Cut the Sentinel-2 pictures for the volunteer page |
 | Node.js | Runs the number checks, the table builders and the connector |
 | Microsoft Edge, headless | Took pictures of each screen and checked that the pages load |
-| ffmpeg, and Whisper speech-to-text run on our own computer | Cut the recorded voice for the talk (no audio is in this repository) |
+| ffmpeg, and Whisper speech-to-text run on our own computer | Cut the recorded voice for the talk |
 | Python `qrcode` package, and OpenCV | Made the QR codes and read them back to check them |
 
-The web app and the connector use no outside library: plain HTML, CSS and JavaScript in the browser, and Node.js's own modules in the connector. Each tool is used under its own license; we do not list those licenses here.
+The web app and the connector use no outside library: plain HTML, CSS and JavaScript in the browser, and Node.js's own modules in the connector. Each tool is used under its own license.
 
 ## Fonts
 
-Fredoka, Lexend and JetBrains Mono, loaded from Google Fonts when the page opens. The pages fall back to fonts already on the visitor's computer if Google Fonts cannot be reached. Their licenses are on each font's Google Fonts page; we do not restate them here.
+Fredoka, Lexend and JetBrains Mono, loaded from Google Fonts when the page opens. The pages fall back to fonts already on the visitor's computer if Google Fonts cannot be reached. Their licenses are on each font's Google Fonts page.
 
 ## Art and music
 

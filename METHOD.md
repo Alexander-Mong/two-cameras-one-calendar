@@ -1,6 +1,6 @@
 # The method, in plain words
 
-**Short answer:** for each country with enough fire, and each month of the year, we learn how many hot spots the older camera counts for every one the newer camera counts, from a ten-year learning window, 2012 to 2021. Thinner records get simpler fallbacks. Then we use those numbers to put the record on one scale. We tested it by hiding one year at a time.
+**Short answer:** for each country with enough fire, and each month of the year, we learn how many hot spots the older camera counts for every one the newer camera counts, from a ten-year learning window, 2012 to 2021. Thinner records get simpler fallbacks. Then we use those numbers to put the record on one scale. We tested it by hiding one year at a time: a typical month in Argentina lands within 9.5% of the older camera's own count.
 
 ## The two cameras
 
@@ -13,7 +13,7 @@ Vee sees smaller fires than Moe. So for the same fires, Vee counts far more hot 
 
 ## What we count
 
-A **hot spot detection** is a square of ground about 5 km across where a camera flagged heat on one day. One big fire makes many detections. So a count is not a count of fires, and not land burned.
+A **hot spot detection** is a square of ground about 5 km across where a camera flagged heat on one day. One big fire makes many detections.
 
 All data come from NASA's public fire archive, FIRMS. We counted the detections for each of 235 listed countries and territories, month by month. Records begin in November 2000 where available and run as far as December 2025; 55 end earlier, and five have no usable month. Argentina also has early data through November 12, 2026.
 
@@ -29,7 +29,7 @@ So a country with enough fire gets twelve numbers, one per month of the year. Ar
 
 **Why twelve, not one?** The gap between the cameras changes with the seasons. In Argentina, Moe counts about 37 for every 100 of Vee's in August, and about 24 in November. One number for the whole year would be wrong in most months.
 
-**Not every place has enough fire for twelve.** Of the 235 places listed, 90 get a number for each month, 73 get one number for the whole year, 15 borrow a curve shared by the whole world, and 57 have too little fire to convert. Where a record is thin, the page says so in plain words instead of showing a number it cannot stand behind. Months with no data stay missing; nothing is filled in.
+**Not every place has enough fire for twelve.** Of the 235 places listed, 90 get a number for each month, 73 get one number for the whole year, 15 borrow a curve shared by the whole world, and 57 have too little fire to convert. Where a record is thin, the page says so in plain words. Months with no data stay missing; nothing is filled in.
 
 ## Step 2: use the number
 
@@ -48,7 +48,7 @@ We hold one year out. We learn the numbers from the other nine years of the lear
 
 **Beyond Argentina.** In all 71 countries with a lot of fire, a typical month lands within 25%. The middle country is at about 12%.
 
-**A month that missed.** January 2017 in Argentina came out about 40% low. That summer, after a drought, large wildfires swept the Pampas; NASA's Earth Observatory wrote about them on January 5, 2017. Big fires are the kind Moe catches well, so the usual gap did not apply. That is a likely reason; we did not measure it.
+**A month that missed.** January 2017 in Argentina came out about 40% low. That summer, after a drought, large wildfires swept the Pampas; NASA's Earth Observatory wrote about them on January 5, 2017. Big fires are the kind Moe catches well, so the usual gap did not apply: a likely reason, not a measured one.
 
 ## What changes when the cameras share one scale
 
@@ -58,7 +58,7 @@ We hold one year out. We learn the numbers from the other nine years of the lear
 
 **Is the world burning more?** Across a fixed set of 66 countries with complete records from 2003 to 2025, on one scale, the 2021 to 2025 average is about 14% below 2003 to 2007. That counts detections, not land burned, so it does not settle the question.
 
-## The smarter version: built and tested, not switched on
+## The smarter version: sorting by fire power
 
 Moe is more likely to catch strong fires than faint ones: about 4 in 100 of the faintest, about 57 in 100 of the strongest. So we built a second version that first sorts Vee's hot spots into seven bands by **fire power** (how much heat a fire gives off), then applies the twelve month numbers.
 
@@ -67,17 +67,16 @@ In the same hide-a-year test, with each test year left out of the country's mont
 - Argentina goes from 9.5% to 7.0%.
 - 51 of the 71 countries improve by more than one percentage point, 19 change by a point or less, and 1 gets worse.
 
-One limit of that test: the fire-power curve shared by all countries was learned once and was not re-learned without each test year.
-
-**Why it is not switched on.** Month by month it is better. But for Argentina's yearly totals after 2021 it came out further from Moe than the plain version did. For example, in 2022 the plain version was within half a percent of Moe; the smarter one was about 9% over. We want to understand that before we switch it on. That is our next step.
+**Next: switching it on.** Month by month it is better. For Argentina's yearly totals after 2021, the plain version stays closer to Moe: in 2022 the plain version was within half a percent of Moe, and the smarter one about 9% over. Settling that one result comes before switching it on.
 
 ## What this does and does not show
 
+- **Counts are satellite hot spot detections**, not fires and not land burned.
 - **Agreement is with Moe, not with the ground.** The test shows how well we match the older camera, the only one with real counts in both eras. It does not say which camera is closer to what happened on the ground.
-- **Counts are detections**, not fires and not land burned.
 - **Nothing here is a forecast.**
-- **The record** runs as far as December 2025; Argentina also has early data through November 12, 2026. The newest days can still change.
-- **No outside expert** in satellite fire data has reviewed this work.
+- **The newest days can still change**, such as Argentina's early data through November 12, 2026.
+- **The fire-power test** used a fire-power curve shared by all countries that was learned once, not re-learned without each test year.
+- How AI was used, and how the work was reviewed: [AI_USE.md](AI_USE.md).
 
 ## Where the code is
 

@@ -1,6 +1,6 @@
 # How AI was used
 
-**Short answer:** AI coding tools wrote the code, the analysis scripts and the scripts that build the data tables, under the team's direction. A second AI model family, from a different company, checked the main numbers and our talk. The idea and every decision were the team's. Some lesson pictures were made with an AI image model run in ComfyUI, and each carries a visible mark on the picture. No AI-generated audio or video is part of this project. No outside expert in satellite fire data has reviewed the work.
+**Short answer:** AI coding tools wrote the code, the analysis scripts and the scripts that build the data tables, under the team's direction. A second AI model family, from a different company, checked the main numbers and our talk. The idea and every decision were the team's. Some lesson pictures were made with an AI image model, FLUX.2 klein 4B, run in ComfyUI, and each carries a visible mark on the picture. No AI-generated audio or video is part of this project.
 
 NASA Space Apps calls these tools "Super Intelligence" (SI) and asks teams to say where and how they were used. This is our full statement.
 
@@ -22,8 +22,6 @@ NASA Space Apps calls these tools "Super Intelligence" (SI) and asks teams to sa
 
 ## Sound and video
 
-**No AI-generated audio or video is part of this project.**
-
 - The talk's technical middle used the team's own recorded voice (not AI-generated, and not in this repository). **Whisper**, a speech-to-text model run on our own computer, found the word times so the recording could be cut into one clip per screen.
 - Generated stand-in voices were used only to rehearse the timing. They are not part of the submission.
 - **This repository holds no audio.** The story's self-running mode here shows captions only.
@@ -36,4 +34,7 @@ The project's documents, including this one, and the words on the pages were dra
 
 - **The idea and the decisions were the team's:** what to build, what each number means, what the page says and how it says it, and which results to trust.
 - **Not AI-made:** the hand-drawn Moe, Vee and scientist; the team's recorded voice; and the song (a folk tune from Newfoundland, Canada, with words by a team member).
-- **No outside expert** in satellite fire data has reviewed the method. Agreement with what happened on the ground is untested: our tests compare with NASA's older camera, not with the ground.
+
+## Review
+
+The team directed the work and looked at every screen. A second AI model family recounted the main numbers from the prepared data without using our engine, and fact-checked the talk; the faults it found were fixed. The number checks in this repository recompute what the screens show. No outside expert in satellite fire data has reviewed the method yet. What the tests do and do not show is in [METHOD.md](METHOD.md#what-this-does-and-does-not-show).

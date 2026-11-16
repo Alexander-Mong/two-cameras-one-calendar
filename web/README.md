@@ -1,8 +1,8 @@
 # web: the web app
 
-**AI use:** the code, the data-table build scripts and the number checks in this folder were written with AI coding assistants (Claude, through Claude Code). The pictures in `img/fire_detectives/` and `img/explainer/` were made with an AI image model run in ComfyUI and carry a visible mark; `img/characters/` is hand-drawn by team members. Directed and reviewed by the team, Spark Squad. Full statement: [../AI_USE.md](../AI_USE.md).
+This folder is the web app as it is served: pick a country and see its burning calendar, with both NASA fire cameras on one scale. Open `explore.html` (the globe), `index.html` (the fuller page; `#story/1` is the story), `connector.html` (the connector's page) or `slides.html` (the seven-slide demo).
 
-This folder is the site as it is served. Open `explore.html` (the globe), `index.html` (the fuller page; `#story/1` is the story), `connector.html` (the connector's page) or `slides.html` (the seven-slide demo).
+**AI use:** the code, the data-table build scripts and the number checks in this folder were written with AI coding assistants (Claude, through Claude Code). The pictures in `img/fire_detectives/` and `img/explainer/` were made with an AI image model run in ComfyUI and carry a visible mark; `img/characters/` is hand-drawn by team members. Directed and reviewed by the team, Spark Squad. Full statement: [../AI_USE.md](../AI_USE.md).
 
 | Path | What it holds |
 |---|---|

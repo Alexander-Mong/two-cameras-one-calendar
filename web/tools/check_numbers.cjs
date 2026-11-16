@@ -273,8 +273,11 @@ const near = (a, b, tol) => a !== null && a !== undefined && Math.abs(a - b) <= 
   // ================= Nov 14 day build (round_SAT, page and record lane) =================
   // 1. public-safe: the sweep finds nothing in this lane's files; one record span, from the data, said one way
   const { execFileSync } = require('child_process');
-  let sweepOut = ''; try { sweepOut = execFileSync(process.execPath, [path.join(ROOT, 'tools', 'public_sweep.cjs')], { encoding: 'utf8' }); } catch (e) { sweepOut = String(e.stdout || e.message); }
+  const sweepPath = path.join(ROOT, 'tools', 'public_sweep.cjs');   // the team's publishing check; it runs where that tool is present
+  if (fs.existsSync(sweepPath)) {
+  let sweepOut = ''; try { sweepOut = execFileSync(process.execPath, [sweepPath], { encoding: 'utf8' }); } catch (e) { sweepOut = String(e.stdout || e.message); }
   check('Public-safe sweep: no name, machine path, e-mail or key in the page and record lane\'s files', /Page and record lane: 0 hits\./.test(sweepOut), (sweepOut.match(/Page and record lane: [^\n]*/) || [''])[0]);
+  }
   check('Record span from the data, in whole years by month: Argentina 26, Ghana 25, Andorra 25 (record Nov 2000 to Dec 2025)', R.recordYears(arg) === 26 && R.recordYears(gh) === 25 && R.recordYears(q.Andorra) === 25, [R.recordYears(arg), R.recordYears(gh), R.recordYears(q.Andorra)].join(' / '));
   check('recordName: "our 26-year record" and its first-use form', R.recordName(arg) === 'our 26-year record' && R.recordName(arg, true) === 'our 26-year record: MODIS and VIIRS on one scale' && R.recordName(gh) === 'our 25-year record', R.recordName(gh));
   const sGh = R.screen(gh, R.positions(gh).month), ghTexts = [sGh.weak, sGh.keyOurs, sGh.buttons.join(' '), R.shortSentence(gh, 'latest')].join(' | ');
