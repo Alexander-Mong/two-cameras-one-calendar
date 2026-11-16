@@ -1,0 +1,6 @@
+{
+  "about": "Web origins a browser-based chat client may call the hosted connector (server/http_server.cjs) from. The only file in the connector that holds web addresses. Requests with no Origin header (desktop apps, servers, command-line tools) are always allowed; so are local addresses (localhost, 127.0.0.1) on any port. Add more here, or in the ALLOWED_ORIGINS environment setting (comma-separated); \"*\" allows any origin.",
+  "origins": [
+    "https://claude.ai"
+  ]
+}

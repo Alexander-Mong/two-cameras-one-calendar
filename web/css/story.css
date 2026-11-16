@@ -1,0 +1,1478 @@
+/* story.css: the story room (js/story.js). NIGHT look (CONSOLIDATE/B_deck/LOOK_GUIDE.md); the exhibit skin only inside scene 1.
+ Sizes are stage pixels: 1920 x 1080 on a laptop or projector, 720 wide on a phone;
+   the stage is scaled as one picture. Nothing under 22 px on the 1920 stage. Colors: gold = our joined record; blue = the older
+   camera alone; ember = only what is wrong or raw. Each also carried by a label. */
+.st-root{
+  --ink:#060e19; --night:#0b1726; --rule:#2c3d50; --rule2:#3d5064; --paper:#f4edda; --dim:#a5b2c2; --gold:#ffcd79; --glow:#ffdda3;
+  --ember:#ff7541; --blue:#7a99bc; --blue-text:#9fbbdb;
+  --sans:Arial,Helvetica,sans-serif; --serif:Georgia,'Times New Roman',serif; --mono:Consolas,'Courier New',monospace;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  position:relative; width:100%; height:100%; overflow:hidden; background:var(--ink); color:var(--paper); font-family:var(--sans);
+  -webkit-tap-highlight-color:transparent; font-variant-numeric:lining-nums;
+}
+.st-viewport{position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden}
+.st-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
+  background:radial-gradient(ellipse 60% 70% at 72% 48%,#173048 0%,#0a1726 55%,var(--ink) 100%)}
+.st-root *{box-sizing:border-box}
+.st-root h2,.st-root p,.st-root figure,.st-root blockquote,.st-root ol,.st-root table{margin:0}
+.st-root em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold);letter-spacing:-.04em}
+
+/* scenes and the change between them (look guide: out 320 ms; in after 220 ms, 800 ms, from 90 px right) */
+.st-scene{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;visibility:hidden;transform:translateX(90px);
+  transition:opacity 320ms ease-in,transform 800ms var(--ease),visibility 0s linear 320ms}
+.st-scene.on{opacity:1;visibility:visible;transform:none;
+  transition:opacity 800ms var(--ease) 220ms,transform 800ms var(--ease) 220ms,visibility 0s}
+.st-scene.past{transform:translateX(-90px)}
+.st-step{opacity:0;transform:translateY(28px);transition:opacity 650ms var(--ease),transform 650ms var(--ease)}
+.st-step.on{opacity:1;transform:none}
+.st-step0{transition:opacity 450ms var(--ease),transform 450ms var(--ease)}
+.st-step0.off{opacity:0;transform:translateY(-20px);pointer-events:none}
+.st-swap{display:grid}
+.st-swap>*{grid-area:1 / 1;min-width:0}
+
+/* landscape: words on the left, the picture on the right */
+.st-land .st-scene{padding:84px 120px 140px 150px;display:grid;grid-template-columns:600px 1fr;grid-template-rows:auto 1fr;
+  grid-template-areas:"head pic" "words pic";column-gap:70px}
+.st-land .st-scene.s1{grid-template-columns:500px 1fr}
+.st-land .st-scene.wide{grid-template-columns:1fr;grid-template-rows:auto auto 1fr;grid-template-areas:"head" "pic" "words"}
+.st-head{grid-area:head;min-width:0}
+.st-pic{grid-area:pic;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:34px}
+.st-words{grid-area:words;min-width:0;display:flex;flex-direction:column;gap:26px;padding-top:34px}
+.st-eyebrow{font:26px/1.4 var(--mono);letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:28px!important;overflow-wrap:anywhere}
+.st-h{font-weight:400;font-size:86px;line-height:.98;letter-spacing:-.055em;color:var(--paper)}
+.st-line{font-size:38px;line-height:1.3;color:var(--paper)}
+.st-line b{font-weight:400;color:var(--gold)}
+.st-sub{font-size:31px;line-height:1.3;color:var(--paper);margin-top:-12px!important}
+.st-port .st-sub{font-size:28px}
+.st-small{font-size:27px;line-height:1.42;color:var(--dim)}
+.st-small b{font-weight:400;color:var(--paper);font-family:var(--serif)}
+.st-small b.e{color:var(--ember)}
+.st-small.mine{color:var(--paper);border-left:4px solid var(--paper);padding-left:18px}
+
+/* portrait (phone): one column, the stage 720 wide, scrolls inside itself if it must, never sideways */
+.st-port .st-scene{padding:34px 32px 150px;display:flex;flex-direction:column;gap:0;overflow-y:auto;overflow-x:hidden}
+.st-port .st-scene>*{flex:none}
+.st-port .st-head{order:1}
+.st-port .st-pic{order:2;margin-top:26px;justify-content:flex-start;gap:24px}
+.st-port .st-words{order:3;padding-top:26px;gap:18px}
+.st-port .st-eyebrow{font-size:23px;letter-spacing:2px;margin-bottom:16px!important}
+.st-port .st-h{font-size:60px}
+.st-port .st-line{font-size:33px}
+.st-port .st-small{font-size:25px}
+
+/* svg charts (text sizes are set per layout by story.js) */
+.st-svg{display:block;max-width:100%;height:auto;overflow:visible}
+.st-svg text{font-family:var(--mono);fill:var(--dim)}
+.st-svg text.paper{fill:var(--paper)} .st-svg text.gold{fill:var(--gold)} .st-svg text.blue{fill:var(--blue-text)} .st-svg text.ember{fill:var(--ember)}
+.st-svg .axis{stroke:var(--rule2);stroke-width:2}
+.st-svg .grid{stroke:#ffffff12;stroke-width:2}
+.st-svg .seam{stroke:var(--dim);stroke-width:2;stroke-dasharray:4 8}
+.st-svg .ghost{fill:none;stroke:var(--ember);stroke-width:4;stroke-dasharray:10 10;opacity:.5}
+.st-svg .typ{stroke:var(--paper);stroke-width:2;stroke-dasharray:12 10;opacity:.7}
+.st-svg .shade{fill:#ffffff09}
+.st-svg .mid{stroke:var(--paper);stroke-width:2;stroke-dasharray:6 8;opacity:.75}
+.st-svg .lead{stroke:var(--gold);stroke-width:2}
+
+/* "nothing to show here" */
+.st-refusal{border:2px dashed var(--rule2);padding:40px;display:flex;flex-direction:column;gap:12px;max-width:900px}
+.st-refusal b{font:400 44px var(--serif);color:var(--paper)}
+.st-refusal span{font-size:30px;line-height:1.4;color:var(--dim)}
+
+/* quote boxes (scene 2, scene 7) */
+.st-quote{position:relative;background:var(--night);border-left:8px solid var(--gold);padding:24px 30px 28px}
+.st-quote figcaption{font:22px/1.4 var(--mono);letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.st-quote blockquote{font:italic 400 36px/1.32 var(--serif);color:var(--paper);letter-spacing:-.01em}
+.st-quote.ember{border-left-color:var(--ember)}
+.st-quote.ember figcaption{color:var(--ember)}
+.st-quote .strike{position:absolute;left:18px;right:18px;top:62px;bottom:20px;pointer-events:none;
+  background:linear-gradient(to top right,transparent calc(50% - 3px),var(--ember) calc(50% - 3px),var(--ember) calc(50% + 3px),transparent calc(50% + 3px));
+  clip-path:inset(0 100% 0 0);transition:clip-path 700ms var(--ease)}
+.st-quote.struck .strike{clip-path:inset(0 0 0 0)}
+.st-quote.struck blockquote{color:var(--dim);text-decoration:line-through;text-decoration-color:var(--ember);text-decoration-thickness:3px}
+
+/* scene 1: the exhibit (its own costume on purpose: "creativity and kid-friendliness") */
+.st-exhibit{display:grid;grid-template-columns:540px 1fr;gap:30px;align-items:start;background:#1d1a4f;color:#fff;padding:26px;border:5px solid #141414;
+  border-radius:28px;box-shadow:9px 9px 0 #141414;font-family:'Trebuchet MS',Arial,sans-serif}
+.ex-canvas{display:block;width:100%;height:auto;border:5px solid #141414;border-radius:16px;background:#1a1745}
+.ex-legend{font-size:22px;line-height:1.35;color:#d8d6ff;margin-top:12px!important}
+.ex-legend i{display:inline-block;width:18px;height:18px;background:#ffd23f;vertical-align:-2px;margin-right:6px}
+.ex-side{min-width:0;display:flex;flex-direction:column;gap:18px}
+.ex-who{display:flex;align-items:center;gap:14px}
+.ex-char{flex:none;width:132px;height:110px}
+.ex-char svg{width:132px;height:110px;display:block}
+.ex-bubble{position:relative;background:#fff;color:#141414;border:4px solid #141414;border-radius:20px;padding:14px 18px;font-weight:bold;font-size:26px;line-height:1.3;min-height:110px}
+.ex-bubble::before{content:"";position:absolute;left:-18px;top:36px;border:14px solid transparent;border-right-color:#141414;border-left:0}
+.ex-count{background:#fff;color:#141414;border:5px solid #141414;border-radius:20px;padding:10px 22px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.ex-count b{font:900 112px/1 'Trebuchet MS',Arial,sans-serif;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.ex-count span{font-size:30px;font-weight:bold}
+.ex-note{font-size:24px;line-height:1.35;color:#d8d6ff}
+.ex-hold{font:bold 32px 'Trebuchet MS',Arial,sans-serif;background:#3ddc97;color:#141414;border:5px solid #141414;border-radius:50px;min-height:92px;padding:0 24px;
+  cursor:pointer;box-shadow:0 6px 0 #141414;user-select:none;-webkit-user-select:none;touch-action:none}
+.ex-hold[aria-pressed="true"]{transform:translateY(5px);box-shadow:0 1px 0 #141414;background:#ffd23f}
+.ex-hold:focus-visible{outline:5px solid #ffd23f;outline-offset:5px}
+.ex-hint{font-size:22px;color:#d8d6ff;text-align:center}
+.st-port .st-exhibit{grid-template-columns:1fr;padding:16px;gap:16px}
+.st-port .ex-picwrap{width:540px;margin:0 auto}
+.st-port .ex-legend{font-size:23px}
+.st-port .ex-side{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}
+.st-port .ex-who{grid-column:1 / span 2}
+.st-port .ex-char,.st-port .ex-char svg{width:100px;height:84px}
+.st-port .ex-bubble{min-height:0;font-size:24px}
+.st-port .ex-count{padding:8px 14px;gap:4px;flex-direction:column;align-items:flex-start}
+.st-port .ex-count b{font-size:76px}
+.st-port .ex-count span{font-size:24px}
+.st-port .ex-hold{font-size:27px;min-height:120px;padding:0 12px;line-height:1.15}
+.st-port .ex-note{grid-column:1 / span 2;font-size:23px;order:5}
+.st-port .ex-hint{display:none}
+
+/* scene 2 */
+.s2-quotes{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.st-port .s2-quotes{grid-template-columns:1fr}
+.st-port .st-quote blockquote{font-size:32px}
+
+/* scene 3 */
+.s3-table table{border-collapse:collapse;width:100%;font-size:30px}
+.s3-table caption{text-align:left;font:22px/1.4 var(--mono);letter-spacing:3px;text-transform:uppercase;color:var(--blue-text);padding-bottom:10px}
+.s3-table th,.s3-table td{text-align:left;padding:8px 14px 8px 0;border-bottom:1px solid var(--rule);font-weight:400}
+.s3-table thead th{font:22px var(--mono);color:var(--dim)}
+.s3-table tbody th{font-family:var(--mono);color:var(--dim)}
+.s3-table td.b{color:var(--blue-text);font-family:var(--serif)}
+.s3-table td.g{color:var(--gold);font-family:var(--serif)}
+.st-port .s3-table table{font-size:26px}
+.st-btn{white-space:nowrap}
+.st-land .s3 .st-words{gap:20px}
+.st-land .s3 .st-line{font-size:33px}
+
+/* scene 4: the trace */
+.s4-trace{list-style:none;padding:0;display:grid;grid-template-columns:1fr 54px 1fr 54px 1fr;gap:18px 0;align-items:stretch}
+.s4-trace li{opacity:0;transform:translateX(-24px);transition:opacity 650ms var(--ease),transform 650ms var(--ease)}
+.s4-trace li.on{opacity:1;transform:none}
+.s4-trace .op{display:flex;align-items:center;justify-content:center;font:400 52px var(--serif);color:var(--dim)}
+.s4-trace .chip{border:2px solid var(--rule2);background:#0b1726cc;padding:16px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.s4-trace .chip span{font:22px/1.3 var(--mono);color:var(--dim)}
+.s4-trace .chip b{font:400 58px/1 var(--serif);color:var(--paper);letter-spacing:-.03em}
+.s4-trace .chip.gold{border-color:var(--gold)} .s4-trace .chip.gold b{color:var(--gold)}
+.s4-trace .chip.blue{border-color:var(--blue);grid-column:5;grid-row:2} .s4-trace .chip.blue b{color:var(--blue-text)}
+.s4-trace .chip.verdict{grid-column:1 / span 3;grid-row:2;border-style:dashed;flex-direction:row;align-items:baseline;flex-wrap:wrap;gap:6px 18px}
+.s4-trace .chip.verdict b{font-size:58px}
+.st-port .s4-trace{grid-template-columns:1fr 1fr;gap:14px}
+.st-port .s4-trace .op{display:none}
+.st-port .s4-trace .chip.blue{grid-column:2;grid-row:2}
+.st-port .s4-trace .chip.verdict{grid-column:1 / span 2;grid-row:3}
+.st-port .s4-trace .chip.factor b::before{content:"× ";color:var(--dim)}
+.st-port .s4-trace .chip.guess{grid-column:1;grid-row:2}
+.st-port .s4-trace .chip.guess b::before{content:"= ";color:var(--dim)}
+.st-port .s4-trace .chip b{font-size:48px}
+
+/* small shared pieces: the EARLY DATA tag with its tip, and a text link */
+.st-eyebrow{position:relative}
+.st-tag{font:24px/1 var(--mono);letter-spacing:3px;text-transform:uppercase;color:var(--ink);background:var(--gold);border:0;padding:6px 12px;margin-left:16px;cursor:help;vertical-align:2px}
+.st-tip{display:none;position:absolute;left:0;top:calc(100% + 10px);z-index:6;max-width:900px;background:var(--night);border:2px solid var(--gold);padding:14px 18px;
+  font:26px/1.4 var(--sans);letter-spacing:0;text-transform:none;color:var(--paper)}
+.st-tag:hover+.st-tip,.st-tag:focus-visible+.st-tip,.st-tag.open+.st-tip{display:block}
+.st-link{font:28px var(--sans);color:var(--gold);background:none;border:0;padding:8px 4px;cursor:pointer;text-decoration:underline;text-underline-offset:6px;white-space:nowrap}
+.st-link:hover{color:var(--glow)}
+
+/* scene 6: one scale, two markers, then the quote box */
+.st-land .st-scene.s6{display:flex;flex-direction:column}
+.st-land .s6>*{flex:none}
+.st-land .s6 .st-h{font-size:78px}
+.st-land .s6 .st-pic{margin-top:34px;justify-content:flex-start}
+.s6-scale{position:relative;width:100%}
+.s6-labs{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;min-height:60px}
+.s6-lab{display:flex;flex-direction:column;gap:6px;max-width:47%;opacity:0;transform:translateY(-14px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+.s6-lab.on{opacity:1;transform:none}
+.s6-lab.left{order:0}
+.s6-lab.right{order:1;text-align:right;margin-left:auto}
+.s6-lab.solo{max-width:70%;position:relative;left:calc(var(--at) * 1%);transform:translateX(calc(var(--at) * -1%)) translateY(-14px)}
+.s6-lab.solo.on{transform:translateX(calc(var(--at) * -1%))}
+.s6-lab .who{font:24px/1.3 var(--mono);letter-spacing:3px;text-transform:uppercase}
+.s6-lab b{font:italic 400 58px/1.05 var(--serif);letter-spacing:-.02em}
+.s6-lab .feel{font-size:32px;line-height:1.3;color:var(--paper)}
+.s6-lab.gold .who,.s6-lab.gold b{color:var(--gold)}
+.s6-lab.blue .who,.s6-lab.blue b{color:var(--blue-text)}
+.s6-lab.hollow b{font-size:48px}
+.s6-lead{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.s6-lead path{fill:none;stroke-width:2.5;opacity:0;transition:opacity 500ms var(--ease) 250ms}
+.s6-lead path.on{opacity:.9}
+.s6-lead path.gold{stroke:var(--gold)} .s6-lead path.blue{stroke:var(--blue)}
+.s6-bar{position:relative;display:flex;gap:4px;height:58px;margin-top:66px}
+.s6-bar i{flex:1;border-radius:6px}
+.s6-bar .z0{background:#1d3550} .s6-bar .z1{background:#22394f} .s6-bar .z2{background:#2b3c4d;box-shadow:inset 0 0 0 2px #4a5d72}
+.s6-bar .z3{background:#3a3330} .s6-bar .z4{background:#4a3228}
+.s6-mk{position:absolute;top:-22px;width:26px;height:102px;margin-left:-13px;border-radius:13px;border:4px solid var(--ink);
+  opacity:0;transform:translateY(-70px);transition:opacity 450ms ease-out,transform 700ms cubic-bezier(.3,1.35,.5,1)}
+.s6-mk.on{opacity:1;transform:none}
+.s6-mk.gold{background:var(--gold);box-shadow:0 0 26px #ffcd7966}
+.s6-mk.blue{background:var(--blue);box-shadow:0 0 22px #7a99bc55}
+.s6-mk.hollow{background:var(--ink);border:4px dashed var(--gold);box-shadow:none}
+.s6-zones{display:flex;gap:4px;margin-top:16px}
+.s6-zones span{flex:1;text-align:center;font-size:29px;line-height:1.2;color:var(--dim)}
+.s6-zones span.mid{color:var(--paper);font-weight:bold}
+.s6-line{opacity:0;transition:opacity 700ms var(--ease)}
+.s6-line.on{opacity:1}
+.st-land .s6 .st-words{padding-top:44px;gap:28px}
+.st-land .s6 .s6-line{font-size:48px;line-height:1.25}
+.s6-under{display:block;font-size:32px;color:var(--dim);margin-top:12px}
+.s6-line .st-link{font-size:inherit;padding:0}
+.s6-quote figcaption{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.s6-quote .st-copy{min-height:52px;font-size:26px;letter-spacing:0;text-transform:none;padding:0 26px}
+.s6-quote blockquote{font-size:31px}
+.s6-quote{padding-top:20px;padding-bottom:22px}
+.s6-copyrow{display:flex;align-items:center;gap:18px}
+.st-copied{font:24px var(--mono);color:var(--gold);letter-spacing:1px;text-transform:none}
+.s6-counts{font-size:25px;opacity:.85}
+.st-land .s6-counts{position:absolute;left:150px;right:120px;bottom:118px}
+.st-port .s6 .st-h{font-size:56px}
+.st-port .s6 .st-pic{margin-top:34px}
+.st-port .s6-labs{gap:16px}
+.st-port .s6-lab .who{font-size:23px;letter-spacing:1px}
+.st-port .s6-lab b{font-size:42px}
+.st-port .s6-lab.hollow b{font-size:34px}
+.st-port .s6-lab .feel{font-size:25px}
+.st-port .s6-bar{height:46px;margin-top:64px}
+.st-port .s6-mk{width:22px;margin-left:-11px;height:84px;top:-19px}
+.st-port .s6-zones span{font-size:23px}
+.st-port .s6-line{font-size:33px}
+.s6-line,.s6-under,.s6-lab .feel{text-wrap:balance}
+.st-port .s6-under{font-size:27px}
+.st-port .s6-quote blockquote{font-size:29px}
+.st-port .s6-counts{margin-top:24px!important;font-size:23px}
+.st-port .st-tag{font-size:23px;margin-left:10px}
+.st-port .st-tip{font-size:25px}
+
+/* scene 7: the end. One thing per press; the second press leaves only the question, and the stage goes dark around it */
+.st-land .st-scene.s7,.st-port .st-scene.s7{display:grid;grid-template-columns:1fr;grid-template-rows:1fr;grid-template-areas:none;place-items:center;text-align:center;padding:60px 120px 150px}
+.st-port .st-scene.s7{padding:40px 28px 150px;overflow:hidden}
+.s7>.s7-a,.s7>.s7-b{grid-area:1 / 1;min-width:0}
+.s7-dark{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 45%,#050b14 0%,#010307 100%);opacity:0;transition:opacity 1600ms ease;pointer-events:none}
+.s7.s7-end .s7-dark{opacity:1}
+.s7-a{display:flex;flex-direction:column;align-items:center;gap:34px;position:relative}
+.s7-old{font-size:66px;line-height:1.15;color:var(--dim);letter-spacing:-.03em;text-wrap:balance}
+.s7-old s{text-decoration-color:var(--ember);text-decoration-thickness:6px}
+.s7-gold{font:italic 400 76px/1.12 var(--serif);color:var(--gold);letter-spacing:-.02em;max-width:1500px}
+.s7-gold span{display:block}
+.s7-figs{font-size:27px;color:var(--dim);text-wrap:balance}
+.s7-b{position:relative;display:flex;flex-direction:column;align-items:center}
+.s7 .s7-b.st-step{transform:none;transition:opacity 1500ms ease 300ms}
+.s7-q{font-size:170px;line-height:1.02;letter-spacing:-.055em;color:var(--paper)}
+.s7-q span{display:block;white-space:nowrap}
+.s7-q em{letter-spacing:-.05em}
+.s7-after{display:flex;flex-direction:column;align-items:center;gap:26px;margin-top:90px;opacity:0;transition:opacity 900ms ease}
+.s7.s7-end .s7-after{opacity:1;transition-delay:2200ms}
+.s7-now{font-size:36px;color:var(--dim)}
+.s7-try{font-size:34px;min-height:80px;padding:0 40px}
+.s7-again{position:absolute;top:40px;right:120px;font-size:26px;color:var(--dim);z-index:2}
+.st-chrome{transition:opacity 600ms ease}
+.st-dark .st-chrome{opacity:.28;transition:opacity 1200ms ease}
+.st-root{transition:background-color 1600ms ease}
+.st-root.st-dark{background-color:#010307}
+.st-still.st-root{transition:none}
+.st-port .s7-old{font-size:38px}
+.st-port .s7-gold{font-size:46px}
+.st-port .s7-figs{font-size:24px}
+.st-port .s7-q{font-size:71px;letter-spacing:-.06em}
+.st-port .s7-after{margin-top:60px}
+.st-port .s7-now{font-size:30px}
+.st-port .s7-try{font-size:32px}
+.st-port .s7-again{top:22px;right:28px;font-size:24px}
+.st-still .s7-dark,.st-still .s7-after,.st-still .s7 .s7-b.st-step,.st-still .s6-mk,.st-still .s6-lab,.st-still .s6-line,.st-still .s6-lead path{transition:none!important}
+@media (prefers-reduced-motion:reduce){.s7-dark,.s7-after,.s7 .s7-b.st-step,.s6-mk,.s6-lab,.s6-line,.s6-lead path{transition:none!important}}
+
+/* buttons */
+.st-btn{font:28px var(--sans);color:var(--paper);background:transparent;border:2px solid #526172;min-height:64px;padding:0 28px;cursor:pointer}
+.st-btn:hover{border-color:var(--gold);color:var(--gold)}
+.st-btn.primary{border-color:var(--gold);color:var(--gold)}
+.st-btn:disabled{opacity:.35;cursor:default}
+.st-root button:focus-visible{outline:4px solid var(--gold);outline-offset:6px}
+
+/* the frame's controls, inside the stage so they scale with it */
+.st-chrome{position:absolute;left:150px;right:120px;bottom:30px;height:72px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.st-counter{font:28px var(--mono);color:var(--gold);letter-spacing:3px;width:300px}
+.st-dots{display:flex;gap:16px}
+.st-dot{width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;position:relative}
+.st-dot::after{content:"";position:absolute;left:11px;top:11px;width:22px;height:22px;border-radius:50%;border:2px solid #6c7f94;box-sizing:border-box}
+.st-dot.on::after{background:var(--gold);border-color:var(--gold);box-shadow:0 0 18px #ffb34980}
+.st-arrows{display:flex;flex-wrap:nowrap;flex:none;gap:16px;min-width:300px;justify-content:flex-end}
+.st-root .st-arrows .st-btn{white-space:nowrap;flex:none;width:auto}
+.st-port .st-chrome{left:20px;right:20px;bottom:14px;height:auto;flex-wrap:nowrap;gap:8px;background:linear-gradient(to top,var(--ink) 70%,transparent);padding-top:22px}
+.st-port .st-counter{width:auto;font-size:24px}
+.st-port .st-dots{gap:0}
+.st-port .st-lbl{display:none}
+.st-port .st-dot{width:40px}
+.st-port .st-arrows{width:auto}
+.st-port .st-chrome .st-btn{font-size:34px;min-height:72px;min-width:84px;padding:0 14px}
+.st-port .st-arrows{min-width:0;gap:10px}
+.st-live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* rehearsal strip (?notes=1), outside the stage, real pixels */
+.st-notes{position:absolute;left:0;right:0;bottom:0;background:#0b1726;border-top:1px solid var(--rule2);padding:8px 16px;font:15px/1.4 var(--sans);color:var(--paper)}
+.st-notes b{font:600 13px var(--mono);color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-right:8px}
+.st-notes .ho{color:var(--dim);margin-left:10px}
+.st-notes[hidden]{display:none}
+
+/* motion off: every scene complete at once, steps still work */
+.st-still .st-scene,.st-still .st-step,.st-still .s4-trace li,.st-still .st-quote .strike{transition:none!important}
+@media (prefers-reduced-motion:reduce){.st-scene,.st-step,.s4-trace li,.st-quote .strike{transition:none!important}}
+
+/* phone: the 720 stage shows at 390/720 on the narrowest phone, so nothing below 23 stage px (12.5 px on screen) */
+.st-port .st-quote figcaption,.st-port .s3-table caption,.st-port .s3-table thead th,.st-port .s4-trace .chip span{font-size:23px}
+
+/* a measured number never counts up: its box arrives instead */
+@keyframes stArrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.st-arrive{animation:stArrive 700ms var(--ease) both}
+.st-still .st-arrive{animation:none}
+@media (prefers-reduced-motion:reduce){.st-arrive{animation:none}}
+
+/* the Numbers panel: the plotted values as plain tables, inside the stage */
+.st-num{position:absolute;top:70px;right:110px;bottom:130px;width:1000px;z-index:8;background:#0b1726;border:2px solid var(--rule2);box-shadow:0 20px 60px #000a;
+  display:flex;flex-direction:column}
+.st-num[hidden]{display:none}
+.st-num-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 24px;border-bottom:1px solid var(--rule)}
+.st-num-head b{font:400 30px/1.25 var(--serif);color:var(--paper)}
+.st-num-body{overflow:auto;padding:10px 24px 24px}
+.st-num table{border-collapse:collapse;width:100%;font-size:27px;margin-top:18px;font-variant-numeric:tabular-nums}
+.st-num caption{text-align:left;font:23px/1.4 var(--mono);color:var(--gold);letter-spacing:2px;padding-bottom:8px}
+.st-num th,.st-num td{text-align:left;padding:6px 18px 6px 0;border-bottom:1px solid var(--rule);font-weight:400;color:var(--paper)}
+.st-num thead th{font:23px var(--mono);color:var(--dim)}
+.st-num tbody th{font-family:var(--mono);color:var(--dim)}
+.st-port .st-num{top:20px;left:16px;right:16px;bottom:120px;width:auto}
+.st-port .st-num table{font-size:24px}
+.st-numbtn[hidden]{display:none}
+
+/* slide 7, second press: the first press's words are fully gone (no overlap, motion on or off) */
+.s7.s7-end .s7-a{opacity:0!important;visibility:hidden;pointer-events:none;transition:opacity 450ms ease,visibility 0s linear 450ms}
+.st-still .s7.s7-end .s7-a{display:none}
+.s7:not(.s7-end) .s7-b{visibility:hidden;transition:visibility 0s linear 1800ms}
+.s7.s7-end .s7-b{visibility:visible}
+.st-still .st-step0{transition:none!important}
+
+/* scene 5: the world map in three presses (outlines and classes from the record's world tab, drawn here as a copy) */
+.st-land .st-scene.s5{padding:76px 80px 140px 110px;grid-template-columns:1fr 430px;grid-template-rows:auto 1fr;grid-template-areas:"head head" "pic words";column-gap:50px}
+.st-land .s5 .st-h{font-size:78px}
+.st-land .s5 .st-eyebrow{margin-bottom:18px!important}
+.st-land .s5 .st-pic{justify-content:flex-start;gap:12px;padding-top:22px}
+.st-land .s5 .st-words{padding-top:22px;gap:22px}
+.st-land .s5 .s5-lead{font-size:34px;line-height:1.28}
+.st-land .s5 .st-sub{font-size:29px;margin-top:0!important}
+.st-land .s5 .st-small{font-size:23px;line-height:1.38}
+.s5-map{position:relative;width:100%;flex:none}
+.s5-smalls{display:grid}.s5-smalls>*{grid-area:1/1}
+.s5-svg{display:block;width:100%!important;height:auto!important;aspect-ratio:3600/1420;overflow:hidden!important}
+.s5-svg .sea{fill:transparent}
+.s5-svg .lands path{fill:#15293d;stroke:#34485d;stroke-width:1px;vector-effect:non-scaling-stroke;transition:fill 900ms var(--ease),opacity 700ms var(--ease)}
+.s5.on .s5-svg .lands .l10{fill:#ffcd79;transition-delay:500ms}
+.s5.on .s5-svg .lands .l15{fill:#a68f62;transition-delay:700ms}
+.s5.on .s5-svg .lands .l25{fill:#57574e;transition-delay:900ms}
+.s5[data-st="1"] .s5-svg .lands .fl,.s5[data-st="2"] .s5-svg .lands .fl{fill:#ff7541;transition-delay:0ms}
+.s5[data-st="2"] .s5-svg .lands path:not(.gh){opacity:.32}
+.s5-svg .mine{fill:none;stroke:#f4edda;stroke-width:2.5px;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.s5-svg text{font-family:var(--sans);paint-order:stroke;stroke:#060e19;stroke-linejoin:round}
+.s5-svg text.fname{fill:#ffa47c}
+.s5-svg text.ghname{fill:var(--paper);font-family:var(--serif)}
+.s5-svg text.ghsub{fill:#ffa47c}
+.s5-svg text.minename{fill:var(--paper)}
+.s5-svg .fline{stroke:#ff7541;opacity:.85}
+.s5-svg .gline{stroke:var(--paper);opacity:.85}
+.s5-svg .fdot{fill:var(--paper)}
+.s5-svg .ghring{fill:none;stroke:var(--paper)}
+.s5 .s5-x{opacity:0;transition:opacity 600ms var(--ease)}
+.s5 .s5-x.on{opacity:1}
+.s5 .s5-x:not(.on){pointer-events:none}
+.s5-subs .s5-x{display:flex;flex-direction:column;gap:14px}
+.s5-key{font-size:22px!important;color:var(--dim)}
+.s5-key .k{display:inline-block;width:24px;height:16px;margin:0 8px 0 18px;vertical-align:-1px;border:1px solid #3d5064}
+.s5-key .k:first-child{margin-left:0}
+.s5-key .k10{background:#ffcd79} .s5-key .k15{background:#a68f62} .s5-key .k25{background:#57574e} .s5-key .kd{background:#15293d} .s5-key .kf{background:#ff7541}
+.s5-names{display:none}
+.st-port .s5-names{display:block}
+.st-port .s5 .st-pic{gap:10px}
+.st-port .s5-key{font-size:23px!important}
+.st-port .s5 .st-sub{margin-top:0!important}
+.st-still .s5 .s5-x,.s5-still .s5-x,.st-still .s5-svg .lands path,.s5.s5-still .s5-svg .lands path{transition:none!important}
+@media (prefers-reduced-motion:reduce){.s5 .s5-x,.s5-svg .lands path{transition:none!important}}
+
+/* words blocks that swap on a press (slides 1 to 4): their own spacing, no negative pull on the line under */
+.st-words .st-swap>div{display:flex;flex-direction:column;gap:20px}
+.st-words .st-swap>div>.st-sub{margin-top:0!important}
+.st-port .st-words .st-swap>div{gap:14px}
+.s7-place{font:26px/1.4 var(--mono);letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:-10px!important}
+.st-port .s7-place{font-size:23px;letter-spacing:2px}
+
+/* ===== Three acts (Nov 14, 11 AM direction): act marker, presses that show only on their own step, the friendly look of act 1 ===== */
+.st-act{position:absolute;left:150px;top:30px;margin:0!important;font:22px/1 var(--mono);letter-spacing:3px;text-transform:uppercase;color:var(--dim);opacity:.8;z-index:3;pointer-events:none}
+.st-port .st-act{left:32px;top:10px;font-size:23px;letter-spacing:2px}
+.st-land .s5 .st-act{left:110px}
+.st-port .st-scene{padding-top:48px}
+.st-only{opacity:0;transition:opacity 600ms var(--ease)}
+.st-only.on{opacity:1}
+.st-only:not(.on){pointer-events:none;visibility:hidden;transition:opacity 400ms var(--ease),visibility 0s linear 400ms}
+.st-still .st-only{transition:none!important}
+.st-dot.extra::after{width:14px;height:14px;left:15px;top:15px;border-style:dashed}
+
+/* act 1: the friendly explainer (the exhibit's indigo, rounded shapes, the satellite characters) */
+.st-scene.act1{background:#17153b;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.10) 2px,transparent 2.5px);background-size:26px 26px}
+.act1 .st-h{font-family:'Trebuchet MS',Arial,sans-serif;font-weight:bold;letter-spacing:-.03em}
+.act1 .st-h em{color:#ffd23f}
+.act1 .st-line b{color:#ffd23f}
+.act1 .st-eyebrow{color:#ffd23f}
+.act1 .st-act{color:#d8d6ff}
+.act1 .st-small{color:#d8d6ff}
+.st-exhibit.s2-ex{display:flex;flex-direction:column;gap:18px}
+.s2-ex .s2-quotes{gap:18px}
+.act1 .st-quote{background:#fff6e0;border:5px solid #141414;border-radius:22px;box-shadow:6px 6px 0 #141414;padding:14px 22px 16px}
+.act1 .st-quote figcaption{font:bold 21px/1.3 'Trebuchet MS',Arial,sans-serif;letter-spacing:1px;color:#141414}
+.act1 .st-quote blockquote{font:bold 30px/1.2 'Trebuchet MS',Arial,sans-serif;color:#141414;font-style:normal}
+.act1 .st-quote.ember{background:#ffd9cf}
+.act1 .st-quote.gold{background:#ffe680}
+.act1 .st-quote .strike{top:46px}
+.act1 .st-quote.struck blockquote{color:#6b5f5a}
+.s2-chart{background:#fff6e0;border:5px solid #141414;border-radius:22px;padding:10px 14px 4px}
+.s2-svg{width:100%}
+.s2-svg .bar{stroke:#141414;stroke-width:3}
+.s2-svg .bar.m{fill:#ffd23f}
+.s2-svg .bar.v{fill:#3ddc97}
+.s2-svg .bar.vs{fill:#ffd23f;stroke:#1f9e68;stroke-width:4}
+.s2-svg .ex-axis{stroke:#141414;stroke-width:4}
+.s2-svg text.ex-t{fill:#141414;font-family:'Trebuchet MS',Arial,sans-serif;font-weight:bold}
+.st-land .s2 .st-pic{justify-content:center}
+.st-port .s2-chart{padding:6px 6px 2px}
+.st-port .act1 .st-quote blockquote{font-size:27px}
+
+/* act 2, slide 3: the clock (today's colors: gold = our conversion, ember = the newer camera as it comes) */
+.s3-clock{display:flex;justify-content:center}
+.st-land .s3-svg{height:790px;width:auto;max-width:100%}
+.st-port .s3-svg{width:100%;height:auto}
+.s3-svg .face{fill:#0b1726;stroke:var(--rule2);stroke-width:2}
+.s3-svg .yr{fill:none;stroke:#7a99bc;stroke-width:1.5;opacity:.35}
+.s3-svg text.yrt{fill:var(--blue-text);font-family:var(--mono)}
+.s3-svg .fmk{stroke:#ffcd79;stroke-width:14;stroke-linecap:round;opacity:.8}
+.s3-svg .fmk.oct{opacity:1;stroke:#ffdda3}
+.s3-svg text.mon{fill:var(--dim);font-family:var(--mono)}
+.s3-svg text.mon.oct,.s3-svg text.octv{fill:var(--gold)}
+.s3-svg text.octv{paint-order:stroke;stroke:#0b1726;stroke-width:6px}
+.s3-svg .wd.e{fill:#ff7541;opacity:.85}
+.s3-svg .wd.g{fill:#ffcd79}
+.s3-svg .hand{stroke:var(--paper);stroke-width:4;stroke-linecap:round}
+.s3-svg .hub{fill:var(--paper)}
+.s3-svg text.yrbig{fill:var(--paper);font-family:var(--serif);paint-order:stroke;stroke:#0b1726;stroke-width:8px}
+.st-land .s3 .st-pic{justify-content:center}
+
+/* act 2, slide 4's last press: the check since 2021 */
+.s4-check{display:flex;flex-direction:column;gap:24px}
+
+/* act 3, slide 7's first press: the chat connector as a real exchange */
+.s7>.s7-c{grid-area:1 / 1;min-width:0;width:100%;max-width:1300px;text-align:left}
+.s7-clabel{font:24px/1.4 var(--mono);letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:22px!important}
+.s7-chat{display:flex;flex-direction:column;gap:26px;background:#0b1726;border:2px solid var(--rule2);border-radius:18px;padding:34px 38px}
+.s7-you{align-self:flex-end;max-width:75%;background:#22394f;border-radius:22px 22px 6px 22px;padding:18px 26px;font-size:36px;line-height:1.3;color:var(--paper)}
+.s7-ai{align-self:flex-start;max-width:88%;background:#13283c;border:2px solid #3a4b5e;border-radius:22px 22px 22px 6px;padding:20px 28px;display:flex;flex-direction:column;gap:14px}
+.s7-you span,.s7-ai span{display:block;font:20px/1.3 var(--mono);letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.s7-ai p{font:italic 400 34px/1.32 var(--serif);color:var(--paper);margin:0}
+.s7-ai p.s7-cnt{font:26px/1.4 var(--sans);font-style:normal;color:var(--dim)}
+.st-port .s7-chat{padding:20px 18px;gap:18px}
+.st-port .s7-you{font-size:28px;max-width:90%}
+.st-port .s7-ai{max-width:100%}
+.st-port .s7-ai p{font-size:27px}
+.st-port .s7-ai p.s7-cnt{font-size:23px}
+.st-port .s7-clabel{font-size:23px;letter-spacing:2px}
+
+/* the harmonizing moment, between slide 5 and slide 6 */
+.st-harmony{position:absolute;inset:0;z-index:7;background:radial-gradient(ellipse 60% 70% at 50% 45%,#173048 0%,#0a1726 60%,var(--ink) 100%);opacity:0;transition:opacity 400ms ease;pointer-events:none}
+.st-harmony.go{opacity:1}
+.st-harmony.out{opacity:0;transition:opacity 600ms ease}
+.hm-marks i{position:absolute;left:0;top:0;width:22px;margin-left:-11px;border-radius:11px;background:#ffcd79;transform-origin:50% 100%;translate:0 -100%;
+  transition:transform 1200ms cubic-bezier(.5,0,.2,1)}
+.hm-marks i b{position:absolute;left:50%;top:calc(100% + 14px);transform:translateX(-50%);font:400 24px var(--mono);color:var(--dim);opacity:0;transition:opacity 500ms ease}
+.st-harmony.settle .hm-marks i b{opacity:1}
+.hm-axis{position:absolute;height:3px;background:var(--rule2);opacity:0;transition:opacity 600ms ease 900ms}
+.st-harmony.go .hm-axis{opacity:1}
+.hm-pair{position:absolute;right:140px;bottom:170px;display:flex;align-items:flex-end;gap:10px;opacity:0;transform:translateY(20px);transition:opacity 700ms ease 1100ms,transform 700ms ease 1100ms}
+.st-harmony.go .hm-pair{opacity:1;transform:none}
+.hm-sat svg{width:110px;height:92px;display:block}
+.hm-one{position:absolute;left:0;right:0;bottom:-40px;border-top:4px solid #ffcd79;font:22px var(--mono);color:var(--gold);text-align:center;padding-top:6px}
+.hm-words{position:absolute;left:0;right:0;top:12%;text-align:center;font-size:72px;letter-spacing:-.04em;color:var(--paper);opacity:0;transition:opacity 700ms ease 700ms}
+.st-harmony.go .hm-words{opacity:1}
+.st-port .hm-words{font-size:48px}
+.st-port .hm-pair{right:24px;bottom:190px}
+
+/* the wild cards (extras after slide 7) */
+.st-land .st-scene.sw1{grid-template-columns:520px 1fr}
+.sw-svg{display:block;width:100%;height:auto;aspect-ratio:3600/1420;overflow:hidden!important}
+.sw-svg .lands path{fill:#15293d;stroke:#34485d;stroke-width:1px;vector-effect:non-scaling-stroke}
+.sw-svg .dv{fill:#7fe0ff;fill-opacity:.55;stroke:#cdf4ff;stroke-width:1px;vector-effect:non-scaling-stroke}
+.sw-svg .dm{fill:none;stroke:#7a99bc;stroke-width:2.5px;vector-effect:non-scaling-stroke}
+.sw-key .k{display:inline-block;width:18px;height:18px;border-radius:50%;margin:0 8px -2px 0}
+.sw-key .kv{background:#7fe0ff}
+.sw-key .km{border:3px solid #7a99bc;margin-left:14px}
+.sw .st-line b{color:#7fe0ff}
+.sw-porch{display:flex;flex-direction:column;gap:10px;max-width:980px}
+.pl-cap{font:24px/1.3 var(--mono);color:var(--dim);margin-top:12px!important}
+.pl-row{display:grid;grid-template-columns:repeat(12,1fr);gap:8px}
+.pl{display:flex;flex-direction:column;align-items:center;gap:6px}
+.pl i{display:block;width:100%;aspect-ratio:1;border-radius:10px;background:#13283c;border:2px solid #2c3d50}
+.pl.on.s i{background:#7fe0ff;border-color:#cdf4ff;box-shadow:0 0 18px #7fe0ff55}
+.pl.on.f i{background:#ff7541;border-color:#ffb08f;box-shadow:0 0 18px #ff754155}
+.pl b{font:400 22px var(--mono);color:var(--dim)}
+.pl-say{font-size:30px}
+.pl-say.s{color:#7fe0ff} .pl-say.f{color:#ff9a6e}
+.st-port .pl-row{gap:4px}
+.st-port .pl b{font-size:23px}
+.st-port .pl-say{font-size:27px}
+
+/* ===== Act 1 in the Fire Detectives look (team lead, 11:19 AM): its palette, type, page furniture and cast ===== */
+.st-root{--fd-bg:#F3F7FB;--fd-ink:#1B2433;--fd-muted:#566579;--fd-panel:#FFFFFF;--fd-line:#D3DDE8;--fd-fire:#F26B1D;--fd-ember:#C8381E;--fd-heat:#FFC93C;
+  --fd-moe:#159A93;--fd-vee:#7C4DEB;--fd-juno:#D9960F;--fd-night:#1E2A4A;
+  --fd-display:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;--fd-body:"Lexend","Segoe UI",system-ui,sans-serif;--fd-label:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace}
+.st-scene.act1{background:var(--fd-bg);background-image:radial-gradient(rgba(27,36,51,.08) 2px,transparent 2.4px);background-size:30px 30px;color:var(--fd-ink);font-family:var(--fd-body)}
+.act1 .st-h{font-family:var(--fd-display);font-weight:700;letter-spacing:-.01em;color:var(--fd-ink)}
+.act1 .st-h em{font-family:var(--fd-display);font-style:normal;font-weight:700;letter-spacing:-.01em;color:var(--fd-fire)}
+.act1 .st-eyebrow{font-family:var(--fd-label);color:var(--fd-ember);letter-spacing:3px}
+.act1 .st-act{font-family:var(--fd-label);color:var(--fd-muted)}
+.act1 .st-line,.act1 .st-sub{color:var(--fd-ink);font-family:var(--fd-body)}
+.act1 .st-line b{color:var(--fd-ember);font-weight:600}
+.act1 .st-small{color:var(--fd-muted);font-family:var(--fd-body)}
+.act1 .st-small b{color:var(--fd-ink);font-family:var(--fd-body);font-weight:600}
+.act1 .st-small b.e{color:var(--fd-ember)}
+.act1 .c-moe{color:var(--fd-moe);font-weight:600} .act1 .c-vee{color:var(--fd-vee);font-weight:600}
+.act1 .fd-cast{font-size:28px}
+
+/* the spread: white paper, one ink outline, a drop shadow (slide 1's exhibit panel and slide 2's picture) */
+.act1 .st-exhibit{background:var(--fd-panel);color:var(--fd-ink);border:4px solid var(--fd-ink);border-radius:28px;box-shadow:0 6px 0 var(--fd-ink),0 22px 40px -18px rgba(27,36,51,.4);font-family:var(--fd-body)}
+.act1 .ex-canvas{border:4px solid var(--fd-ink);border-radius:18px}
+.act1 .ex-legend,.act1 .ex-note,.act1 .ex-hint{color:var(--fd-muted)}
+.act1 .ex-legend i{background:#ffd23f;border:1px solid var(--fd-ink)}
+.act1 .ex-bubble{background:var(--fd-panel);color:var(--fd-ink);border:4px solid var(--fd-ink);border-radius:18px;box-shadow:0 4px 0 var(--fd-ink);font-weight:400;font-family:var(--fd-body);font-size:26px}
+.act1 .ex-bubble::before{border-right-color:var(--fd-ink)}
+.act1 .ex-count{border:4px solid var(--fd-ink);box-shadow:0 4px 0 var(--fd-ink);color:var(--fd-ink);background:#fff8e1}
+.act1 .ex-count b{font-family:var(--fd-display);font-weight:700}
+.act1 .ex-count span{font-family:var(--fd-body);font-weight:500}
+.act1 .ex-hold{font-family:var(--fd-display);font-weight:600;background:var(--fd-heat);color:var(--fd-ink);border:4px solid var(--fd-ink);box-shadow:0 6px 0 var(--fd-ink)}
+.act1 .ex-hold[aria-pressed="true"]{background:var(--fd-vee);color:#fff;box-shadow:0 1px 0 var(--fd-ink)}
+.act1 .who{display:block;font-family:var(--fd-display);font-weight:600;font-size:.85em;margin-bottom:2px}
+.act1 .who.moe{color:var(--fd-moe)} .act1 .who.vee{color:var(--fd-vee)} .act1 .who.juno{color:var(--fd-juno)}
+
+/* Juno asks: a small figure with a speech bubble */
+.fd-juno{display:flex;align-items:flex-end;gap:10px}
+.fd-bubble{position:relative;background:var(--fd-panel);color:var(--fd-ink);border:3px solid var(--fd-ink);border-radius:18px;padding:10px 16px;box-shadow:0 3px 0 var(--fd-ink);
+  font:500 26px/1.3 var(--fd-display);margin-bottom:34px!important}
+.fd-bubble::after{content:"";position:absolute;left:-12px;bottom:14px;width:18px;height:18px;background:var(--fd-panel);border-left:3px solid var(--fd-ink);border-bottom:3px solid var(--fd-ink);transform:skewY(-35deg);border-radius:0 0 0 3px}
+.st-port .fd-bubble{font-size:25px}
+
+/* slide 2: case-file cards for the two headlines, and the chart on paper with Moe and Vee holding up their halves */
+.act1 .st-quote{background:var(--fd-panel);border:3px solid var(--fd-ink);border-radius:0 18px 18px 18px;box-shadow:0 4px 0 var(--fd-ink);padding:14px 22px 16px}
+.act1 .st-quote figcaption{font:500 20px/1.3 var(--fd-label);letter-spacing:2px;text-transform:uppercase;color:var(--fd-ember)}
+.act1 .st-quote blockquote{font:600 31px/1.2 var(--fd-display);color:var(--fd-ink);font-style:normal}
+.act1 .st-quote.ember{background:#fde3d6}
+.act1 .st-quote.gold{background:#fff1c4}
+.act1 .st-quote.gold figcaption{color:#8a5a00}
+.act1 .st-quote.struck blockquote{color:var(--fd-muted)}
+.act1 .s2-chart{background:var(--fd-panel);border:3px solid var(--fd-ink);border-radius:18px}
+.act1 .s2-svg .bar{stroke:var(--fd-ink);stroke-width:3}
+.act1 .s2-svg .bar.m{fill:var(--fd-moe)}
+.act1 .s2-svg .bar.v{fill:var(--fd-vee)}
+.act1 .s2-svg .bar.vs{fill:var(--fd-moe);stroke:var(--fd-vee);stroke-width:5}
+.act1 .s2-svg .ex-axis{stroke:var(--fd-ink)}
+.act1 .s2-svg text.ex-t{fill:var(--fd-ink);font-family:var(--fd-display);font-weight:600}
+.act1 .st-exhibit.s2-ex{background:transparent;border:0;box-shadow:none;padding:0}
+
+/* the controls while act 1 is on (light paper) */
+.st-light .st-counter{color:var(--fd-ember)}
+.st-light .st-btn{color:var(--fd-ink);border-color:var(--fd-ink);background:#fff}
+.st-light .st-btn.primary{background:var(--fd-heat);color:var(--fd-ink);border-color:var(--fd-ink)}
+.st-light .st-dot::after{border-color:#8796a8}
+.st-light .st-dot.on::after{background:var(--fd-fire);border-color:var(--fd-fire);box-shadow:none}
+.st-port.st-light .st-chrome{background:linear-gradient(to top,var(--fd-bg) 70%,transparent)}
+
+/* character slots (img/characters/slots.json): any shape of picture fits its box, bottom-anchored, never stretched or cropped; no effects that assume a style */
+.slot{display:inline-flex;flex:none;align-items:flex-end;justify-content:center;gap:4px;position:relative;vertical-align:bottom}
+.slot img{flex:1 1 0;min-width:0;width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block}
+.act1 .ex-char{width:auto;height:auto}
+.st-port .act1 .ex-char .slot{transform:scale(.8);transform-origin:50% 100%}
+.fd-castrow{display:flex;align-items:flex-end;gap:10px}
+.fd-castrow .fd-cast{margin:0 0 0 8px!important;font-size:27px}
+.st-port .fd-castrow .slot{transform:scale(.85);transform-origin:50% 100%}
+.st-slotdbg .slot{outline:3px dashed #d0f;outline-offset:0}
+.st-slotdbg .slot::after{content:attr(data-slot);position:absolute;left:0;top:0;font:16px/1.2 Consolas,monospace;background:#d0f;color:#fff;padding:1px 4px;white-space:nowrap}
+.slot-dbg{fill:none;stroke:#d0f;stroke-width:3;stroke-dasharray:8 5}
+.slot-dbg-t{font:16px Consolas,monospace;fill:#d0f}
+/* act 1 fit (pictures 11:40): smaller display type, a wider words column on slide 2 */
+.st-land .act1 .st-h{font-size:70px;line-height:1.02}
+.st-land .act1 .st-line{font-size:32px}
+.st-land .act1 .st-sub{font-size:27px}
+.st-land .act1 .st-small{font-size:23px;line-height:1.38}
+.st-land .act1 .st-words{padding-top:24px;gap:18px}
+.st-land .act1 .st-eyebrow{margin-bottom:16px!important}
+.st-land .st-scene.s2{grid-template-columns:640px 1fr;column-gap:56px}
+.st-land .act1 .fd-castrow .fd-cast{font-size:25px}
+.st-land .act1 .fd-bubble{font-size:24px;margin-bottom:26px!important}
+.st-land .sw .st-line{font-size:32px}
+.st-land .sw .st-small{font-size:23px}
+.st-land .sw .st-h{font-size:76px}
+
+/* ===== One journey (art direction 11:44 / 11:45 AM; teaching order 11:55 AM) =====
+   The stage paints one sky from style variables that story.js interpolates per slide (--sky-top, --sky-bot, --dots, --stars, --glow,
+   --ground, --screen, --chr, --hw). Camera colors: --cam-older and --cam-newer (and their night versions, -hi), set by story.js.
+   One type family throughout: Fredoka for headlines (heavy on the ground, lighter in orbit), Lexend for words, JetBrains Mono for numbers. */
+.st-root{--cam-older:#3f3a8f;--cam-newer:#a6c3e4;--cam-older-hi:#9e9ad8;--cam-newer-hi:#cddcef;--cam-older-ink:#3f3a8f;--cam-newer-ink:#536272;
+  --blue:var(--cam-older-hi);--blue-text:var(--cam-older-hi);--fd-moe:var(--cam-older);--fd-vee:var(--cam-newer);
+  --sans:var(--fd-body);--serif:var(--fd-display);--mono:var(--fd-label)}
+.st-stage{background:linear-gradient(180deg,var(--sky-top,#060e19) 0%,var(--sky-bot,#0b1726) 100%)}
+.st-sky{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.sky-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(27,36,51,var(--dots,0)) 2px,transparent 2.4px);background-size:30px 30px}
+.sky-stars{position:absolute;inset:0;opacity:var(--stars,0)}
+.sky-stars svg{width:100%;height:100%;display:block}
+.sky-glow{position:absolute;inset:0;opacity:var(--glow,0);background:radial-gradient(ellipse 36% 48% at 67% 38%,rgba(255,140,60,.14),rgba(60,110,220,.12) 55%,transparent 76%)}
+.sky-ground{position:absolute;left:0;right:0;bottom:0;height:330px;opacity:var(--ground,0);transform:translateY(calc((1 - var(--ground,0)) * 380px))}
+.sky-ground svg{width:100%;height:100%;display:block}
+.sky-screen{position:absolute;left:70px;top:44px;right:70px;bottom:118px;border-radius:30px;border:12px solid #1c2431;
+  background:radial-gradient(ellipse 60% 70% at 60% 45%,#173048 0%,#0a1726 55%,#060e19 100%);box-shadow:0 0 0 2px #303d50,0 30px 80px rgba(0,0,0,.6),0 0 140px rgba(255,190,120,.10);
+  opacity:var(--screen,0);transform:scale(calc(1.25 - .25 * var(--screen,0)))}
+.sky-desk{position:absolute;left:0;right:0;bottom:0;height:116px;opacity:var(--screen,0);
+  background:radial-gradient(ellipse 30% 120% at 82% 0%,rgba(255,196,120,.22),transparent 70%),linear-gradient(180deg,#2c1f15,#1a120c);box-shadow:inset 0 3px 0 #4a3424}
+.st-port .sky-screen{left:8px;right:8px;top:40px;bottom:112px;border-width:7px;border-radius:20px}
+.st-scene.act1,.st-scene.act2,.st-scene.act3{background:none}
+.st-step:not(.on){pointer-events:none}
+
+/* type, one family */
+.st-root .st-h{font-family:var(--fd-display);font-weight:var(--hw,500);letter-spacing:-.01em}
+.st-root em{font-family:var(--fd-display);font-style:normal;font-weight:inherit;letter-spacing:inherit}
+.act2 .st-h,.act3 .st-h,.sw .st-h{font-size:70px;line-height:1.04}
+.st-root .st-quote blockquote,.st-root .s6-lab b,.st-root .s7-gold,.st-root .st-num-head b,.st-root .st-refusal b{font-family:var(--fd-display);font-style:normal;font-weight:500}
+.st-root .s7-ai p{font-family:var(--fd-body);font-style:normal}
+.st-root .s4-trace .chip b,.st-root .s3-table td.b,.st-root .s3-table td.g,.st-root .st-small b{font-family:var(--fd-label);font-weight:500}
+.st-root .s7-q{font-family:var(--fd-display);font-weight:500}
+.st-line b{font-weight:500}
+.st-bridge{font:500 30px/1.25 var(--fd-display);color:#c9d3e0;margin-bottom:-4px!important}
+.act1 .st-bridge{color:var(--fd-muted)}
+.st-port .st-bridge{font-size:27px}
+.st-title .st-act,.st-title .st-numbtn{opacity:0}
+
+/* the small guides: the characters in Act 2 and 3, never gone */
+.slot.guide{width:64px!important;height:64px!important;vertical-align:middle}
+.st-port .slot.guide{width:56px!important;height:56px!important}
+
+/* ---- slide 1 and the title state ---- */
+.st-land .st-scene.s1{grid-template-columns:560px 1fr;column-gap:46px;padding:72px 84px 126px 124px}
+.s1-title{grid-column:1 / -1;grid-row:1 / -1;align-self:center;justify-self:center;text-align:center;z-index:2;max-width:1500px}
+.s1-title .st-eyebrow{color:var(--fd-ember);font-family:var(--fd-label)}
+.t-q{font:700 128px/1.02 var(--fd-display);color:var(--fd-ink);letter-spacing:-.01em;text-wrap:balance}
+.t-q em{color:var(--fd-fire)}
+.t-bridge{font:500 42px/1.3 var(--fd-display);color:var(--fd-muted);margin-top:34px!important}
+.t-pair{margin-top:30px;display:flex;justify-content:center}
+.t-pair .slot{transform:scale(1.35);transform-origin:50% 0}
+.s1 .st-pic{justify-content:flex-start;gap:0}
+.act1 .st-exhibit.s1-spread{position:relative;display:block;width:100%;height:700px;padding:0;overflow:hidden;
+  background:linear-gradient(180deg,#c7e5f9 0%,#eaf5fd 52%,#f4f8ec 100%)}
+.s1-hill{position:absolute;left:-10%;right:-10%;bottom:-120px;height:300px;border-radius:50% 50% 0 0;background:#9fd07f;box-shadow:inset 0 14px 0 #b6dc98}
+.s1-cloud{position:absolute;opacity:.95;pointer-events:none}
+.s1-cloud.a{left:300px;top:22px;width:150px}
+.s1-cloud.b{right:290px;top:56px;width:112px}
+.s1-beam{position:absolute;left:0;top:0;width:100%;height:100%}
+.s1-beam polygon{transition:opacity 600ms var(--ease)}
+.s1-beam .bo{fill:color-mix(in srgb,var(--cam-older) 24%,transparent)}
+.s1-beam .bn{fill:color-mix(in srgb,var(--cam-newer) 24%,transparent)}
+.cam-o .s1-beam .bn,.cam-n .s1-beam .bo,.one .s1-beam .bn{opacity:0}
+.s1-sat{position:absolute;top:6px;width:300px;height:250px;display:flex;align-items:flex-end;justify-content:center;z-index:2;transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+.s1-sat.old{left:0}.s1-sat.new{right:0}
+.s1-sat .slot{transform:scale(calc(1.4 * var(--chr,1)));transform-origin:50% 100%}
+.cam-o .s1-sat.new,.cam-n .s1-sat.old{opacity:.5;transform:scale(.86)}
+.one .s1-sat.new{opacity:0;transform:translateX(140px) scale(.8)}
+.s1-spread .ex-picwrap{position:absolute;left:300px;top:160px;width:490px;z-index:1}
+.act1 .s1-spread .ex-canvas{border-radius:14px;box-shadow:0 5px 0 var(--fd-ink)}
+.s1-spread .ex-side{position:absolute;top:296px;width:270px;display:flex;flex-direction:column;gap:14px;z-index:3;transition:opacity 400ms var(--ease)}
+.cam-o .ex-side{left:16px}.cam-n .ex-side{right:16px}
+.st-land .act1 .s1-spread .ex-bubble{font-size:23px;line-height:1.3;padding:12px 14px;min-height:0}
+.act1 .s1-spread .ex-bubble::before{left:44px;top:-17px;border:14px solid transparent;border-bottom-color:var(--fd-ink);border-top:0}
+.act1 .cam-n .ex-bubble::before{left:auto;right:44px}
+.act1 .s1-spread .ex-count{padding:6px 16px;gap:2px;flex-direction:column;align-items:flex-start}
+.act1 .s1-spread .ex-count b{font-size:70px}
+.act1 .s1-spread .ex-count span{font-size:23px}
+.s1-spread .ex-note{display:none}
+.st-port .s1-spread .ex-note{display:block;font-size:23px;line-height:1.3}
+.fd-stamp{position:absolute;left:50%;top:26px;z-index:4;background:var(--fd-heat);color:var(--fd-ink);border:4px solid var(--fd-ink);border-radius:12px;padding:6px 20px;
+  font:700 34px/1.2 var(--fd-display);box-shadow:0 5px 0 var(--fd-ink);white-space:nowrap}
+.fd-stamp.st-step{transform:translateX(-50%) rotate(-4deg) translateY(24px)}
+.fd-stamp.st-step.on{transform:translateX(-50%) rotate(-4deg)}
+.s1-under{display:flex;align-items:center;gap:26px;margin-top:-36px;position:relative;z-index:4;padding:0 26px}
+.s1-under .ex-hold{flex:none;min-height:80px;font-size:30px}
+.s1-under .ex-legend{font-size:22px;line-height:1.32;color:var(--fd-muted);padding-top:40px;margin:0!important}
+.s1 .st-words .fd-juno{margin-top:6px}
+.s1-same{font-size:34px}
+.st-port .t-q{font-size:74px}
+.st-port .t-bridge{font-size:32px}
+.st-port .s1-title{align-self:start;margin-top:120px}
+.st-port .act1 .st-exhibit.s1-spread{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"o n" "map map" "side side";gap:10px;height:auto;padding:70px 14px 16px}
+.st-port .s1-sat{position:relative;left:auto;right:auto;top:auto;width:auto;height:190px}
+.st-port .s1-sat.old{grid-area:o}.st-port .s1-sat.new{grid-area:n}
+.st-port .s1-sat .slot{transform:scale(1.2)}
+.st-port .one .s1-sat.new{transform:none;opacity:0}
+.st-port .s1-spread .ex-picwrap{grid-area:map;position:relative;left:auto;top:auto;width:100%}
+.st-port .s1-spread .ex-side{grid-area:side;position:relative;left:auto;right:auto;top:auto;width:auto;display:grid;grid-template-columns:1fr;gap:12px}
+.st-port .s1-beam,.st-port .s1-cloud,.st-port .s1-hill{display:none}
+.st-port .fd-stamp{top:12px;font-size:28px}
+.st-port .s1-under{flex-direction:column;align-items:stretch;margin-top:16px;padding:0}
+.st-port .s1-under .ex-legend{padding-top:0;font-size:23px}
+.st-port .act1 .s1-spread .ex-count b{font-size:60px}
+
+/* ---- slide 2: the case board ---- */
+.st-land .st-scene.s2{grid-template-columns:560px 1fr;column-gap:46px;padding:72px 84px 126px 124px}
+.act1 .st-exhibit.fd-board.s2-ex{position:relative;background:#f6e9c8;background-image:radial-gradient(rgba(120,80,30,.16) 1.6px,transparent 2px);background-size:22px 22px;
+  border:16px solid #b07a43;border-radius:16px;box-shadow:inset 0 0 0 3px #7a4f25,0 7px 0 var(--fd-ink),0 30px 50px -20px rgba(0,0,0,.45);padding:26px 24px 8px;display:flex;flex-direction:column;gap:12px}
+.fd-board .st-quote{transform:rotate(-1.4deg);border-radius:6px!important}
+.fd-board .st-quote.gold{transform:rotate(1.2deg)}
+.fd-board .st-quote.gold.st-step:not(.on){transform:rotate(1.2deg) translateY(20px)}
+.fd-board .st-quote::before{content:"";position:absolute;top:-12px;left:50%;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff9b7a,#c8381e);border:2px solid var(--fd-ink);z-index:2}
+.fd-board .st-quote.gold::before{background:radial-gradient(circle at 35% 35%,#ffe28a,#c99000)}
+.act1 .s2-chart{background:none;border:0;padding:0}
+.s2-svg .paper{fill:#fffdf6;stroke:#d9cba6;stroke-width:2;filter:drop-shadow(0 4px 0 rgba(27,36,51,.22))}
+.act1 .s2-svg .bar{stroke:var(--fd-ink);stroke-width:2.5}
+.s2-svg .tape rect{fill:rgba(150,195,240,.6);stroke:rgba(80,120,170,.7);stroke-width:2;transition:fill 400ms}
+.s2-svg .tape.hot rect{fill:rgba(255,128,80,.6);stroke:#c8381e}
+.act1 .s2-svg text.ex-t.sw{fill:var(--fd-ember);font-weight:700}
+.s2 .st-words .fd-juno .slot{transform:scale(1.4);transform-origin:0 100%;margin-right:40px}
+.s2 .st-words .fd-juno{margin-top:50px}
+.st-land .s2 .st-pic{justify-content:center}
+.st-port .act1 .st-exhibit.fd-board.s2-ex{border-width:10px;padding:18px 12px 6px}
+
+/* ---- slide 3: the Hot-Spot Clock, and the wave ---- */
+.st-land .st-scene.s3{grid-template-columns:560px 1fr;column-gap:40px;padding:72px 84px 330px 124px}
+.st-land .st-scene.s4{padding-bottom:318px}
+.s3-clock{position:relative;display:flex;justify-content:center;align-items:center;min-height:0}
+.s3-cv{display:block}
+.s3-when{position:absolute;left:0;top:0;display:flex;flex-direction:column;gap:2px;pointer-events:none}
+.s3-when b{font:500 54px/1 var(--fd-display);color:var(--paper)}
+.s3-when span{font:500 30px var(--fd-display);color:var(--gold)}
+.s3-when small{font:22px var(--fd-label);color:var(--dim)}
+.st-land .s3 .st-pic{justify-content:center;overflow:visible}
+.s3-key{display:flex;flex-direction:column;gap:6px;font-size:26px;color:var(--paper)}
+.s3-key>span{display:flex;align-items:center;gap:12px}
+.s3-key .k{display:inline-block;width:30px;height:18px;border-radius:4px}
+.k.kn{background:var(--cam-newer-hi);box-shadow:0 0 12px var(--cam-newer-hi)}
+.k.ko{background:var(--cam-older-hi);box-shadow:0 0 12px var(--cam-older-hi)}
+.k.kg{background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.st-wave{min-width:0}
+.st-land .st-wave{position:absolute;left:124px;right:84px;bottom:116px}
+.wv-cap{font:22px/1.3 var(--fd-body);color:var(--dim);margin-bottom:4px!important}
+.wv-cap b{font-weight:500;color:var(--paper)}
+.wv-box svg{width:100%;height:auto;display:block}
+.wv-svg text{fill:var(--dim);font-family:var(--fd-label)}
+.wv-svg .wv-mid{stroke:rgba(255,255,255,.16);stroke-width:1}
+.wv-svg .wv-band{fill:rgba(255,255,255,.07)}
+.wv-svg .wv-band.wv-held{fill:rgba(255,117,65,.18)}
+.wv-svg .wv-band.wv-check{fill:color-mix(in srgb,var(--cam-older-hi) 18%,transparent)}
+.wv-svg text.wv-both{fill:var(--paper)} .wv-svg text.wv-held{fill:var(--ember)} .wv-svg text.wv-check{fill:var(--blue-text)}
+.wv-svg .wv-change{stroke:var(--ember);stroke-width:2;stroke-dasharray:6 6}
+.wv-svg text.wv-ember{fill:var(--ember)} .wv-svg text.wv-gold{fill:var(--gold)}
+.st-port .st-wave{order:4;margin-top:26px}
+.st-port .s3-when b{font-size:44px}
+
+/* ---- slides 4 and 5 in the same family: glow on dark, gold for the record ---- */
+.s4-trace .chip{position:relative;border-radius:14px;background:#0b1726d9}
+.s4-trace .chip b{font-size:48px}
+.s4-trace .chip.gold{box-shadow:0 0 24px rgba(255,205,121,.25)}
+.s4-trace .chip .guide{position:absolute;right:6px;top:-34px}
+.st-land .s4 .st-pic{justify-content:flex-start;padding-top:10px}
+.s5-guide .guide{float:left;margin:0 12px 4px 0}
+.s5.on .s5-svg .lands .l10{filter:drop-shadow(0 0 6px rgba(255,205,121,.5))}
+.st-land .s5 .st-h{font-size:72px}
+
+/* ---- slides 6 and 7: the page on a screen, a desk at night ---- */
+.guide-pair{position:absolute;right:120px;top:66px;display:flex;flex-direction:column;align-items:center;z-index:3;pointer-events:none}
+.guide-pair .slot{transform:scale(.55);transform-origin:50% 100%;margin:-58px -58px 0}
+.guide-pair span{border-top:4px solid var(--gold);font:22px var(--fd-label);color:var(--gold);padding-top:4px;width:150px;text-align:center}
+.st-port .guide-pair{right:24px;top:44px}
+.st-land .s6 .st-h{font-size:70px}
+.s6-ans{font-size:46px!important;line-height:1.2;color:var(--paper)}
+.s6-year{display:block;font-size:31px;color:var(--dim);margin-top:8px}
+.s6-lab .guide{margin:-20px 10px -10px 0}
+.st-land .s6 .st-words{padding-top:30px;gap:18px}
+.st-land .s6 .s6-line{font-size:38px}
+.s7>.s7-p{grid-area:1 / 1;display:flex;flex-direction:column;align-items:center;gap:30px;text-align:center;max-width:1300px}
+.s7-p .st-h{font-size:96px}
+.s7-p .st-line{font-size:40px;max-width:1200px}
+.st-port .s7-p .st-h{font-size:60px}
+.st-port .s7-p .st-line{font-size:30px}
+.s7.s7-end .guide-pair{opacity:.35;transition:opacity 1200ms}
+
+/* the wild cards: the newer camera's color for its steady heat */
+.sw-svg .dv{fill:var(--cam-newer-hi);stroke:#fff}
+.sw-svg .dm{stroke:var(--cam-older-hi)}
+.sw-key .kv{background:var(--cam-newer-hi)}
+.sw-key .km{border-color:var(--cam-older-hi)}
+.sw .st-line b{color:var(--cam-newer-hi)}
+.pl.on.s i{background:var(--cam-newer-hi);border-color:#fff}
+.pl-say.s{color:var(--cam-newer-hi)}
+
+/* the lift-off (slide 2 into 3) and the landing (5 into 6) */
+.st-moment{position:absolute;inset:0;z-index:7;pointer-events:none;transition:opacity 650ms ease}
+.st-moment.out{opacity:0}
+.lf-disc{position:absolute;border-radius:50%;overflow:hidden;transform-origin:50% 50%;transition:transform 2300ms cubic-bezier(.45,0,.2,1);box-shadow:0 0 70px rgba(120,190,255,.55)}
+.st-lift.go .lf-disc{transform:none!important}
+.lf-land{position:absolute;inset:0;background:#6aae55 center / cover no-repeat}
+.lf-night{position:absolute;inset:0;background:radial-gradient(circle at 40% 38%,#12305a,#050d1c);opacity:0;transition:opacity 1300ms ease 1000ms}
+.st-lift.go .lf-night{opacity:1}
+.lf-sat{position:absolute;transform-origin:50% 100%;transition:transform 2300ms cubic-bezier(.45,0,.2,1)}
+.st-lift.go .lf-sat{transform:none!important}
+.ld-planet{position:absolute;left:50%;top:860px;width:3400px;height:3400px;margin-left:-1700px;border-radius:50%;
+  background:radial-gradient(circle at 50% 6%,#22477c 0%,#0c1f3c 26%,#060d1a 55%);box-shadow:0 -14px 70px rgba(110,170,255,.6),inset 0 14px 34px rgba(150,205,255,.5);
+  transition:transform 2400ms cubic-bezier(.5,0,.3,1),opacity 900ms ease 1500ms}
+.st-landing.go .ld-planet{transform:translateY(-1300px);opacity:0}
+.ld-screen{position:absolute;left:70px;top:44px;right:70px;bottom:118px;border-radius:30px;border:12px solid #2a3546;opacity:0;transform:scale(1.9);
+  transition:transform 1400ms cubic-bezier(.3,0,.2,1) 900ms,opacity 700ms ease 900ms}
+.st-landing.go .ld-screen{opacity:1;transform:none}
+.ld-words{position:absolute;left:0;right:0;top:38%;text-align:center;font:500 84px var(--fd-display);color:var(--paper);opacity:0;transition:opacity 700ms ease 300ms}
+.st-landing.go .ld-words{opacity:1}
+.ld-pair{position:absolute;right:120px;top:66px;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translate(-500px,380px) scale(2.2);
+  transition:transform 1900ms cubic-bezier(.4,0,.2,1) 300ms,opacity 500ms ease 300ms}
+.ld-pair .slot{transform:scale(.55);transform-origin:50% 100%;margin:-58px -58px 0}
+.ld-pair span{border-top:4px solid var(--gold);font:22px var(--fd-label);color:var(--gold);padding-top:4px;width:150px;text-align:center}
+.st-landing.go .ld-pair{opacity:1;transform:none}
+.st-port .ld-words{font-size:52px}
+.st-port .ld-screen{left:8px;right:8px;top:40px;bottom:112px}
+.st-port .ld-pair{right:24px;top:44px}
+
+/* fit after the 12:10 pictures: slide 3's words column leaves room for the wave; the clock's date stays clear of its numbers */
+.st-land .s3 .st-line{font-size:30px;line-height:1.28}
+.st-land .s3 .st-words{padding-top:18px;gap:14px}
+.st-land .s3 .st-swap>div{gap:12px}
+.st-land .s3 .st-small{font-size:22px;line-height:1.32}
+.st-land .s3 .st-bridge{font-size:27px}
+.s3-key{flex-direction:row;flex-wrap:wrap;gap:4px 22px;font-size:23px}
+.s3-key .slot.guide{width:52px!important;height:52px!important}
+.s3-when{max-width:210px}
+.s3-when small{line-height:1.25}
+/* the characters on a night sky: a soft pale glow behind them so dark outlines never vanish (CSS only; the drawings are untouched) */
+.act2 .slot img,.act3 .slot img,.sw .slot img,.st-moment .slot img{filter:drop-shadow(0 0 2px rgba(255,255,255,.85)) drop-shadow(0 0 12px rgba(235,240,255,.35))}
+.st-land .s4 .st-line{font-size:32px;line-height:1.28}
+.st-land .s4 .st-sub{font-size:27px}
+.st-land .s4 .st-words{padding-top:22px;gap:16px}
+.st-land .s4 .st-bridge{font-size:27px}
+.act3 .st-act{top:12px}
+.st-land .s6-counts{bottom:142px}
+.st-land .s7 .guide-pair{right:auto;left:150px;top:70px}
+.st-land .s7 .s7-again{top:56px;right:120px}
+.st-land .s5 .s5-lead{font-size:32px}
+.st-land .s5 .st-words{gap:16px}
+.s5-guide .slot.guide{width:46px!important;height:46px!important}
+.sw-key .st-only:not(.on){display:none}
+.st-land .s3-key{flex-direction:row;flex-wrap:nowrap;gap:18px;font-size:22px}
+.st-land .s3-key .slot.guide{width:44px!important;height:44px!important}
+.st-land .s3-key>span{gap:8px}
+/* phone fit after the 12:37 pictures */
+.st-port .s1 .st-only:not(.on){display:none}
+.st-port .s3-clock{flex-direction:column;align-items:center}
+.st-port .s3-when{position:static;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 12px;max-width:none;align-self:flex-start;margin-bottom:8px}
+.st-port .st-counter{white-space:nowrap}
+
+/* ===== The climb (team lead, 12:54 PM): one altitude (--alt, set per press by story.js) drives the clouds and the curve of the Earth;
+   scenes slide DOWN past you as you climb (slides 1 to 5) and UP as you come down to the desk (5 into 6). ===== */
+.sky-desk{opacity:var(--desk,0)}
+.sky-clouds{position:absolute;inset:0;transform:translateY(calc(var(--alt,0) * 2900px));opacity:clamp(0,calc((0.3 - var(--alt,0)) * 9),1)}
+.sky-clouds img{position:absolute;width:190px}
+.sky-clouds img:nth-child(1){left:6%;top:150px}.sky-clouds img:nth-child(2){left:41%;top:70px;width:140px}
+.sky-clouds img:nth-child(3){left:70%;top:190px;width:230px}.sky-clouds img:nth-child(4){left:88%;top:40px;width:120px}
+.sky-earth{position:absolute;left:50%;width:calc(9600px - var(--alt,0) * 15000px);aspect-ratio:1;border-radius:50%;transform:translateX(-50%);
+  top:calc(1110px - (var(--alt,0) - 0.12) * 1000px);background:#4f93dc;border:6px solid #1b2433;box-shadow:0 0 0 16px rgba(170,215,255,.35),0 0 90px rgba(170,215,255,.55);
+  opacity:min(clamp(0,calc((var(--alt,0) - 0.11) * 14),1),clamp(0,calc((0.47 - var(--alt,0)) * 9),1));overflow:hidden}
+.sky-earth i{position:absolute;left:47%;top:.6%;width:7%;height:1.6%;border-radius:50%;background:#7cc46a;border:4px solid #1b2433}
+.st-port .sky-earth{width:calc(4200px - var(--alt,0) * 6000px)}
+.st-root[data-move="up"] .st-scene{transform:translateY(-120px)}
+.st-root[data-move="up"] .st-scene.past{transform:translateY(140px)}
+.st-root[data-move="down"] .st-scene{transform:translateY(120px)}
+.st-root[data-move="down"] .st-scene.past{transform:translateY(-140px)}
+.st-root[data-move] .st-scene.on{transform:none}
+.st-scene{transition:opacity 700ms ease-in,transform 1300ms var(--ease),visibility 0s linear 700ms}
+.st-scene.on{transition:opacity 1100ms var(--ease) 250ms,transform 1300ms var(--ease) 150ms,visibility 0s}
+
+/* slide 3 starts friendly: the round headline, the two characters large beside a drawn planet; they step down press by press */
+.st-land .s3 .st-h{font-size:80px;line-height:1.02}
+.s3-pals{position:absolute;inset:0;pointer-events:none}
+.s3-pals .pal{position:absolute;transform-origin:50% 100%;transition:transform 1200ms var(--ease),left 1200ms var(--ease),bottom 1200ms var(--ease)}
+.s3-pals .pal.o{left:-30px;bottom:60px}
+.s3-pals .pal.n{right:-10px;top:30px}
+.s3[data-st="0"] .pal{transform:scale(1.9)}
+.s3[data-st="1"] .pal{transform:scale(1.4)}
+.s3[data-st="2"] .pal,.s3[data-st="3"] .pal{transform:scale(1.05)}
+.st-port .s3-pals .pal.o{left:0;bottom:20px}
+.st-port .s3[data-st="0"] .pal{transform:scale(1.3)}
+/* paper-edged cards on the dark (slide 3), glass panels (slides 4 and 5) */
+.st-land .s3 .st-words{align-self:start;background:rgba(14,22,48,.72);border:3px solid #efe1bf;border-radius:18px;padding:16px 22px 18px;box-shadow:0 5px 0 rgba(239,225,191,.3)}
+.st-port .s3 .st-words{background:rgba(14,22,48,.72);border:3px solid #efe1bf;border-radius:16px;padding:12px 16px 14px;margin-top:16px}
+.s4-trace .chip,.s4-check .s3-table{background:rgba(40,62,100,.38)!important;border:1px solid rgba(255,255,255,.2)!important;border-radius:16px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.s4-check .s3-table{padding:8px 18px}
+.s4-trace .chip.gold{border-color:var(--gold)!important}
+.st-land .s5 .st-words{background:rgba(40,62,100,.3);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:18px 20px;align-self:start;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+/* characters step down one notch per slide: large on 3, medium on 4, small on 5, tiny pair on 6 and 7 */
+.s4 .slot.guide{width:86px!important;height:86px!important}
+.s4-trace .chip .guide{top:-52px}
+.s5 .slot.guide{width:62px!important;height:62px!important}
+/* climb fit after the 13:10 strip */
+.sky-earth{top:calc(1110px - (var(--alt,0) - 0.12) * 760px);opacity:min(clamp(0,calc((var(--alt,0) - 0.11) * 14),1),clamp(0,calc((0.37 - var(--alt,0)) * 10),1))}
+.s3-pals .pal.o{left:auto;right:-30px;bottom:30px}
+.s3-pals .pal.n{right:0;top:10px}
+.st-land .s3 .st-words{padding:10px 18px 12px;gap:10px}
+.st-land .s3 .st-line{font-size:28px}
+.st-land .s3 .st-bridge{font-size:25px}
+.sky-clouds{opacity:clamp(0,calc((0.26 - var(--alt,0)) * 6),.8)}
+.st-port .sky-clouds{display:none}
+
+/* slide 5 rebuilt (1:21 PM: "not focus as much on the problem areas"): gold where it lands close; quiet countries dark; still-rough grey, never ember */
+.s5-svg .lands path.tl{fill:#13243a}
+.s5-svg .lands path.lr{fill:#3b4656}
+.s5-key .kd{background:#13243a} .s5-key .kr{background:#3b4656}
+.s5-why{margin-top:6px}
+.s5-why .st-small{margin-bottom:4px!important}
+.s5-wsvg{width:100%;max-width:820px}
+.s5-wsvg .wb{fill:var(--gold);filter:drop-shadow(0 0 6px rgba(255,205,121,.45))}
+.s5-wsvg text{fill:var(--dim)} .s5-wsvg text.gold{fill:var(--gold)}
+.s5-rough{margin-top:6px!important}
+.s5 .st-sub b{color:var(--gold);font-weight:500}
+.s5[data-st="2"] .s5-svg .lands path:not(.gh){opacity:.55}
+.s5.on .s5-svg .lands .l25{fill:#8c7a55}
+.s5.on .s5-svg .lands .l15{fill:#b89a63}
+.s5.on .s5-svg .lands .l25{fill:#7d6c4c}
+.s5-key .k15{background:#b89a63} .s5-key .k25{background:#7d6c4c}
+.st-port .s5-why:not(.on){display:none}
+
+/* ===== Slide reviews applied (round_SAT/slide_review/APPLIED.md) ===== */
+/* act labels readable; clouds kept to the top right, never behind words */
+.st-act{opacity:1;color:#c9d3e0}
+.act1 .st-act{color:#3d4a5c}
+.sky-clouds img:nth-child(1){left:62%;top:8px;width:150px}.sky-clouds img:nth-child(2){left:76%;top:40px;width:120px}
+.sky-clouds img:nth-child(3){left:88%;top:6px;width:140px}.sky-clouds img:nth-child(4){display:none}
+/* slide 1: the hold button sits with the count, under the picture on a phone; both counts on the last press */
+.s1-spread .ex-hold{min-height:68px;font-size:26px;padding:0 18px}
+.ex-count .ex-other{display:block;width:100%;font:500 21px/1.3 var(--fd-body);color:var(--fd-muted)}
+.st-land .act1 .s1-spread .ex-bubble{font-size:22px}
+.s1-under .ex-legend{padding-top:24px}
+.st-port .s1-spread .ex-side .ex-hold{order:-1;min-height:86px;font-size:30px}
+.st-port .s1-spread .ex-side{display:flex;flex-direction:column}
+/* slide 2 */
+.s2-svg .s2-band{fill:rgba(255,205,121,.18);stroke:rgba(200,150,40,.6);stroke-dasharray:6 6}
+.act1 .s2-svg text.s2-bandt,.act1 .s2-svg text.s2-unit{fill:var(--fd-muted);font-weight:600}
+.act1 .s2-svg text.s2-ko{fill:var(--cam-older)} .act1 .s2-svg text.s2-kn{fill:var(--cam-newer)}
+.s2 .st-figs{background:rgba(255,253,246,.92);border:2px solid #d9cba6;border-radius:10px;padding:8px 12px;color:var(--fd-ink)}
+.s2-next{margin-top:6px!important;color:var(--fd-ink)!important}
+.st-port .act1 .st-words{background:rgba(255,253,246,.94);border:2px solid #d9cba6;border-radius:14px;padding:12px 14px;margin-top:14px}
+/* slide 3: the paper strip rides in from slide 2 on the first press; one card block at a time */
+.s3[data-st="0"] .st-wave{--cam-older-hi:var(--cam-older);--cam-newer-hi:var(--cam-newer);background:#fffdf6;border:2px solid #d9cba6;border-radius:10px;padding:6px 12px 2px;box-shadow:0 4px 0 rgba(27,36,51,.25)}
+.s3[data-st="0"] .wv-cap,.s3[data-st="0"] .wv-cap b,.s3[data-st="0"] .wv-svg text{color:var(--fd-ink);fill:var(--fd-ink)}
+.s3[data-st="0"] .wv-svg .wv-band{fill:rgba(227,157,18,.22);stroke:#c99000;stroke-width:2}
+.s3[data-st="0"] .wv-svg .wv-mid{stroke:rgba(27,36,51,.25)}
+.s3 .st-words .st-swap>.st-only:not(.on){display:none}
+.s3-key .k.kd{background:none;border:2px dashed var(--cam-newer-hi);box-shadow:none}
+.st-port .s3 .st-wave{order:3;margin-top:14px}
+.st-port .s3 .st-words{order:4}
+.st-port .s3-pals .pal.n{top:auto;bottom:10px;right:0}
+.st-port .s3-pals .pal.o{left:0;bottom:10px;right:auto}
+/* slide 4: guides inline in the chips, words above the sum on a phone */
+.s4-trace .chip span .slot.guide{width:40px!important;height:40px!important;margin:-6px 8px 0 0;vertical-align:middle;position:static}
+.s4-trace .chip.verdict{grid-column:3 / span 3;grid-row:3}
+.st-port .s4 .st-words{order:2;padding-top:12px}
+.st-port .s4 .st-pic{order:3}
+.st-port .s4 .st-wave{order:4}
+/* slide 5: still rough in its own muted color, the press-3 map not dimmed */
+.s5-svg .lands path.lr{fill:#7a6688}
+.s5-key .kr{background:#7a6688}
+.s5[data-st="2"] .s5-svg .lands path:not(.gh){opacity:1}
+.s5-next{margin-top:10px!important}
+.st-land .s5 .st-sub{font-size:28px}
+/* slide 6 */
+.s6-early{margin-top:8px!important;font-size:23px}
+.s6-counts.st-only:not(.on){display:none}
+.st-port .s6 .guide-pair{display:none}
+.st-port .s6-counts{padding-bottom:40px}
+/* slide 7: the closing screen lands; Next quiet there */
+.s7-how{font-size:26px;color:var(--dim);margin:-8px 0 18px!important}
+.s7-addr{font:500 28px var(--fd-label);color:var(--gold)}
+.s7-addr.big{font-size:40px}
+.s7-ai p.s7-cnt{font-size:28px}
+.s7-echo{font:500 40px/1.3 var(--fd-display);color:var(--dim);margin-bottom:34px!important}
+.s7-echo b{color:var(--paper);font-weight:600}
+.s7-now{font:500 52px var(--fd-display);color:var(--paper)}
+.s7.s7-end .guide-pair{opacity:0}
+.st-btn.quiet{opacity:.35;border-color:#526172;color:var(--dim)}
+.st-port .s7-again{top:auto;bottom:118px;right:auto;left:28px}
+.st-port .s7-echo{font-size:28px}
+.st-port .s7-now{font-size:36px}
+/* phone chrome: nothing cut at the right edge */
+.st-port .st-dot{width:30px}
+.st-port .st-chrome .st-btn{min-width:72px;font-size:30px}
+.st-port .st-counter{font-size:22px}
+/* W1 and W2 */
+.sw-cap{margin-bottom:6px!important;color:var(--paper)}
+.sw-key{display:flex;flex-direction:column;gap:4px}
+.sw-key .sw-k.st-only:not(.on){display:none}
+.sw-svg .dm{fill:var(--cam-older-hi);fill-opacity:.95;stroke:#fff;stroke-width:1.5px}
+.sw-key .km{background:var(--cam-older-hi);border:0}
+.sw-close{margin-top:10px!important;color:var(--gold)}
+.st-land .s1-spread>.ex-hold{position:absolute;left:300px;top:606px;z-index:4}
+.s1-under{margin-top:14px}
+.st-port .act1 .st-exhibit.s1-spread{grid-template-areas:"o n" "map map" "hold hold" "side side"}
+.st-port .s1-spread>.ex-hold{grid-area:hold;min-height:86px;font-size:30px}
+.s2 .st-pic>.st-figs{margin-top:14px;font-size:22px}
+.st-land .s2 .st-pic{justify-content:center;gap:0}
+.s2 .st-words>.st-bridge.st-only:not(.on){display:none}
+.sw-b2{margin-top:10px!important}
+.st-land .s6 .st-words{gap:12px;padding-top:22px}
+.st-land .s4 .st-line{font-size:28px}
+.st-land .s4 .st-sub{font-size:25px}
+.st-land .s4 .st-small{font-size:21px}
+.st-land .s4 .st-words{padding-top:14px;gap:10px}
+.st-land .s4 .st-words .st-swap>div{gap:10px}
+.s7.s7-end .guide-pair{opacity:0!important}
+.s4-trace .chip.verdict{grid-column:1 / span 3;grid-row:2}
+.s4[data-st="1"] .st-wave{display:none}
+.st-land .s4[data-st="1"]{padding-bottom:126px}
+/* the newer camera's sky blue is light: words in its color on paper use the darker ink */
+.act1 .c-vee,.act1 .who.vee,.act1 .s2-svg text.s2-kn{color:var(--cam-newer-ink);fill:var(--cam-newer-ink)}
+.act1 .c-moe,.act1 .who.moe,.act1 .s2-svg text.s2-ko{color:var(--cam-older-ink);fill:var(--cam-older-ink)}
+.act1 .ex-hold[aria-pressed="true"]{background:var(--cam-older);color:#fff}
+/* slide 6's third press: the sentence box replaces the answer lines, so nothing crosses the frame */
+.s6[data-st="2"] .s6-ans,.s6[data-st="2"] .st-bridge{display:none}
+.st-land .s6 .s6-quote blockquote{font-size:28px}
+/* slide 7: the badge sits clear of the labels */
+.st-land .s7 .guide-pair{left:auto;right:140px;top:140px}
+.st-land .s7 .s7-again{top:96px}
+.st-land .s7 .guide-pair{left:auto;right:150px;top:auto;bottom:150px}
+.st-land .s7 .s7-again{top:110px;right:150px}
+/* phone: the wave keeps one label (the band is still shaded, the camera change still dashed) */
+.st-port .wv-svg text.wv-both,.st-port .wv-svg text.wv-check,.st-port .wv-svg text.wv-held{display:none}
+.st-port .wv-svg text.wv-ember:not([text-anchor="end"]){display:none}
+.s7.s7-end .guide-pair{display:none}
+
+/* autoplay (optional): a thin progress line at the very bottom, and a caption above the controls; nothing like a video player */
+.st-ap{position:absolute;left:0;right:0;bottom:0;height:5px;z-index:9;opacity:0;transition:opacity 600ms ease;pointer-events:none;background:rgba(255,255,255,.06)}
+.st-ap.on{opacity:1}
+.st-ap i{display:block;height:100%;width:0;background:var(--gold);opacity:.75;transition:width 400ms linear}
+.st-apcap{position:absolute;left:50%;transform:translateX(-50%);bottom:112px;z-index:9;max-width:1400px;margin:0!important;padding:10px 24px;border-radius:12px;
+  background:rgba(6,14,25,.86);color:var(--paper);font:500 30px/1.32 var(--fd-body);text-align:center;pointer-events:none;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.st-apcap[hidden]{display:none}
+.st-port .st-apcap{left:16px;right:16px;transform:none;max-width:none;bottom:118px;font-size:25px}
+.st-aptest{position:absolute;left:150px;top:120px;z-index:10;margin:0;padding:18px 22px;background:rgba(6,14,25,.95);border:2px solid var(--gold);color:var(--paper);font:22px/1.35 var(--fd-label);white-space:pre}
+/* while autoplay runs, the controls row steps aside and the caption takes its place (the progress line shows it is playing) */
+.st-autoplay .st-chrome{opacity:0;pointer-events:none}
+.st-apcap{bottom:20px;display:block;-webkit-line-clamp:unset;max-height:none;padding:8px 26px;font-size:28px;line-height:1.3;min-width:600px}
+.st-apcap span{display:block}
+.st-port .st-apcap{bottom:18px;min-width:0;font-size:24px}
+/* the whole show's Play control on the title screen (only when the manifest has the whole show; hidden while it runs) */
+.st-play{display:none;margin:34px auto 0;font:600 30px var(--fd-display);color:var(--fd-ink);background:rgba(255,255,255,.75);border:3px solid var(--fd-ink);border-radius:40px;
+  padding:12px 34px;cursor:pointer;box-shadow:0 4px 0 var(--fd-ink)}
+.st-play:hover{background:#fff}
+.st-has-show .st-play{display:inline-block}
+.st-autoplay .st-play{visibility:hidden}
+/* the cue word is spoken: a small pulse on what the press already shows */
+@keyframes stCue{0%{filter:none}30%{filter:drop-shadow(0 0 14px rgba(255,205,121,.95)) brightness(1.15)}100%{filter:none}}
+.st-cue .st-only.on .st-line b,.st-cue .st-step.on .st-line b,.st-cue .s6-mk.on,.st-cue .s6-lab.on b,.st-cue .ex-count b,.st-cue .s5-lead b,.st-cue .s7-q em{animation:stCue 1.4s ease}
+
+/* slide 1's explainer press: four screens of Fire Detectives land one after another (about 2 s apart), then rest together */
+.s1-ex{grid-column:1 / -1;grid-row:1 / -1;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:10px}
+.s1-ex-line{font:700 58px/1.12 var(--fd-display);color:var(--fd-ink);max-width:1400px;margin:0!important}
+.s1-ex-line b{color:var(--fd-fire);font-weight:700}
+.s1-ex-sub{font:500 32px/1.3 var(--fd-display);color:var(--fd-muted);margin:12px 0 0!important}
+.s1-ex-fan{position:relative;width:1500px;height:560px;margin-top:26px}
+.s1-ex-card{position:absolute;top:40px;width:640px;height:auto;border:5px solid var(--fd-ink);border-radius:18px;box-shadow:0 8px 0 var(--fd-ink),0 30px 50px -20px rgba(27,36,51,.5);background:#fff}
+.s1-ex-card.c0{left:0;transform:rotate(-6deg);z-index:1}
+.s1-ex-card.c1{left:300px;top:10px;transform:rotate(-2deg);z-index:2}
+.s1-ex-card.c2{left:560px;top:30px;transform:rotate(2.5deg);z-index:3}
+.s1-ex-card.c3{left:860px;top:60px;transform:rotate(6deg);z-index:4}
+@keyframes s1exIn{from{opacity:0;translate:0 140px;scale:.8}to{opacity:1;translate:0 0;scale:1}}
+.s1-x-go .s1-ex-card{animation:s1exIn 700ms cubic-bezier(.2,.8,.2,1.1) both}
+.s1-x-go .s1-ex-card.c0{animation-delay:300ms}.s1-x-go .s1-ex-card.c1{animation-delay:2100ms}
+.s1-x-go .s1-ex-card.c2{animation-delay:3900ms}.s1-x-go .s1-ex-card.c3{animation-delay:5700ms}
+.st-still .s1-ex-card{animation:none!important}
+.s1-ex-pair{position:absolute;right:30px;bottom:-30px;z-index:5}
+.s1-ex-pair .slot{transform:scale(.9);transform-origin:100% 100%}
+.st-port .s1-ex{padding-top:0}
+.st-port .s1-ex-line{font-size:44px}
+.st-port .s1-ex-sub{font-size:27px}
+.st-port .s1-ex-fan{width:656px;height:auto;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.st-port .s1-ex-card{position:relative;left:auto!important;top:auto!important;width:100%;border-width:3px;border-radius:10px;box-shadow:0 4px 0 var(--fd-ink)}
+.st-port .s1-ex-pair{position:relative;right:auto;bottom:auto;margin-top:18px}
+.st-port .s1 .st-only:not(.on){display:none}
+/* flat clouds drawn in CSS (in the hand of the hills), replacing the old painted cloud pictures */
+.cl{position:absolute;display:block;width:150px;height:48px;border-radius:30px;background:#fff;border:3px solid #c9d7e6;box-shadow:0 3px 0 rgba(27,36,51,.15)}
+.cl::before,.cl::after{content:"";position:absolute;background:#fff;border:3px solid #c9d7e6;border-bottom:0;border-radius:50% 50% 0 0}
+.cl::before{left:24px;bottom:30px;width:56px;height:34px}
+.cl::after{left:64px;bottom:30px;width:70px;height:46px}
+.sky-clouds .cl:nth-child(1){left:62%;top:30px}.sky-clouds .cl:nth-child(2){left:76%;top:70px;transform:scale(.8)}
+.sky-clouds .cl:nth-child(3){left:88%;top:26px;transform:scale(.9)}.sky-clouds .cl:nth-child(4){display:none}
+.s1-cloud.cl.a{left:300px;top:50px;width:130px}
+.s1-cloud.cl.b{left:auto;right:290px;top:80px;width:100px;transform:scale(.8)}
+.st-root.st-ex .sky-clouds{opacity:0!important}
+/* the visible mark on the old Fire Detectives art (made with an AI image tool); never on the hand-drawn satellites */
+.slot.ai::after{content:"AI-generated art";position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);white-space:nowrap;font:600 16px/1 var(--fd-body);
+  color:#fff;background:rgba(27,36,51,.88);padding:4px 8px;border-radius:6px;z-index:3;pointer-events:none}
+.st-svg .ai-mark{font:600 16px var(--fd-body);fill:var(--fd-ink);paint-order:stroke;stroke:#fff;stroke-width:4px}
+/* the explainer press: the pair sits clear of the buttons */
+.s1-ex-pair{right:-60px;bottom:auto;top:-150px}
+.s1-ex-pair .slot{transform:scale(.75);transform-origin:100% 0}
+/* the AI mark sits inside the picture's own box, top left, so it never covers words below */
+.slot.ai::after{left:0;top:0;bottom:auto;transform:none;font-size:14px;padding:3px 6px}
+/* the one AI-art mark per screen: top right of the stage, quiet, never over the content or the controls */
+.slot.ai::after{display:none}
+.st-aimark{position:absolute;right:28px;top:14px;z-index:6;margin:0!important;font:500 20px/1.2 var(--fd-body);color:var(--fd-ink);background:rgba(255,255,255,.82);
+  border:1px solid rgba(27,36,51,.25);border-radius:8px;padding:5px 10px;pointer-events:none}
+.st-aimark[hidden]{display:none}
+.st-port .st-aimark{right:12px;top:6px;font-size:18px;max-width:420px;text-align:right}
+.st-port .st-aimark{left:12px;right:12px;top:6px;max-width:none;text-align:center;font-size:17px}
+.st-port .st-stage:has(> .st-aimark:not([hidden])) .st-act{visibility:hidden}
+/* the explainer screens land faster (all four in about 4.3 s) so they are in place before the narration moves on */
+.s1-x-go .s1-ex-card.c1{animation-delay:1400ms}.s1-x-go .s1-ex-card.c2{animation-delay:2500ms}.s1-x-go .s1-ex-card.c3{animation-delay:3600ms}
+/* press-map faults (19:21): slide 3's third press card cleared the wave's caption; the last extra's closing line cleared the counter */
+.st-land .s3[data-st="2"] .st-line{font-size:26px;line-height:1.25}
+.st-land .s3[data-st="2"] .s3-key{font-size:20px}
+.st-land .s3[data-st="2"] .st-small{font-size:20px}
+.st-land .sw2 .st-line{font-size:29px;line-height:1.25}
+.st-land .sw2 .st-sub{font-size:26px;line-height:1.25}
+.st-land .sw2 .st-small{font-size:21px}
+.st-land .sw2 .st-words{gap:12px}
+.st-land .sw2 .st-swap>div{gap:12px}
+.st-apcap{bottom:14px;font-size:25px;line-height:1.25;padding:6px 22px}
+/* slide 1's deep page (second explainer press): one Fire Detectives page large, with the path down to it above */
+.s1-deep{grid-column:1 / -1;grid-row:1 / -1;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding-top:0}
+.s1-deep-trail{font:500 24px/1.3 var(--fd-body);color:var(--fd-muted);margin:0 0 14px!important;text-align:center}
+.s1-deep-trail span{color:var(--fd-ink)} .s1-deep-trail b{color:var(--fd-fire);font-weight:600}
+.s1-deep-page{width:1560px;height:auto;border:5px solid var(--fd-ink);border-radius:20px;box-shadow:0 8px 0 var(--fd-ink),0 30px 50px -20px rgba(27,36,51,.5);background:#fff}
+@keyframes s1deepIn{from{opacity:0;transform:scale(.55) translateY(60px)}to{opacity:1;transform:none}}
+.s1-x-go .s1-deep-page{animation:none}
+.st-scene.s1 .s1-deep.on .s1-deep-page{animation:s1deepIn 900ms cubic-bezier(.2,.8,.2,1) both}
+.st-still .s1-deep-page{animation:none!important}
+.st-port .s1-deep-trail{font-size:20px}
+.st-port .s1-deep-page{width:656px;border-width:3px;border-radius:10px}
+.st-land .s1-deep-page{width:1380px}
+.st-land .s1-deep{padding-top:0;margin-top:-18px}
+.st-land .s1-deep{margin-top:0}
+.st-land .s1-deep-page{width:1340px}
+/* slide 2's camera strip: quiet, on paper, under the chart */
+.s2 .s2-cams{margin-top:10px;background:rgba(255,253,246,.92);border:2px solid #d9cba6;border-radius:10px;padding:6px 12px;font-size:20px;line-height:1.35;color:var(--fd-ink)}
+.s2 .s2-cams b{font-family:var(--fd-label);font-weight:500;color:var(--fd-ink)}
+.s2 .s2-cams b.s2-cams-h{font-family:var(--fd-body);font-weight:600}
+.s2 .s2-cams-u{color:var(--fd-muted)}
+.s2 .st-pic>.st-only:not(.on){display:none}
+/* the deep page without the quiz (8:26 PM ruling): wider and shorter, so it reads larger */
+.st-land .s1-deep-page{width:1620px}
+.st-port .s1-deep-page{width:656px}
+
+/* slide 1 (9:05 PM order): the flip back's question, and Moe's and Vee's moment */
+.s1-q{font:700 46px/1.15 var(--fd-display);color:var(--fd-ink);margin-top:6px!important}
+.s1-q b{color:var(--fd-fire);font-weight:700}
+.st-port .s1-q{font-size:36px}
+@keyframes s1meetO{0%{translate:280px 190px;scale:2}55%{translate:280px 190px;scale:2}100%{translate:0 0;scale:1}}
+@keyframes s1meetN{0%{translate:-280px 190px;scale:2;opacity:0}15%{opacity:1}55%{translate:-280px 190px;scale:2}100%{translate:0 0;scale:1}}
+@keyframes s1meetFade{0%,50%{opacity:0}100%{opacity:1}}
+.s1-meet-o .s1-sat.old{animation:s1meetO 1.8s cubic-bezier(.3,.7,.2,1) both;z-index:5}
+.s1-meet-n .s1-sat.new{animation:s1meetN 1.8s cubic-bezier(.3,.7,.2,1) both;z-index:5}
+.s1-meet-o .ex-picwrap,.s1-meet-o .ex-side,.s1-meet-n .ex-side{animation:s1meetFade 1.8s ease both}
+.st-still .s1-meet-o *,.st-still .s1-meet-n *{animation:none!important}
+@media (prefers-reduced-motion:reduce){.s1-meet-o *,.s1-meet-n *{animation:none!important}}
+.st-port .s1-meet-o .s1-sat.old,.st-port .s1-meet-n .s1-sat.new{animation:none}
+/* the flip back: Moe's view with both counts; the question on the left carries the words, so his bubble steps aside */
+.st-land .s1-flip .s1-spread .ex-who{display:none}
+/* slide 3's third press: the rule, three lines arriving one after another and staying */
+.s3-math{display:flex;flex-direction:column;gap:10px}
+.s3-math p{margin:0!important;font:500 24px/1.3 var(--fd-body);color:var(--paper)}
+.s3-math b{color:var(--gold);font-weight:600;font-family:var(--fd-label)}
+.s3-math .m1 b{display:block;font-size:30px;margin-top:4px}
+.s3-math .m3{color:var(--gold-text,var(--gold))}
+@keyframes s3mathIn{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+.s3 .st-only.on .s3-math p{animation:s3mathIn 700ms ease both}
+.s3 .st-only.on .s3-math .m2{animation-delay:900ms}
+.s3 .st-only.on .s3-math .m3{animation-delay:1800ms}
+.st-still .s3-math p{animation:none!important}
+.st-land .s3[data-st="2"] .st-small{display:none}
+.st-land .s3[data-st="2"] .s3-math ~ .s3-key{display:none}
+.st-land .s3[data-st="2"] .st-words>.st-bridge{display:none}
+.st-land .s3-math p{font-size:22px}
+.st-land .s3-math .m1 b{font-size:28px}
+
+/* slide 4: the left-out-year test, one step per press; each step arrives and stays */
+.s4-walk{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.s4-walk li{display:flex;gap:12px;align-items:baseline;font:500 23px/1.28 var(--fd-body);color:var(--paper)}
+.s4-walk li b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#1b2433;font:700 18px/30px var(--fd-label);text-align:center}
+.s4-walk li i{font-style:normal;color:var(--gold);font-family:var(--fd-label);font-weight:500}
+.s4-years{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin:0 0 30px}
+.s4-years span{display:block;text-align:center;padding:8px 0;border-radius:10px;border:2px solid rgba(255,255,255,.3);background:rgba(40,62,100,.4);font:500 21px var(--fd-label);color:var(--paper);transition:transform 700ms var(--ease),border-color 500ms,background 500ms}
+.s4-held .s4-years span.held{transform:translateY(-22px);border-color:var(--ember);background:rgba(255,117,65,.25);color:#fff}
+.s4-held .s4-years span:not(.held){border-color:rgba(255,205,121,.6)}
+.st-still .s4-years span{transition:none}
+.s4-trace li[data-w]:not(.on){visibility:hidden}
+.st-land .s4[data-w="1"] .st-line,.st-land .s4[data-w="2"] .st-line{font-size:28px}
+.s4-walk li{display:block;position:relative;padding-left:42px}
+.s4-walk li b{position:absolute;left:0;top:1px}
+
+/* Ending A (9:38 PM): slide 5 = the yardstick graph (js/story_ending.js), then the map. The map's parts sit in a wrapper that does not
+   change the slide's grid; one class says which is up. */
+.s5a .s5a-map{display:contents}
+.s5a.s5a-y .s5a-map{display:none}
+.s5a:not(.s5a-y)>.se-host{display:none}
+.s5a.s5a-y>.st-act{z-index:2}
+.st-port .s5a .s5a-map>*{flex:none}
+
+/* The presenter's place in the printed script (10:37 PM, the talk is read live): "click 12 / 30", small and quiet, just above the
+   slide counter so the person pressing Next can find their line. */
+.st-click{position:absolute;left:0;bottom:62px;font:20px var(--mono);letter-spacing:2px;color:var(--gold);opacity:.6;white-space:nowrap;pointer-events:none}
+.st-light .st-click{color:var(--fd-ember)}
+.st-port .st-click{position:static;font-size:16px;letter-spacing:1px}
+.st-next:disabled{opacity:.35;cursor:default}
+
+/* Slide 3, the smarter version (10:43 PM): its own full screen over the slide; the clock, the wave and the words step aside */
+.s3 .s3-fp{position:absolute;inset:0;padding:90px 110px 130px;display:flex;flex-direction:column;gap:18px;opacity:0;visibility:hidden;transition:opacity 500ms ease,visibility 0s 500ms;z-index:3}
+.s3.s3-fpon .s3-fp{opacity:1;visibility:visible;transition:opacity 500ms ease}
+.s3.s3-fpon>:not(.s3-fp):not(.st-act){opacity:0;visibility:hidden;transition:opacity 300ms ease,visibility 0s 300ms}
+.s3-fp .st-head{margin:0}
+.s3-fp .fp-chart{flex:none;display:flex;flex-direction:column}
+.s3-fp .fp-cap{font:500 25px/1.3 var(--fd-body,Lexend,sans-serif);color:#dfe7f2;margin:0 0 6px;max-width:1500px}
+.s3-fp .fp-ends{height:430px;display:flex;align-items:flex-end;gap:26px}
+.s3-fp .fp-end{width:200px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font:500 22px/1.25 var(--fd-body,Lexend,sans-serif);padding-bottom:70px}
+.s3-fp .fp-end.n{color:var(--cam-newer-hi,#c9dbf0)}.s3-fp .fp-end.o{color:var(--cam-older-hi,#9ab3ef)}
+.s3-fp .fp-pal{width:120px;height:120px}
+.s3-fp .fp-bars{flex:1;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:18px;height:100%;align-items:end}
+.s3-fp .fp-bars li{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative}
+.s3-fp .fp-n{font:700 34px var(--fd-display,Fredoka,sans-serif);color:#fff3d6;margin-bottom:6px;white-space:nowrap}
+.s3-fp .fp-n small{font:500 18px var(--fd-body,Lexend,sans-serif);color:#c7d1de}
+.s3-fp .fp-bar{width:100%;max-width:150px;height:calc(var(--h) * 250px);min-height:10px;border-radius:10px 10px 3px 3px;background:linear-gradient(to top,#c2461d,#ff8a3d 55%,#ffcd79);box-shadow:0 0 calc(10px + var(--i) * 4px) rgba(255,140,60,.45);transform-origin:bottom}
+.s3-fp .fp-flame{width:calc(var(--f) * 34px);height:calc(var(--f) * 46px);flex:none;margin-top:10px;background:radial-gradient(ellipse at 50% 70%,#fff2b0 0 18%,#ffb340 40%,#e2531c 70%,transparent 72%);border-radius:50% 50% 45% 45%/60% 60% 40% 40%;filter:drop-shadow(0 0 6px rgba(255,150,60,.6))}
+.s3-fp .fp-w{font:600 23px var(--fd-body,Lexend,sans-serif);color:#f4edda;margin-top:6px;white-space:nowrap}
+.s3-fp .fp-mw{font:500 18px var(--mono);color:#a5b2c2;white-space:nowrap}
+.s3-fp .fp-axis{font:500 19px var(--mono);color:#a5b2c2;text-align:center;margin:8px 0 0}
+.s3-fp .fp-foot{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.s3-fp .fp-how{font:500 30px/1.3 var(--fd-body,Lexend,sans-serif);color:#f4edda;margin:0;max-width:1050px}
+.s3-fp .fp-badge{font:500 26px/1.3 var(--fd-body,Lexend,sans-serif);color:#dfe7f2;margin:0;padding:14px 22px;border:2px solid rgba(255,205,121,.55);border-radius:14px;background:rgba(255,205,121,.08)}
+.s3-fp .fp-badge b{color:var(--gold)}
+.s3-fp .fp-badge i{display:inline-block;margin-left:12px;font:600 17px var(--mono);font-style:normal;letter-spacing:2px;text-transform:uppercase;color:#14100a;background:var(--gold);padding:3px 9px;border-radius:6px;vertical-align:middle}
+.s3.s3-fpgo .fp-bar{animation:fpGrow 700ms cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 110ms)}
+.s3.s3-fpgo .fp-n,.s3.s3-fpgo .fp-flame{animation:fpFade 400ms ease both;animation-delay:calc(300ms + var(--i) * 110ms)}
+@keyframes fpGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes fpFade{from{opacity:0}to{opacity:1}}
+.st-still .s3-fp .fp-bar,.st-still .s3-fp .fp-n,.st-still .s3-fp .fp-flame{animation:none!important}
+@media (prefers-reduced-motion:reduce){.s3 .fp-bar,.s3 .fp-n,.s3 .fp-flame{animation:none!important}}
+.st-port .s3 .s3-fp{position:relative;inset:auto;padding:20px 0}
+.st-port .s3.s3-fpon>:not(.s3-fp):not(.st-act){display:none}
+.st-port .s3-fp .fp-ends{flex-direction:column;align-items:stretch}
+.st-port .s3-fp .fp-bars{height:420px;gap:6px}
+.st-port .s3-fp .fp-n{font-size:22px}.st-port .s3-fp .fp-n small{display:none}
+.st-port .s3-fp .fp-w{font-size:15px;white-space:normal;text-align:center}.st-port .s3-fp .fp-mw{font-size:13px;white-space:normal;text-align:center}
+.st-port .s3-fp .fp-end{width:auto;flex-direction:row;padding:0}.st-port .s3-fp .fp-pal{width:70px;height:70px}
+.st-port .s3-fp .fp-foot{flex-direction:column;align-items:flex-start}
+/* the live talk (10:37 PM): the four Fire Detectives screens arrive within about 2.5 s, so the picture is ready while the line is read */
+.s1-x-go .s1-ex-card.c0{animation-delay:200ms}.s1-x-go .s1-ex-card.c1{animation-delay:750ms}.s1-x-go .s1-ex-card.c2{animation-delay:1300ms}.s1-x-go .s1-ex-card.c3{animation-delay:1850ms}
+.st-land .st-click{left:140px;bottom:auto;top:50%;transform:translateY(-50%)}   /* on the counter's line, after "4 / 7": nothing above the controls */
+/* a caption beside the picture (slide 4's chart press): under the words, in the left column */
+.st-land .st-apcap.side{left:150px;right:auto;transform:none;bottom:130px;max-width:600px;min-width:0;width:600px}
+.st-land .s4 .s4-far{font-size:22px;line-height:1.2;margin-top:0;margin-bottom:0}   /* the chart press: its line stays clear of the controls at 1920 */
+
+/* Two tones per bar on Vee's scale (team lead, 8:21 AM): what Moe counted (his color, solid) · what the translation adds (light Vee, hatched) ·
+   what Vee counted (her color, solid). Lightness and pattern differ, not only hue. */
+.s2-svg .bar.s2-m{fill:var(--cam-older)}
+.s2-svg .bar.s2-a{fill:url(#s2-hatch);stroke:var(--cam-newer-ink,#4f7aa8);stroke-width:1.5}
+.s2-svg .bar.s2-v{fill:color-mix(in srgb, var(--cam-newer) 55%, #1f5a96)}
+.s2-svg .s2-abg{fill:color-mix(in srgb, var(--cam-newer) 45%, #fffaf0)}
+.s2-svg .s2-aln{stroke:var(--cam-newer-ink,#4f7aa8);stroke-width:2.4}
+.s2-svg .s2-ttk{fill:#3b3226}
+.wv-svg .wv-m{fill:var(--cam-older-hi)}
+.wv-svg .wv-a{fill:color-mix(in srgb, var(--cam-newer) 40%, transparent)}
+.wv-svg .wv-v{fill:var(--cam-newer)}
+.wv-key{display:flex;flex-wrap:wrap;gap:4px 18px}
+.wv-key span{display:inline-flex;align-items:center;gap:8px}
+.wv-key i{display:inline-block;width:26px;height:14px;border-radius:3px}
+.wv-key i.m{background:var(--cam-older-hi)}.wv-key i.a{background:color-mix(in srgb, var(--cam-newer) 40%, transparent);outline:1px dashed var(--cam-newer)}.wv-key i.v{background:var(--cam-newer)}
+.wv-svg .wv-kt{fill:var(--paper,#f4edda)}
+/* 2001-2002 (second-model check, 8:33 AM): before Moe, the earlier satellite, translated: a plain grey, clearly not Moe's color */
+.s2-svg .bar.s2-t{fill:#8d8f96}
+.wv-svg .wv-t{fill:#9a9ca3}
+/* slide 1 (redline 8:58 AM: "what is the time span of the dots"): the span, large, on the map itself */
+.s1-span{position:absolute;left:14px;top:12px;margin:0;padding:6px 14px;border-radius:10px;background:rgba(12,18,30,.82);color:#fff3d6;font:600 28px/1.2 var(--fd-body);z-index:3;pointer-events:none}
+.st-port .s1-span{font-size:22px}
+/* slide 3's rule (redline 8:58 AM): the globe and clock stay the hero; the two steps are secondary, the worked line small */
+.st-land .s3-math p{font-size:20px;line-height:1.3}
+.st-land .s3-math .m3{font:500 17px/1.3 var(--fd-label);color:var(--gold);opacity:.9}
+.st-land .s3[data-st="2"] .st-words{max-width:430px}
+/* slide 4's chart (redline 8:58 AM): January's story beside its circle, and its source, small */
+.s4-chart .s4-jan{fill:var(--paper,#f4edda)}
+.s4-chart .s4-src{fill:#a5b2c2;font-style:italic}
+.s4 .s4-nine{margin-top:6px}
+
+/* Slide 4 after the reorder (9:02 AM): the walk and the chart (scene 4 in a wrapper that keeps the slide's grid), then the yardstick (the
+   ending module's screen) and the smarter version (its own full screen), one at a time */
+.s4x .s4x-in{display:contents}
+.s4x.s4x-y .s4x-in,.s4x.s3-fpon .s4x-in{display:none}
+.s4x:not(.s4x-y)>.se-host{display:none}
+.s4x .s3-fp{position:absolute;inset:0;padding:90px 110px 130px;display:flex;flex-direction:column;gap:18px;opacity:0;visibility:hidden;transition:opacity 500ms ease,visibility 0s 500ms;z-index:3}
+.s4x.s3-fpon .s3-fp{opacity:1;visibility:visible;transition:opacity 500ms ease}
+.s4x.s3-fpgo .fp-bar{animation:fpGrow 700ms cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 110ms)}
+.s4x.s3-fpgo .fp-n,.s4x.s3-fpgo .fp-flame{animation:fpFade 400ms ease both;animation-delay:calc(300ms + var(--i) * 110ms)}
+.st-port .s4x .s3-fp{position:relative;inset:auto;padding:20px 0}
+.st-port .s4x.s3-fpon .s3-fp{display:flex}.st-port .s4x:not(.s3-fpon) .s3-fp{display:none}
+
+/* the pixel grids on the flip back (redline 9:02 AM): shown only on the flip (s1-flip), in under 2 s */
+.s1-grids{position:absolute;inset:0;pointer-events:none;opacity:0;visibility:hidden;transition:opacity 500ms ease,visibility 0s 500ms;z-index:4}
+.s1-flip .s1-grids{opacity:1;visibility:visible;transition:opacity 500ms ease 300ms}
+.s1-gpatch{position:absolute;left:46%;top:38%;width:22px;height:22px;border:3px solid #ffcd79;box-shadow:0 0 0 2px rgba(0,0,0,.5)}
+.s1-gbox{position:absolute;right:-14px;bottom:-18px;background:rgba(12,18,30,.93);border:2px solid #ffcd79;border-radius:14px;padding:10px 14px 10px;box-shadow:0 14px 30px -10px #000}
+.s1-gt{margin:0 0 6px;font:600 20px/1.2 var(--fd-body);color:#fff3d6}
+.s1-grow{display:flex;gap:14px}
+.s1-g{margin:0;display:flex;flex-direction:column;align-items:center;gap:4px}
+.s1-g svg{width:128px;height:128px;display:block}
+.s1-g .bg{fill:#2b3b2a}
+.s1-g .fr{fill:none;stroke:#ffcd79;stroke-width:2}
+.s1-g.o .ln line{stroke:var(--cam-older-hi,#9e9ad8);stroke-width:1.6}
+.s1-g.n .ln line{stroke:var(--cam-newer,#a6c3e4);stroke-width:.9}
+.s1-g figcaption{display:flex;flex-direction:column;align-items:center;font:500 18px/1.15 var(--fd-body);color:#dfe7f2}
+.s1-g figcaption b{font-weight:600}.s1-g.o figcaption b{color:var(--cam-older-hi,#9e9ad8)}.s1-g.n figcaption b{color:var(--cam-newer,#a6c3e4)}
+.s1-flip .s1-g svg{animation:s1gIn 700ms ease 500ms both}.s1-flip .s1-g.n svg{animation-delay:900ms}
+@keyframes s1gIn{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+.st-still .s1-grids,.st-still .s1-g svg{transition:none!important;animation:none!important}
+.st-port .s1-gbox{right:4px;bottom:4px}.st-port .s1-g svg{width:96px;height:96px}
+
+/* slide 3's yearly bars (redline 9:19 AM), in slide 2's language on the night sky */
+.yb-svg .yb-m{fill:var(--cam-older-hi,#9e9ad8)}
+.yb-svg .yb-t{fill:#8d8f96}
+.yb-svg .yb-v{fill:var(--cam-newer,#a6c3e4)}
+.yb-svg .yb-a{fill:url(#yb-hatch);stroke:var(--cam-newer,#a6c3e4);stroke-width:1}
+.yb-svg .yb-abg{fill:color-mix(in srgb, var(--cam-newer) 30%, #0b1324)}
+.yb-svg .yb-aln{stroke:var(--cam-newer,#a6c3e4);stroke-width:2}
+.yb-svg .yb-band{fill:rgba(255,205,121,.08);stroke:rgba(255,205,121,.35);stroke-dasharray:6 6}
+.yb-svg .yb-axis{stroke:rgba(255,255,255,.35);stroke-width:1.5}
+.yb-svg .yb-yr{fill:#a5b2c2;font-family:var(--fd-label)}
+.yb-svg .yb-cap{fill:var(--gold,#ffcd79);font-family:var(--fd-label)}
+.yb-svg .yb-k{fill:var(--paper,#f4edda);font-family:var(--fd-body)}
+.s3-yb .wv-box{color:var(--paper,#f4edda)}.st-light .s3-yb .wv-box,.s3-yb.light .wv-box{color:#2b2b33}
+.yb-svg .yb-k{fill:currentColor}
+.s3-yb .wv-box{color:var(--paper,#f4edda)}
+.yb-svg .yb-k{fill:currentColor}
+.s3[data-st="0"] .s3-yb .wv-box{color:#2b2b33}
+.s3[data-st="0"] .yb-svg .yb-m{fill:var(--cam-older)}
+.s3[data-st="0"] .yb-svg .yb-v{fill:color-mix(in srgb, var(--cam-newer) 55%, #1f5a96)}
+.s3[data-st="0"] .yb-svg .yb-cap{fill:#9a6a00}
+/* replay (redline 9:19 AM): small and quiet, beside Back */
+.st-replay{opacity:.55;min-width:0;padding-left:14px;padding-right:14px}
+.st-replay:hover,.st-replay:focus-visible{opacity:1}
+
+/* slide 7, "Fire, or something else?" (9:19 AM): one screenshot in a plain browser frame, three callouts, the QR code; then the final screen */
+.s7v .s7v-vol{position:absolute;inset:0;padding:70px 100px 120px;display:flex;flex-direction:column;gap:18px}
+.s7v.s7v-fin .s7v-vol{display:none}
+.s7v:not(.s7v-fin)>.se-host{display:none}
+.s7v .s7v-vol .st-head{margin:0}
+.s7v-body{display:flex;gap:40px;align-items:flex-start;min-height:0}
+.s7v-shot{margin:0;flex:0 0 auto;width:1120px;background:#f4f1ea;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px -18px #000;border:2px solid #3a4b5e}
+.s7v-bar{display:flex;align-items:center;gap:8px;height:34px;padding:0 14px;background:#dcd6ca;color:#3b3226;font:500 17px var(--fd-body)}
+.s7v-bar i{width:12px;height:12px;border-radius:50%;background:#b8ae9c}.s7v-bar span{margin-left:12px}
+.s7v-shot img{display:block;width:100%;height:auto}
+.s7v-shot figcaption{padding:8px 14px;font:500 17px/1.3 var(--fd-body);color:#3b3226;background:#ece7dd}
+.s7v-side{display:flex;flex-direction:column;gap:22px;min-width:0}
+.s7v-calls{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;counter-reset:c}
+.s7v-calls li{counter-increment:c;position:relative;padding-left:46px;font:500 26px/1.3 var(--fd-body);color:var(--paper)}
+.s7v-calls li::before{content:counter(c);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#1b2433;font:700 20px/34px var(--fd-label);text-align:center}
+.s7v-qr img{width:200px;height:200px;background:#fff;border-radius:10px;display:block}
+.s7v-addr{margin:8px 0 0;font:500 18px/1.3 var(--fd-label);color:var(--dim,#a5b2c2);word-break:break-all}
+.st-port .s7v .s7v-vol{position:relative;inset:auto;padding:20px 0}.st-port .s7v-body{flex-direction:column}.st-port .s7v-shot{width:100%}
+/* click 15 (9:58 AM): the October cards belonged to click 14; the twelve-month chart gets the room */
+.s4x .s4-two .s4-trace{display:none}
+.s4-jan-note{margin:14px 0 0;max-width:860px;font:500 22px/1.35 var(--fd-body);color:var(--paper,#f4edda);border-left:4px solid #ff7541;padding:4px 0 4px 14px}
+.s4-jan-note b{color:#ff9a6e}.s4-jan-note small{display:block;margin-top:4px;font:italic 500 16px var(--fd-body);color:#a5b2c2}
+
+/* slide 1, the challenge screen (10:42 AM): the title's look, three large lines, Moe and Vee named small */
+.t-ch{font:700 64px/1.08 var(--fd-display);color:var(--fd-ink);margin:6px 0 18px;text-wrap:balance}
+.t-ch em{color:var(--fd-fire)}
+.t-chl{list-style:none;margin:0 auto;padding:0;display:flex;flex-direction:column;gap:12px;max-width:1240px;text-align:left;counter-reset:c}
+.t-chl li{counter-increment:c;position:relative;padding-left:58px;font:600 34px/1.25 var(--fd-body);color:var(--fd-ink)}
+.t-chl li::before{content:counter(c);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--fd-fire);color:#fff;font:700 26px/42px var(--fd-display);text-align:center}
+.t-chpair{display:flex;justify-content:center;gap:120px;margin-top:22px}
+.t-chpair figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.t-chpair .slot{width:150px;height:110px}
+.t-chpair figcaption{font:600 22px var(--fd-label);color:var(--fd-ink)}
+.st-port .t-ch{font-size:40px}.st-port .t-chl li{font-size:24px}.st-port .t-chpair{gap:30px}
+.t-chsrc{display:block;margin-top:2px;font:italic 500 18px var(--fd-body);color:#6b5a44}
+
+/* the song (10:46 AM): the family's words, large, in the title's daylight; Moe and Vee beside their verses, swaying gently */
+.s1-song{grid-column:1 / -1;grid-row:1 / -1;align-self:center;justify-self:stretch;z-index:2;position:relative;padding:0 40px}
+.sg-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 70px;max-width:1660px;margin:0 auto}
+.sg-v{display:flex;align-items:center;gap:22px;background:rgba(255,253,246,.78);border:2px solid #e3d6b4;border-radius:22px;padding:18px 26px;box-shadow:0 6px 0 rgba(160,130,80,.18)}
+.sg-v p{margin:0;font:600 36px/1.32 var(--fd-body);color:var(--fd-ink)}
+.sg-who{flex:none;width:140px;height:120px}
+.sg-who .slot{width:100%;height:100%}
+.st-scene.on .s1-song.on .sg-who.o{animation:sgSway 3.2s ease-in-out infinite}
+.st-scene.on .s1-song.on .sg-who.n{animation:sgSway 3.2s ease-in-out -1.6s infinite}
+@keyframes sgSway{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-6px)}}
+.sg-note{position:absolute;font:700 64px var(--fd-display);color:var(--fd-fire);opacity:.55;pointer-events:none}
+.sg-note.a{left:10px;top:-70px}.sg-note.b{right:30px;top:-80px;font-size:72px}.sg-note.c{left:50%;bottom:-70px}
+.st-still .sg-who,.st-still .sg-v{animation:none!important}
+@media (prefers-reduced-motion:reduce){.sg-who{animation:none!important}}
+.st-port .sg-grid{grid-template-columns:1fr;gap:16px}.st-port .sg-v p{font-size:24px}.st-port .sg-who{width:84px;height:72px}
+/* each sung line stays on one line (the family's lines are never reflowed) */
+.sg-v p{white-space:nowrap;font-size:32px}
+.sg-who{width:118px;height:104px}
+.sg-grid{max-width:1720px;gap:34px 50px}
+.sg-v{gap:30px}
+
+/* slide 6's calendar press (10:51 AM): the real grid, large; the address small under it (this laptop only) */
+.s6cal .s6-shot{width:900px}
+.s6cal .s6-shot img{background:#06111f}
+.s6cal .s6-addr{font:500 17px var(--fd-label);color:#3b3226}
+.s6cal .s7v-calls li{font-size:27px}
+/* challenge screen: room under the headline; song screen: Moe clear of his verse */
+.t-ch{margin-bottom:34px}
+.sg-v.v1{gap:44px}.sg-v.v1 .sg-who{margin-left:-10px}
+
+/* the calendar screen's globe look (10:56 AM; calendarLook: 'globe') */
+.cg-sub{margin:-6px 0 0;font:500 24px var(--fd-body);color:#c7d1de}
+.cg{display:flex;gap:46px;align-items:flex-start}
+.cg-globe{margin:0;flex:none;display:flex;flex-direction:column;align-items:center;gap:8px}
+.cg-globe canvas{width:500px;height:500px}
+.cg-globe figcaption{font:500 22px var(--fd-body);color:#dfe7f2;text-align:center}
+.cg-globe figcaption b{color:var(--gold);font-size:30px;font-family:var(--fd-display)}
+.cg-globe small{display:block;color:#a5b2c2;font-size:18px}
+.cg-stack{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.cg-head,.cg-row{display:grid;grid-template-columns:62px repeat(12,1fr) 112px;gap:3px;align-items:center}
+.cg-head i{font:600 16px var(--fd-label);color:#a5b2c2;text-align:center;font-style:normal;border-radius:3px}
+.cg-head em,.cg-row em{font:500 15px var(--fd-label);color:#c7d1de;text-align:right;font-style:normal}
+.cg-row b{font:600 15px var(--fd-label);color:#c7d1de}
+.cg-row i{height:15px;border-radius:2px;border:1px solid rgba(255,255,255,.05)}
+.cg-row i.nd{border-color:transparent}
+.cg-row{opacity:0;transform:translateY(-16px);transition:opacity 400ms ease,transform 400ms ease}
+.cg-row.in{opacity:1;transform:none}
+.cg-head i.lit{background:var(--gold);color:#1b2433}
+.cg-row i.lit{outline:2px solid rgba(255,236,200,.85);outline-offset:-1px}
+.cg-key{margin:8px 0 0;font:500 17px var(--fd-body);color:#a5b2c2;display:flex;align-items:center;gap:10px}
+.cg-sw{display:inline-block;width:90px;height:14px;border-radius:3px;background:linear-gradient(90deg,rgba(255,205,121,.07),rgba(255,205,121,.67))}
+.st-still .cg-row{transition:none}
+.st-pmid{opacity:.7;font-size:18px;padding-left:12px;padding-right:12px}
+.s7v-body[hidden]{display:none!important}
+.cg-stack{gap:1px}.cg-row i{height:13px}.cg-row b,.cg-row em{font-size:14px}
+.cg-key{margin-top:6px}
+/* click 18 (12:51 PM): the three spoken numbers as small chips above the seven bands */
+.fp-chips{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 4px}
+.fp-chips span{font:600 22px var(--fd-body);padding:6px 14px;border-radius:999px;border:2px solid currentColor;background:rgba(255,255,255,.04)}
+.fp-chips .e{color:#ff8a5c}.fp-chips .g{color:var(--gold)}.fp-chips .s{color:var(--cam-newer,#a6c3e4)}
+.s4x .s3-fp{padding-top:80px;gap:12px}
+
+/* the ridge look (1:00 PM; calendarLook: 'ridges'): one line per year, receding; the page's own grid small in a corner */
+.cg-r{align-items:flex-start}
+.cr{flex:1;min-width:0;position:relative;display:flex;flex-direction:column;gap:6px}
+.cr-cv{width:100%;height:auto;display:block}
+.cr-cap{margin:0;font:500 22px var(--fd-body);color:#c7d1de}
+.cr-thumb{position:absolute;right:0;top:-6px;margin:0;width:210px;background:#06111f;border:1px solid #3a4b5e;border-radius:8px;overflow:hidden;opacity:.9}
+.cr-thumb img{display:block;width:100%}
+.cr-thumb figcaption{padding:4px 8px;font:500 14px var(--fd-body);color:#a5b2c2}
+.cr-thumb figcaption span{display:block;font:500 12px var(--fd-label);word-break:break-all}
+.cg-stack[hidden]{display:none}
+.cr-thumb{top:auto;bottom:-4px;width:150px;opacity:.85}
+.cr-cap{padding-right:170px}
+.cg-r .cg-globe canvas{width:440px;height:440px}
+/* slide 2's pinned note (1:13 PM): the question on a paper slip, no character */
+.s2-pin{display:inline-block;margin:0 0 18px!important;padding:10px 18px;background:#fff8e6;color:var(--fd-ink);border:2px solid #d9cba6;border-radius:6px;box-shadow:0 4px 0 rgba(120,90,40,.25);font:700 30px/1.25 var(--fd-display);transform:rotate(-1.5deg);position:relative}
+.s2-pin::before{content:"";position:absolute;left:50%;top:-9px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--fd-fire);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+/* slide 2's hand-drawn scientist (1:36 PM): small, beside her speech bubble, facing the chart */
+.s2-human{display:flex;align-items:flex-end;gap:10px;margin-bottom:14px}
+.s2-human img{width:auto;height:150px;flex:none;transform:scaleX(-1)}
+.s2-human .fd-bubble{margin-bottom:30px!important}
+.st-port .s2-human img{height:110px}
+/* the "play the middle" button sits just above the controls row, so the dots and the counter keep their places (1:45 PM) */
+.st-land .st-pmid{position:absolute;right:0;top:-58px;font-size:17px;padding:6px 14px}
+.s1-nohold .ex-hold{display:none!important}
+/* the song credit (2:07 PM): small, centered under the four verses */
+.sg-credit{margin:26px auto 0;text-align:center;font:600 20px/1.3 var(--fd-body, system-ui, sans-serif);color:#1f2a44;opacity:.85}
+.st-port .sg-credit{font-size:15px;margin-top:12px}

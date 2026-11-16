@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- explore.html: a burning calendar for any country, with a globe to pick it.
+     New page (Nov 15, 1:34 PM); it loads the engine, the adapters and the readings read-only and shares no state with the main page. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ai-assistance" content="Code and analysis written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. Data: NASA FIRMS.">
+<title>A burning calendar for any country</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+<main class="xp">
+  <header class="xp-head">
+    <p class="xp-eyebrow">Two Cameras, One Calendar · NASA Space Apps 2026</p>
+    <h1>A burning calendar <em>for any country</em></h1>
+    <p class="xp-sub">Two satellite cameras, harmonized onto one scale. Click a country.</p>
+  </header>
+  <section class="xp-left" aria-label="Pick a country">
+    <div class="xp-globe"><canvas id="globe" width="640" height="640" role="img" aria-label="A globe of the countries; drag to turn it, click a country to pick it"></canvas></div>
+    <div class="xp-find"><label for="q">Find a country</label><input id="q" list="names" type="search" placeholder="Type a country name" autocomplete="off"><datalist id="names"></datalist></div>
+    <p class="xp-key" id="key"></p>
+  </section>
+  <section class="xp-right" aria-label="The burning calendar" aria-live="polite">
+    <div id="answer"><p class="xp-loading">Opening the record…</p></div>
+    <div class="xp-tools">
+      <div class="xp-seg" role="group" aria-label="Show the calendar as"><button type="button" data-view="lines" aria-pressed="true">Year lines</button><button type="button" data-view="grid" aria-pressed="false">Grid</button></div>
+      <div class="xp-seg" role="group" aria-label="Which camera's units"><button type="button" data-scale="viirs" aria-pressed="true">VIIRS's scale</button><button type="button" data-scale="modis" aria-pressed="false">MODIS's scale</button></div>
+      <a id="csv" class="xp-csv" download>Download the monthly table (CSV)</a>
+    </div>
+    <div id="cal" class="xp-cal"></div>
+    <p class="xp-cap" id="cap"></p>
+  </section>
+  <footer class="xp-foot"><a href="index.html#story/1">The story</a><a href="index.html">The main page</a><a id="l-conn" href="index.html#record/ask">Ask your own AI (the connector)</a><a id="l-vol" href="volunteer/">Fire, or something else?</a><span class="xp-ai" style="flex-basis:100%;text-align:center;opacity:.7;font-size:12px">Code and analysis written with AI coding assistants (Claude), directed and reviewed by Spark Squad. Data: NASA FIRMS.</span></footer>
+</main>
+<script src="parts/engine_and_data/engine/hs_engine.js"></script>
+<script src="parts/engine_and_data/adapters.js"></script>
+<script src="js/readings.js"></script>
+<script src="js/beats.js"></script>
+<script src="js/explore.js"></script>
+</body>
+</html>

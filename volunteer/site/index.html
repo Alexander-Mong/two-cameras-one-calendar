@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- Hot spot volunteer page, local prototype. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="ai-assistance" content="Code and analysis written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. Data: NASA FIRMS.">
+<title>Fire, or Something Else?</title>
+<meta name="description" content="Look at a hot spot seen from space and guess: a fire, or something NASA labels as not a fire.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="brand">Fire, or something else?</span>
+  <span class="topr"><span id="score" class="score" hidden></span><a href="#about" id="about-link" class="about-link">About</a></span>
+</header>
+
+<main id="app">
+  <!-- welcome -->
+  <section id="s-welcome" class="screen">
+    <img class="cast" src="img/moe_and_vee.webp" alt="Moe and Vee, two hand-drawn satellites" width="1000" height="312">
+    <h1>Not every hot spot is a fire.</h1>
+    <p class="lead">Two NASA cameras in space, <b>Moe</b> (MODIS, the older one) and <b>Vee</b> (VIIRS, the newer one), spot hot places all over Earth every day.</p>
+    <p class="lead">Most are fires. Some are a gas flare, a factory, or a volcano that stays hot all year.</p>
+    <p class="ask">Can you tell which is which?</p>
+    <button id="b-start" class="go">Try 3 practice places</button>
+    <p id="privacy-line" class="small"></p>
+  </section>
+
+  <!-- one place -->
+  <section id="s-place" class="screen" hidden>
+    <p id="p-step" class="step"></p>
+    <div class="pics" id="pics">
+      <div class="tabs" role="tablist">
+        <button role="tab" data-v="wide" class="on">Wide</button>
+        <button role="tab" data-v="close">Close</button>
+        <button role="tab" data-v="heat">Heat</button>
+        <button role="tab" data-v="night">Night</button>
+      </div>
+      <figure class="pic" data-v="wide">
+        <div class="frame" data-slot="wide"><img alt="Daytime picture from space, about 30 kilometers across, centered on the hot spot"><i class="ring wide"></i><span class="credit"></span><span class="wait">Picture on its way from NASA...</span></div>
+        <figcaption title="Wide view, about 30 km across: what kind of land is around it?"><b>Wide view</b>, about 30 km across: what kind of land is around it?</figcaption>
+      </figure>
+      <figure class="pic" data-v="close">
+        <div class="frame" data-slot="close"><img alt="Sharp daytime picture from space, about 3 kilometers across, centered on the hot spot"><i class="ring close"></i><span class="credit"></span><span class="wait">Picture on its way...</span></div>
+        <figcaption title="Close view, about 3 km across. The ring is the hot spot."><b>Close view</b>, about 3 km across. The ring is the hot spot.</figcaption>
+      </figure>
+      <figure class="pic" data-v="heat">
+        <div class="frame" data-slot="heat"><img alt="Heat picture: short-wave infrared, about 3 kilometers across"><i class="ring close"></i><span class="credit"></span><span class="wait">Picture on its way...</span></div>
+        <figcaption title="Heat picture, 3 km: light our eyes can't see. Something burning or very hot glows yellow-red; a fresh burn looks dark red-brown; plants look green."><b>Heat picture</b>, 3 km: light our eyes can't see. Something burning or very hot <b>glows yellow-red</b>; a fresh burn looks dark red-brown; plants look green.</figcaption>
+      </figure>
+      <figure class="pic pic-nasaheat" data-v="heat">
+        <div class="frame sub" data-slot="nasaheat"><img alt="NASA false-color picture, about 30 kilometers across, with the day's fire dots"><i class="ring wide"></i><span class="credit"></span><span class="wait">Picture on its way from NASA...</span></div>
+        <figcaption id="nasaheat-cap" title="NASA's heat view, 30 km: red dots are where NASA's camera saw heat that day."><b>NASA's heat view</b>, 30 km: red dots are where NASA's camera saw heat that day.</figcaption>
+      </figure>
+      <figure class="pic" data-v="night">
+        <div class="frame" data-slot="night"><img alt="Night lights picture from space, about 30 kilometers across"><i class="ring wide"></i><span class="credit"></span><span class="wait">Picture on its way from NASA...</span></div>
+        <figcaption title="Night lights: towns, flares and plants that glow night after night."><b>Night lights</b>: towns, flares and plants that glow night after night.</figcaption>
+      </figure>
+      <div class="dayrow"><button id="b-day" class="day" type="button" hidden>Another day</button><span id="day-label" class="small"></span></div>
+    </div>
+    <p id="pic-note" class="small pic-note" hidden></p>
+
+    <div class="record">
+      <h2>Its heat in 2020</h2>
+      <div id="strip" class="strip" aria-label="Months of 2020 with hot spots"></div>
+      <p id="strip-detail" class="small strip-detail">Tap a month to see how many times each camera saw heat.</p>
+      <ul id="facts" class="chips"></ul>
+    </div>
+
+    <div class="record thermo" id="thermo-card" aria-label="How hot and how often the cameras saw heat here"></div>
+
+    <div class="side">
+    <div id="quiz" class="quiz">
+      <h2 class="q">Is this a fire, or something else?</h2>
+      <p id="coach" class="coach" hidden></p>
+      <div class="answers">
+        <button data-a="fire">A wildfire or farm burning</button>
+        <button data-a="industry">Oil, gas or other industry</button>
+        <button data-a="volcano">A volcano</button>
+        <button data-a="something">Something else</button>
+        <button data-a="canttell" class="soft">I can't tell</button>
+      </div>
+    </div>
+
+    <div id="reveal" class="reveal" hidden>
+      <p id="r-you" class="r-you"></p>
+      <p id="r-nasa" class="r-nasa"></p>
+      <p id="r-badge" class="badge"></p>
+      <p id="r-clue" class="clue"></p>
+      <div id="r-tally" class="tally" hidden></div>
+      <button id="b-next" class="go">Next place</button>
+    </div>
+    </div>
+  </section>
+
+  <!-- end of a round -->
+  <section id="s-end" class="screen" hidden>
+    <img class="cast small-cast" src="img/vee_surprised.webp" alt="Vee, a hand-drawn satellite, looking surprised" width="1000" height="651">
+    <h1 id="e-title"></h1>
+    <p id="e-score" class="lead"></p>
+    <h2>The clues that give it away</h2>
+    <ul class="clues">
+      <li><b>A fire comes in a season and moves on.</b> A few weeks or months of heat, then nothing.</li>
+      <li><b>A steady source stays on.</b> Hot month after month, often seen at night, and it may glow in the night lights.</li>
+      <li><b>A volcano stays hot too.</b> The wide view gives it away: a mountain.</li>
+      <li><b>Even NASA's label is an estimate.</b> It is the best answer key we have, not the final word.</li>
+    </ul>
+    <button id="b-more" class="go">10 more places</button>
+    <a id="b-main" class="link-main" hidden>Back to the team's main page</a>
+  </section>
+</main>
+
+<details id="about" class="about">
+  <summary>About this page</summary>
+  <p><b>The hot spots</b> come from NASA FIRMS (Fire Information for Resource Management System): every detection from MODIS and VIIRS in 2020. Each place here is a square about 2 km wide, placed by its coordinates only. Counts are satellite detections, not fires.</p>
+  <p><b>How hot the cameras read it</b> comes from the same NASA FIRMS rows: the brightness temperature of each detection's hot channel (MODIS 4 µm, VIIRS I4). It is the temperature of the whole pixel, fire and cooler ground mixed together, not of the flames; a small very hot source reads much cooler than it is, and the channels top out (the newer camera's readings stop at 367 K in these files). On our 50 places the readings themselves barely tell a fire from a steady source; how often the cameras read heat here, especially at night, does much better.</p>
+  <p><b>The answer key</b> is NASA's own label on each detection: vegetation fire, volcano, other steady source on land, or offshore. We show the label most of the place's detections carry. The label is itself an estimate.</p>
+  <p><b>Live pictures from NASA</b> (they stream from NASA GIBS, the Global Imagery Browse Services, while you look): the wide view (NASA HLS, Harmonized Landsat Sentinel-2, 30 m, or NASA MODIS Terra or Aqua true color, 250 m), NASA's heat view (VIIRS on Suomi NPP, false color from bands M11, I2 and I1, with VIIRS 375 m thermal anomalies by day and by night from NASA FIRMS), and the night lights (NASA Black Marble, VIIRS, 2016). We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).</p>
+  <p><b>Stored pictures</b> (cut once and kept with this page): the 10 m close view and the 3 km heat picture (short-wave infrared bands 12, 11 and 8A) come from the European Union's Copernicus Sentinel-2 satellites, read from the open archive on Amazon Web Services. Contains modified Copernicus Sentinel data 2020. For each place we picked the three clearest days of 2020; for a fire, days during or just after it burned.</p>
+  <p><b>How this page was made:</b> the code was written with AI coding assistants (Claude), directed and reviewed by the team, Spark Squad. The data and pictures are from NASA and the other sources named above.</p>
+  <p id="about-saving"></p>
+  <p>A prototype built by Spark Squad, a homeschool family team, for the NASA Space Apps Challenge 2026.</p>
+</details>
+
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

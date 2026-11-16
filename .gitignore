@@ -1,0 +1,24 @@
+# Laptop-only file the page asks for on a local address; never published
+web/local/
+
+# Recorded voice clips stay out of the repository (the manifest is captions only)
+web/narration/*.m4a
+web/narration/*.mp3
+web/narration/*.wav
+
+# Test output written when the connector's tests run
+connector/test/TEST_OUTPUT*.txt
+
+# Saved picks, if the picks service is ever run locally
+volunteer/picks_server/*.jsonl
+
+# Python and tool caches
+__pycache__/
+*.pyc
+volunteer/tools/_cache/
+volunteer/tools/_pylib/
+
+# Editor and system files
+.DS_Store
+Thumbs.db
+*.log

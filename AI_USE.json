@@ -1,0 +1,88 @@
+{
+  "project": "Two Cameras, One Calendar",
+  "team": "Spark Squad",
+  "event": "NASA Space Apps Challenge 2026, challenge: Harmonization of MODIS and VIIRS Hot Spots",
+  "statement": "AI_USE.md",
+  "ai_tools": [
+    {
+      "name": "Claude models (Anthropic), through Claude Code",
+      "role": "wrote the code, the analysis scripts, the data-table build scripts, and drafts of the text"
+    },
+    {
+      "name": "OpenAI models, through the Codex command-line tool",
+      "role": "independently recounted the main numbers and fact-checked the talk"
+    },
+    {
+      "name": "Whisper speech-to-text, run locally",
+      "role": "found word times to cut the team's recorded voice for the talk (no audio is in this repository)"
+    },
+    {
+      "name": "ComfyUI (AI image generation)",
+      "role": "made the Fire Detectives lesson pictures; each carries a visible AI mark"
+    }
+  ],
+  "not_ai_generated": [
+    "the idea and the decisions",
+    "hand-drawn Moe, Vee and scientist characters",
+    "the team's recorded voice",
+    "the song"
+  ],
+  "audio_video": "No AI-generated audio or video is part of this project.",
+  "outside_review": "No outside expert in satellite fire data has reviewed the work.",
+  "folders": {
+    "web/": {
+      "holds": "the web app (globe page, fuller page and story, connector page, seven-slide demo page), its engine, data tables, pictures and number checks",
+      "ai_use": "Code, data-table build scripts and number checks written by Claude through Claude Code; page text drafted with Claude and edited by the team. Pictures in img/fire_detectives/ and img/explainer/ are AI-generated (ComfyUI) and carry a visible mark; img/characters/ is hand-drawn by team members; img/ending/ and img/slides/ are screen captures of the project's pages; img/qr/ are QR codes.",
+      "tools": [
+        "Claude Code (Claude models)",
+        "OpenAI Codex CLI (checking)",
+        "ComfyUI (lesson pictures only)"
+      ],
+      "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's.",
+      "in_file_metadata": "header comments in code files; made_with in data files; <meta name=\"ai-assistance\"> in every HTML page"
+    },
+    "connector/": {
+      "holds": "the MCP connector (Node.js), its tests and a copy of the engine and data",
+      "ai_use": "Code and tests written by Claude through Claude Code; reviewed for faults by OpenAI models through the Codex CLI.",
+      "tools": [
+        "Claude Code (Claude models)",
+        "OpenAI Codex CLI (review)"
+      ],
+      "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's.",
+      "in_file_metadata": "header comments in code files; made_with in data files"
+    },
+    "volunteer/": {
+      "holds": "the volunteer page 'Fire, or something else?', its data, its build scripts, and a picks service that is not deployed",
+      "ai_use": "Code, place-picking and picture-cutting scripts written by Claude through Claude Code. Pictures: hand-drawn characters (site/img/*.webp) and real Sentinel-2 satellite pictures (site/img/places/, credited); no AI-generated pictures.",
+      "tools": [
+        "Claude Code (Claude models)"
+      ],
+      "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's.",
+      "in_file_metadata": "header comments in code files; <meta name=\"ai-assistance\"> in the page"
+    },
+    "experiments/": {
+      "holds": "a summary of six experiments on the method",
+      "ai_use": "The experiments were run by Claude through Claude Code; the summary was drafted with Claude.",
+      "tools": [
+        "Claude Code (Claude models)"
+      ],
+      "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's."
+    },
+    "demo/": {
+      "holds": "the seven-slide demo as a PDF",
+      "ai_use": "Printed from web/slides.html, which Claude wrote through Claude Code; the slides show screens of the project's pages and the hand-drawn characters.",
+      "tools": [
+        "Claude Code (Claude models)"
+      ],
+      "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's."
+    },
+    "top-level documents": {
+      "holds": "README.md, METHOD.md, DATA_SOURCES.md, AI_USE.md, AI_USE.json",
+      "ai_use": "Drafted with Claude; numbers checked against the project's own checked figures.",
+      "tools": [
+        "Claude Code (Claude models)"
+      ],
+      "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's."
+    }
+  }
+}

@@ -1,0 +1,1780 @@
+{
+ "P05": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-06",
+    "item": "S2B_38RQV_20200106_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.04,
+    "close": "P05_1_close.webp",
+    "heat": "P05_1_heat.webp",
+    "glow": 2.32,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-21",
+    "item": "S2B_38RQV_20201221_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.02,
+    "close": "P05_3_close.webp",
+    "heat": "P05_3_heat.webp",
+    "glow": 2.47,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-31",
+    "item": "S2B_38RQV_20201231_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P05_2_close.webp",
+    "heat": "P05_2_heat.webp",
+    "glow": 2.21,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 66.9
+ },
+ "P35": {
+  "found_in_catalog": 30,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-07-18",
+    "item": "S2B_21KTV_20200718_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P35_3_close.webp",
+    "heat": "P35_3_heat.webp",
+    "glow": 14.18,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-27",
+    "item": "S2B_21KTV_20200827_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P35_2_close.webp",
+    "heat": "P35_2_heat.webp",
+    "glow": 1.3,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-05",
+    "item": "S2B_21KTV_20201105_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P35_1_close.webp",
+    "heat": "P35_1_heat.webp",
+    "glow": 1.34,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 50.9
+ },
+ "P17": {
+  "found_in_catalog": 100,
+  "tried": 5,
+  "kept": [
+   {
+    "date": "2020-01-30",
+    "item": "S2A_33SVB_20200130_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.1,
+    "close": "P17_3_close.webp",
+    "heat": "P17_3_heat.webp",
+    "glow": 5.17,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-24",
+    "item": "S2B_33SVB_20200524_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P17_1_close.webp",
+    "heat": "P17_1_heat.webp",
+    "glow": 2.13,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-22",
+    "item": "S2B_33SVB_20200822_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P17_2_close.webp",
+    "heat": "P17_2_heat.webp",
+    "glow": 2.64,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 69.8
+ },
+ "P01": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-02-05",
+    "item": "S2A_15QVV_20200205_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P01_2_close.webp",
+    "heat": "P01_2_heat.webp",
+    "glow": 6.37,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-01",
+    "item": "S2B_15QVV_20200301_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P01_1_close.webp",
+    "heat": "P01_1_heat.webp",
+    "glow": 8.11,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-03",
+    "item": "S2A_15QVV_20200303_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P01_3_close.webp",
+    "heat": "P01_3_heat.webp",
+    "glow": 8.28,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 51.6
+ },
+ "P03": {
+  "found_in_catalog": 42,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-04-20",
+    "item": "S2A_31UES_20200420_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P03_2_close.webp",
+    "heat": "P03_2_heat.webp",
+    "glow": 12.91,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-15",
+    "item": "S2B_31UES_20200515_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.01,
+    "close": "P03_3_close.webp",
+    "heat": "P03_3_heat.webp",
+    "glow": 12.56,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-30",
+    "item": "S2A_31UES_20200530_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P03_1_close.webp",
+    "heat": "P03_1_heat.webp",
+    "glow": 12.52,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 56.9
+ },
+ "P02": {
+  "found_in_catalog": 43,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-03-02",
+    "item": "S2B_20PMR_20200302_0_L2A",
+    "scene_cloud": 15.6,
+    "window_cloud": 0.12,
+    "close": "P02_3_close.webp",
+    "heat": "P02_3_heat.webp",
+    "glow": 7.47,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-01",
+    "item": "S2B_20PMR_20200401_0_L2A",
+    "scene_cloud": 3.5,
+    "window_cloud": 0.04,
+    "close": "P02_1_close.webp",
+    "heat": "P02_1_heat.webp",
+    "glow": 6.76,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-08",
+    "item": "S2B_20PMR_20200908_0_L2A",
+    "scene_cloud": 12.5,
+    "window_cloud": 0.2,
+    "close": "P02_2_close.webp",
+    "heat": "P02_2_heat.webp",
+    "glow": 12.45,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 79.6
+ },
+ "P07": {
+  "found_in_catalog": 74,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-15",
+    "item": "S2A_47RQK_20200115_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P07_2_close.webp",
+    "heat": "P07_2_heat.webp",
+    "glow": 8.65,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-15",
+    "item": "S2B_47RQK_20201215_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P07_3_close.webp",
+    "heat": "P07_3_heat.webp",
+    "glow": 9.13,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-25",
+    "item": "S2B_47RQK_20201225_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P07_1_close.webp",
+    "heat": "P07_1_heat.webp",
+    "glow": 12.57,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 83.7
+ },
+ "P09": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-09-29",
+    "item": "S2B_14RKQ_20200929_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.04,
+    "close": "P09_2_close.webp",
+    "heat": "P09_2_heat.webp",
+    "glow": 4.59,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-29",
+    "item": "S2B_14RKQ_20201029_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.02,
+    "close": "P09_1_close.webp",
+    "heat": "P09_1_heat.webp",
+    "glow": 2.65,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-03",
+    "item": "S2A_14RKQ_20201203_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P09_3_close.webp",
+    "heat": "P09_3_heat.webp",
+    "glow": 3.47,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 89.5
+ },
+ "P04": {
+  "found_in_catalog": 100,
+  "tried": 9,
+  "kept": [
+   {
+    "date": "2020-09-08",
+    "item": "S2A_31SGR_20200908_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.11,
+    "close": "P04_2_close.webp",
+    "heat": "P04_2_heat.webp",
+    "glow": 2.81,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-13",
+    "item": "S2B_31SGR_20200913_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.15,
+    "close": "P04_1_close.webp",
+    "heat": "P04_1_heat.webp",
+    "glow": 2.62,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 126.9
+ },
+ "P08": {
+  "found_in_catalog": 83,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-30",
+    "item": "S2B_53HQD_20200130_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P08_2_close.webp",
+    "heat": "P08_2_heat.webp",
+    "glow": 2.13,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-10",
+    "item": "S2B_53HQD_20200310_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P08_3_close.webp",
+    "heat": "P08_3_heat.webp",
+    "glow": 2.84,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-30",
+    "item": "S2A_53HQD_20201130_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P08_1_close.webp",
+    "heat": "P08_1_heat.webp",
+    "glow": 7.54,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 128.3
+ },
+ "P06": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-05-30",
+    "item": "S2A_39UXT_20200530_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P06_1_close.webp",
+    "heat": "P06_1_heat.webp",
+    "glow": 7.78,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-06-22",
+    "item": "S2A_39UXT_20200622_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P06_3_close.webp",
+    "heat": "P06_3_heat.webp",
+    "glow": 8.2,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-02",
+    "item": "S2B_39UXT_20200902_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P06_2_close.webp",
+    "heat": "P06_2_heat.webp",
+    "glow": 6.16,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 142.2
+ },
+ "P10": {
+  "found_in_catalog": 93,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-03-05",
+    "item": "S2B_20PKS_20200305_0_L2A",
+    "scene_cloud": 2.7,
+    "window_cloud": 0.01,
+    "close": "P10_2_close.webp",
+    "heat": "P10_2_heat.webp",
+    "glow": 7.4,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-06-03",
+    "item": "S2B_20PKS_20200603_0_L2A",
+    "scene_cloud": 1.3,
+    "window_cloud": 0.01,
+    "close": "P10_1_close.webp",
+    "heat": "P10_1_heat.webp",
+    "glow": 6.36,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-02",
+    "item": "S2B_20PKS_20200802_0_L2A",
+    "scene_cloud": 4.1,
+    "window_cloud": 0.08,
+    "close": "P10_3_close.webp",
+    "heat": "P10_3_heat.webp",
+    "glow": 3.48,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 84.3
+ },
+ "P11": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-05-21",
+    "item": "S2B_38SLE_20200521_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.04,
+    "close": "P11_1_close.webp",
+    "heat": "P11_1_heat.webp",
+    "glow": 2.1,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-05",
+    "item": "S2A_38SLE_20200705_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.05,
+    "close": "P11_3_close.webp",
+    "heat": "P11_3_heat.webp",
+    "glow": 2.87,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-30",
+    "item": "S2B_38SLE_20200730_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.06,
+    "close": "P11_2_close.webp",
+    "heat": "P11_2_heat.webp",
+    "glow": 3.57,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 90.4
+ },
+ "P12": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-07-19",
+    "item": "S2B_32RNS_20200719_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.04,
+    "close": "P12_2_close.webp",
+    "heat": "P12_2_heat.webp",
+    "glow": 2.53,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-29",
+    "item": "S2B_32RNS_20200729_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.03,
+    "close": "P12_3_close.webp",
+    "heat": "P12_3_heat.webp",
+    "glow": 2.46,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-07",
+    "item": "S2B_32RNS_20201007_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P12_1_close.webp",
+    "heat": "P12_1_heat.webp",
+    "glow": 2.52,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 88.7
+ },
+ "P14": {
+  "found_in_catalog": 100,
+  "tried": 4,
+  "kept": [
+   {
+    "date": "2020-08-17",
+    "item": "S2B_49VEJ_20200817_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P14_3_close.webp",
+    "heat": "P14_3_heat.webp",
+    "glow": 13.21,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-25",
+    "item": "S2A_49VEJ_20200825_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P14_1_close.webp",
+    "heat": "P14_1_heat.webp",
+    "glow": 13.93,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-19",
+    "item": "S2B_49VEJ_20200919_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P14_2_close.webp",
+    "heat": "P14_2_heat.webp",
+    "glow": 11.76,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 94.0
+ },
+ "P16": {
+  "found_in_catalog": 16,
+  "tried": 9,
+  "kept": [],
+  "seconds": 62.9
+ },
+ "P15": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-10",
+    "item": "S2A_15PYR_20200110_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.0,
+    "close": "P15_2_close.webp",
+    "heat": "P15_2_heat.webp",
+    "glow": 1.15,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-02-29",
+    "item": "S2A_15PYR_20200229_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P15_1_close.webp",
+    "heat": "P15_1_heat.webp",
+    "glow": 1.16,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-05",
+    "item": "S2B_15PYR_20200305_1_L2A",
+    "scene_cloud": 0.2,
+    "window_cloud": 0.0,
+    "close": "P15_3_close.webp",
+    "heat": "P15_3_heat.webp",
+    "glow": 1.15,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 92.4
+ },
+ "P19": {
+  "found_in_catalog": 59,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-03-26",
+    "item": "S2B_49MGM_20200326_0_L2A",
+    "scene_cloud": 10.7,
+    "window_cloud": 0.17,
+    "close": "P19_3_close.webp",
+    "heat": "P19_3_heat.webp",
+    "glow": 2.01,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-04",
+    "item": "S2B_49MGM_20200704_0_L2A",
+    "scene_cloud": 4.6,
+    "window_cloud": 0.01,
+    "close": "P19_1_close.webp",
+    "heat": "P19_1_heat.webp",
+    "glow": 2.49,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-23",
+    "item": "S2B_49MGM_20200823_0_L2A",
+    "scene_cloud": 5.4,
+    "window_cloud": 0.01,
+    "close": "P19_2_close.webp",
+    "heat": "P19_2_heat.webp",
+    "glow": 2.69,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 64.8
+ },
+ "P13": {
+  "found_in_catalog": 100,
+  "tried": 9,
+  "kept": [],
+  "seconds": 188.9
+ },
+ "P20": {
+  "found_in_catalog": 100,
+  "tried": 4,
+  "kept": [
+   {
+    "date": "2020-05-21",
+    "item": "S2B_17TNH_20200521_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P20_1_close.webp",
+    "heat": "P20_1_heat.webp",
+    "glow": 5.45,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-23",
+    "item": "S2A_17TNH_20200923_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.01,
+    "close": "P20_3_close.webp",
+    "heat": "P20_3_heat.webp",
+    "glow": 3.23,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-12",
+    "item": "S2A_17TNH_20201112_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.01,
+    "close": "P20_2_close.webp",
+    "heat": "P20_2_heat.webp",
+    "glow": 8.51,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 75.4
+ },
+ "P18": {
+  "found_in_catalog": 41,
+  "tried": 7,
+  "kept": [
+   {
+    "date": "2020-03-23",
+    "item": "S2A_35MQU_20200323_0_L2A",
+    "scene_cloud": 11.2,
+    "window_cloud": 0.13,
+    "close": "P18_3_close.webp",
+    "heat": "P18_3_heat.webp",
+    "glow": 1.81,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-06-01",
+    "item": "S2A_35MQU_20200601_0_L2A",
+    "scene_cloud": 2.6,
+    "window_cloud": 0.02,
+    "close": "P18_1_close.webp",
+    "heat": "P18_1_heat.webp",
+    "glow": 4.42,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-31",
+    "item": "S2A_35MQU_20200731_0_L2A",
+    "scene_cloud": 10.1,
+    "window_cloud": 0.19,
+    "close": "P18_2_close.webp",
+    "heat": "P18_2_heat.webp",
+    "glow": 1.92,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 142.9
+ },
+ "P21": {
+  "found_in_catalog": 54,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-06-02",
+    "item": "S2A_23KNR_20200602_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P21_2_close.webp",
+    "heat": "P21_2_heat.webp",
+    "glow": 2.74,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-07",
+    "item": "S2B_23KNR_20200707_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P21_3_close.webp",
+    "heat": "P21_3_heat.webp",
+    "glow": 12.1,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-30",
+    "item": "S2A_23KNR_20200930_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P21_1_close.webp",
+    "heat": "P21_1_heat.webp",
+    "glow": 1.17,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 106.4
+ },
+ "P24": {
+  "found_in_catalog": 70,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-02",
+    "item": "S2A_43NCE_20200102_0_L2A",
+    "scene_cloud": 0.7,
+    "window_cloud": 0.07,
+    "close": "P24_2_close.webp",
+    "heat": "P24_2_heat.webp",
+    "glow": 62.99,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-22",
+    "item": "S2A_43NCE_20200322_0_L2A",
+    "scene_cloud": 0.9,
+    "window_cloud": 0.08,
+    "close": "P24_3_close.webp",
+    "heat": "P24_3_heat.webp",
+    "glow": 59.94,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-27",
+    "item": "S2A_43NCE_20201227_0_L2A",
+    "scene_cloud": 0.6,
+    "window_cloud": 0.06,
+    "close": "P24_1_close.webp",
+    "heat": "P24_1_heat.webp",
+    "glow": 56.28,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 57.9
+ },
+ "P23": {
+  "found_in_catalog": 100,
+  "tried": 4,
+  "kept": [
+   {
+    "date": "2020-04-24",
+    "item": "S2B_35JNL_20200424_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P23_2_close.webp",
+    "heat": "P23_2_heat.webp",
+    "glow": 3.18,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-04",
+    "item": "S2B_35JNL_20200504_1_L2A",
+    "scene_cloud": 0,
+    "window_cloud": 0.0,
+    "close": "P23_1_close.webp",
+    "heat": "P23_1_heat.webp",
+    "glow": 3.24,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-11",
+    "item": "S2B_35JNL_20200911_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P23_3_close.webp",
+    "heat": "P23_3_heat.webp",
+    "glow": 5.05,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 83.5
+ },
+ "P22": {
+  "found_in_catalog": 63,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-02-16",
+    "item": "S2B_36UXU_20200216_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P22_3_close.webp",
+    "heat": "P22_3_heat.webp",
+    "glow": 1.56,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-06-10",
+    "item": "S2A_36UXU_20200610_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.02,
+    "close": "P22_2_close.webp",
+    "heat": "P22_2_heat.webp",
+    "glow": 1.36,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-05",
+    "item": "S2B_36UXU_20200705_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.03,
+    "close": "P22_1_close.webp",
+    "heat": "P22_1_heat.webp",
+    "glow": 2.06,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 137.9
+ },
+ "P26": {
+  "found_in_catalog": 35,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-03-25",
+    "item": "S2B_15QZB_20200325_0_L2A",
+    "scene_cloud": 0.4,
+    "window_cloud": 0.02,
+    "close": "P26_3_close.webp",
+    "heat": "P26_3_heat.webp",
+    "glow": 1.16,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-04",
+    "item": "S2B_15QZB_20200404_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P26_1_close.webp",
+    "heat": "P26_1_heat.webp",
+    "glow": 1.15,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-14",
+    "item": "S2B_15QZB_20200414_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.01,
+    "close": "P26_2_close.webp",
+    "heat": "P26_2_heat.webp",
+    "glow": 1.77,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 81.0
+ },
+ "P25": {
+  "found_in_catalog": 100,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-03-28",
+    "item": "S2A_40UFE_20200328_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.01,
+    "close": "P25_3_close.webp",
+    "heat": "P25_3_heat.webp",
+    "glow": 5.19,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-04",
+    "item": "S2A_40UFE_20200504_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.0,
+    "close": "P25_2_close.webp",
+    "heat": "P25_2_heat.webp",
+    "glow": 1.29,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-29",
+    "item": "S2B_40UFE_20200529_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P25_1_close.webp",
+    "heat": "P25_1_heat.webp",
+    "glow": 11.03,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 94.4
+ },
+ "P27": {
+  "found_in_catalog": 32,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-07-19",
+    "item": "S2A_20MPS_20200719_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P27_3_close.webp",
+    "heat": "P27_3_heat.webp",
+    "glow": 1.57,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-03",
+    "item": "S2B_20MPS_20200803_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P27_1_close.webp",
+    "heat": "P27_1_heat.webp",
+    "glow": 2.21,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-23",
+    "item": "S2B_20MPS_20200823_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P27_2_close.webp",
+    "heat": "P27_2_heat.webp",
+    "glow": 1.62,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 150.0
+ },
+ "P30": {
+  "found_in_catalog": 27,
+  "tried": 4,
+  "kept": [
+   {
+    "date": "2020-09-27",
+    "item": "S2B_39KTV_20200927_0_L2A",
+    "scene_cloud": 0.6,
+    "window_cloud": 0.0,
+    "close": "P30_1_close.webp",
+    "heat": "P30_1_heat.webp",
+    "glow": 1.8,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-02",
+    "item": "S2A_38KRE_20201002_0_L2A",
+    "scene_cloud": 2.8,
+    "window_cloud": 0.0,
+    "close": "P30_3_close.webp",
+    "heat": "P30_3_heat.webp",
+    "glow": 1.82,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-27",
+    "item": "S2B_39KTV_20201027_1_L2A",
+    "scene_cloud": 1.6,
+    "window_cloud": 0.0,
+    "close": "P30_2_close.webp",
+    "heat": "P30_2_heat.webp",
+    "glow": 2.22,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 99.4
+ },
+ "P28": {
+  "found_in_catalog": 38,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-04-02",
+    "item": "S2B_36UUB_20200402_1_L2A",
+    "scene_cloud": 0.5,
+    "window_cloud": 0.0,
+    "close": "P28_2_close.webp",
+    "heat": "P28_2_heat.webp",
+    "glow": 4.84,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-05",
+    "item": "S2B_35UQS_20200405_0_L2A",
+    "scene_cloud": 0.9,
+    "window_cloud": 0.0,
+    "close": "P28_3_close.webp",
+    "heat": "P28_3_heat.webp",
+    "glow": 7.71,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-07",
+    "item": "S2A_35UQS_20200407_1_L2A",
+    "scene_cloud": 0.3,
+    "window_cloud": 0.0,
+    "close": "P28_1_close.webp",
+    "heat": "P28_1_heat.webp",
+    "glow": 1.43,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 156.9
+ },
+ "P31": {
+  "found_in_catalog": 67,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-08-27",
+    "item": "S2A_52VER_20200827_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P31_2_close.webp",
+    "heat": "P31_2_heat.webp",
+    "glow": 1.24,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-09",
+    "item": "S2A_52VER_20200909_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P31_1_close.webp",
+    "heat": "P31_1_heat.webp",
+    "glow": 1.23,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-21",
+    "item": "S2B_52WES_20200921_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P31_3_close.webp",
+    "heat": "P31_3_heat.webp",
+    "glow": 1.23,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 132.0
+ },
+ "P29": {
+  "found_in_catalog": 42,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-10-10",
+    "item": "S2B_38KLV_20201010_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P29_3_close.webp",
+    "heat": "P29_3_heat.webp",
+    "glow": 1.8,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-20",
+    "item": "S2B_38KLV_20201020_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P29_2_close.webp",
+    "heat": "P29_2_heat.webp",
+    "glow": 1.14,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-09",
+    "item": "S2B_38KLV_20201109_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P29_1_close.webp",
+    "heat": "P29_1_heat.webp",
+    "glow": 1.11,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 150.9
+ },
+ "P32": {
+  "found_in_catalog": 14,
+  "tried": 6,
+  "kept": [
+   {
+    "date": "2020-03-21",
+    "item": "S2B_48QXD_20200321_0_L2A",
+    "scene_cloud": 24.8,
+    "window_cloud": 0.12,
+    "close": "P32_3_close.webp",
+    "heat": "P32_3_heat.webp",
+    "glow": 3.14,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-31",
+    "item": "S2B_48QXD_20200331_0_L2A",
+    "scene_cloud": 8.8,
+    "window_cloud": 0.04,
+    "close": "P32_2_close.webp",
+    "heat": "P32_2_heat.webp",
+    "glow": 8.97,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-05",
+    "item": "S2A_48QXD_20200505_0_L2A",
+    "scene_cloud": 2.4,
+    "window_cloud": 0.0,
+    "close": "P32_1_close.webp",
+    "heat": "P32_1_heat.webp",
+    "glow": 2.94,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 112.6
+ },
+ "P33": {
+  "found_in_catalog": 29,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-11-26",
+    "item": "S2B_55HCE_20201126_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P33_1_close.webp",
+    "heat": "P33_1_heat.webp",
+    "glow": 1.18,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-12-26",
+    "item": "S2B_55HCE_20201226_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P33_2_close.webp",
+    "heat": "P33_2_heat.webp",
+    "glow": 1.17,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2021-01-20",
+    "item": "S2A_55HCE_20210120_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P33_3_close.webp",
+    "heat": "P33_3_heat.webp",
+    "glow": 1.14,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 92.5
+ },
+ "P34": {
+  "found_in_catalog": 26,
+  "tried": 5,
+  "kept": [
+   {
+    "date": "2020-10-18",
+    "item": "S2A_11SKB_20201018_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.08,
+    "close": "P34_2_close.webp",
+    "heat": "P34_2_heat.webp",
+    "glow": 5.05,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-28",
+    "item": "S2A_11SKB_20201028_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.0,
+    "close": "P34_3_close.webp",
+    "heat": "P34_3_heat.webp",
+    "glow": 1.36,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-27",
+    "item": "S2A_11SKB_20201127_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.12,
+    "close": "P34_1_close.webp",
+    "heat": "P34_1_heat.webp",
+    "glow": 1.17,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 129.9
+ },
+ "P39": {
+  "found_in_catalog": 23,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-07-04",
+    "item": "S2A_47VMF_20200704_0_L2A",
+    "scene_cloud": 0.9,
+    "window_cloud": 0.16,
+    "close": "P39_3_close.webp",
+    "heat": "P39_3_heat.webp",
+    "glow": 2.86,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-15",
+    "item": "S2B_47VMF_20200815_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.02,
+    "close": "P39_1_close.webp",
+    "heat": "P39_1_heat.webp",
+    "glow": 3.31,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-18",
+    "item": "S2B_47VMF_20200818_1_L2A",
+    "scene_cloud": 0.1,
+    "window_cloud": 0.01,
+    "close": "P39_2_close.webp",
+    "heat": "P39_2_heat.webp",
+    "glow": 2.39,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 88.3
+ },
+ "P38": {
+  "found_in_catalog": 20,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-10-21",
+    "item": "S2B_38TNQ_20201021_0_L2A",
+    "scene_cloud": 1.7,
+    "window_cloud": 0.0,
+    "close": "P38_1_close.webp",
+    "heat": "P38_1_heat.webp",
+    "glow": 1.08,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-27",
+    "item": "S2B_38TNQ_20201127_0_L2A",
+    "scene_cloud": 2.2,
+    "window_cloud": 0.0,
+    "close": "P38_2_close.webp",
+    "heat": "P38_2_heat.webp",
+    "glow": 1.13,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2021-01-16",
+    "item": "S2B_38TNQ_20210116_0_L2A",
+    "scene_cloud": 2.5,
+    "window_cloud": 0.0,
+    "close": "P38_3_close.webp",
+    "heat": "P38_3_heat.webp",
+    "glow": 1.13,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 91.4
+ },
+ "P37": {
+  "found_in_catalog": 25,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-09-21",
+    "item": "S2B_35LPF_20200921_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P37_3_close.webp",
+    "heat": "P37_3_heat.webp",
+    "glow": 1.94,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-26",
+    "item": "S2A_35LPF_20200926_2_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P37_1_close.webp",
+    "heat": "P37_1_heat.webp",
+    "glow": 1.87,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-21",
+    "item": "S2B_35LPF_20201021_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P37_2_close.webp",
+    "heat": "P37_2_heat.webp",
+    "glow": 4.86,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 144.1
+ },
+ "P36": {
+  "found_in_catalog": 18,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-04-03",
+    "item": "S2A_35UMS_20200403_0_L2A",
+    "scene_cloud": 1.4,
+    "window_cloud": 0.0,
+    "close": "P36_2_close.webp",
+    "heat": "P36_2_heat.webp",
+    "glow": 2.33,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-08",
+    "item": "S2B_35UMS_20200408_0_L2A",
+    "scene_cloud": 0.6,
+    "window_cloud": 0.0,
+    "close": "P36_1_close.webp",
+    "heat": "P36_1_heat.webp",
+    "glow": 2.1,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-23",
+    "item": "S2A_35UMS_20200423_0_L2A",
+    "scene_cloud": 3.8,
+    "window_cloud": 0.0,
+    "close": "P36_3_close.webp",
+    "heat": "P36_3_heat.webp",
+    "glow": 2.74,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 164.4
+ },
+ "P40": {
+  "found_in_catalog": 9,
+  "tried": 6,
+  "kept": [
+   {
+    "date": "2020-01-24",
+    "item": "S2B_47NQC_20200124_0_L2A",
+    "scene_cloud": 14.2,
+    "window_cloud": 0.07,
+    "close": "P40_2_close.webp",
+    "heat": "P40_2_heat.webp",
+    "glow": 1.51,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-02-28",
+    "item": "S2A_47NQC_20200228_1_L2A",
+    "scene_cloud": 11.1,
+    "window_cloud": 0.0,
+    "close": "P40_1_close.webp",
+    "heat": "P40_1_heat.webp",
+    "glow": 2.27,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-14",
+    "item": "S2B_47NQC_20200314_0_L2A",
+    "scene_cloud": 29.9,
+    "window_cloud": 0.19,
+    "close": "P40_3_close.webp",
+    "heat": "P40_3_heat.webp",
+    "glow": 1.68,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 116.4
+ },
+ "P41": {
+  "found_in_catalog": 13,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-03",
+    "item": "S2A_56JKR_20200103_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P41_1_close.webp",
+    "heat": "P41_1_heat.webp",
+    "glow": 2.88,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-01-08",
+    "item": "S2B_56JKR_20200108_0_L2A",
+    "scene_cloud": 5.7,
+    "window_cloud": 0.1,
+    "close": "P41_3_close.webp",
+    "heat": "P41_3_heat.webp",
+    "glow": 2.71,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-02-02",
+    "item": "S2A_56JKR_20200202_0_L2A",
+    "scene_cloud": 4.1,
+    "window_cloud": 0.03,
+    "close": "P41_2_close.webp",
+    "heat": "P41_2_heat.webp",
+    "glow": 1.17,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 79.4
+ },
+ "P42": {
+  "found_in_catalog": 56,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-10-13",
+    "item": "S2B_11SLA_20201013_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.02,
+    "close": "P42_1_close.webp",
+    "heat": "P42_1_heat.webp",
+    "glow": 2.78,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-20",
+    "item": "S2B_11SLA_20201020_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P42_3_close.webp",
+    "heat": "P42_3_heat.webp",
+    "glow": 2.75,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-04",
+    "item": "S2A_11SLA_20201104_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P42_2_close.webp",
+    "heat": "P42_2_heat.webp",
+    "glow": 2.98,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 95.7
+ },
+ "P43": {
+  "found_in_catalog": 29,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-07-21",
+    "item": "S2B_21MTN_20200721_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P43_2_close.webp",
+    "heat": "P43_2_heat.webp",
+    "glow": 1.3,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-07-31",
+    "item": "S2B_21MTN_20200731_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P43_1_close.webp",
+    "heat": "P43_1_heat.webp",
+    "glow": 1.28,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-05",
+    "item": "S2A_21MTN_20200805_0_L2A",
+    "scene_cloud": 2.4,
+    "window_cloud": 0.0,
+    "close": "P43_3_close.webp",
+    "heat": "P43_3_heat.webp",
+    "glow": 1.31,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 100.5
+ },
+ "P44": {
+  "found_in_catalog": 35,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-03-26",
+    "item": "S2B_35UNS_20200326_0_L2A",
+    "scene_cloud": 0.9,
+    "window_cloud": 0.0,
+    "close": "P44_3_close.webp",
+    "heat": "P44_3_heat.webp",
+    "glow": 1.51,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-04-08",
+    "item": "S2B_35UNS_20200408_0_L2A",
+    "scene_cloud": 0.7,
+    "window_cloud": 0.0,
+    "close": "P44_2_close.webp",
+    "heat": "P44_2_heat.webp",
+    "glow": 1.56,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-06-12",
+    "item": "S2A_35UNS_20200612_0_L2A",
+    "scene_cloud": 0.5,
+    "window_cloud": 0.0,
+    "close": "P44_1_close.webp",
+    "heat": "P44_1_heat.webp",
+    "glow": 2.15,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 92.5
+ },
+ "P49": {
+  "found_in_catalog": 16,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-25",
+    "item": "S2B_55HFA_20200125_1_L2A",
+    "scene_cloud": 0.6,
+    "window_cloud": 0.0,
+    "close": "P49_2_close.webp",
+    "heat": "P49_2_heat.webp",
+    "glow": 1.23,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-01-30",
+    "item": "S2A_55HFA_20200130_1_L2A",
+    "scene_cloud": 1.6,
+    "window_cloud": 0.0,
+    "close": "P49_3_close.webp",
+    "heat": "P49_3_heat.webp",
+    "glow": 1.5,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-15",
+    "item": "S2B_55HFA_20200315_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P49_1_close.webp",
+    "heat": "P49_1_heat.webp",
+    "glow": 1.99,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 107.7
+ },
+ "P48": {
+  "found_in_catalog": 14,
+  "tried": 6,
+  "kept": [
+   {
+    "date": "2020-03-15",
+    "item": "S2B_48NZK_20200315_0_L2A",
+    "scene_cloud": 22.4,
+    "window_cloud": 0.11,
+    "close": "P48_2_close.webp",
+    "heat": "P48_2_heat.webp",
+    "glow": 1.55,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-30",
+    "item": "S2A_48NZK_20200330_0_L2A",
+    "scene_cloud": 24.0,
+    "window_cloud": 0.06,
+    "close": "P48_3_close.webp",
+    "heat": "P48_3_heat.webp",
+    "glow": 1.69,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-05-29",
+    "item": "S2A_48NZK_20200529_0_L2A",
+    "scene_cloud": 11.4,
+    "window_cloud": 0.04,
+    "close": "P48_1_close.webp",
+    "heat": "P48_1_heat.webp",
+    "glow": 1.64,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 139.2
+ },
+ "P46": {
+  "found_in_catalog": 41,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-08-06",
+    "item": "S2A_38KNE_20200806_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P46_2_close.webp",
+    "heat": "P46_2_heat.webp",
+    "glow": 1.99,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-08-16",
+    "item": "S2A_38KNE_20200816_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P46_1_close.webp",
+    "heat": "P46_1_heat.webp",
+    "glow": 1.87,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-09-10",
+    "item": "S2B_38KNE_20200910_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P46_3_close.webp",
+    "heat": "P46_3_heat.webp",
+    "glow": 2.52,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 168.3
+ },
+ "P45": {
+  "found_in_catalog": 22,
+  "tried": 3,
+  "kept": [
+   {
+    "date": "2020-01-09",
+    "item": "S2B_33NUG_20200109_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P45_3_close.webp",
+    "heat": "P45_3_heat.webp",
+    "glow": 1.56,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-01-14",
+    "item": "S2A_33NUG_20200114_1_L2A",
+    "scene_cloud": 0,
+    "window_cloud": 0.0,
+    "close": "P45_1_close.webp",
+    "heat": "P45_1_heat.webp",
+    "glow": 1.53,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-03-14",
+    "item": "S2A_33NUG_20200314_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P45_2_close.webp",
+    "heat": "P45_2_heat.webp",
+    "glow": 1.12,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 176.3
+ },
+ "P50": {
+  "found_in_catalog": 44,
+  "tried": 4,
+  "kept": [
+   {
+    "date": "2020-09-13",
+    "item": "S2A_13TCF_20200913_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P50_1_close.webp",
+    "heat": "P50_1_heat.webp",
+    "glow": 1.64,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-01",
+    "item": "S2B_13TCF_20201001_0_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.0,
+    "close": "P50_3_close.webp",
+    "heat": "P50_3_heat.webp",
+    "glow": 2.0,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-11-05",
+    "item": "S2A_13TCF_20201105_1_L2A",
+    "scene_cloud": 0.0,
+    "window_cloud": 0.2,
+    "close": "P50_2_close.webp",
+    "heat": "P50_2_heat.webp",
+    "glow": 2.39,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 55.7
+ },
+ "P47": {
+  "found_in_catalog": 57,
+  "tried": 9,
+  "kept": [
+   {
+    "date": "2020-09-26",
+    "item": "S2A_51VXJ_20200926_0_L2A",
+    "scene_cloud": 1.3,
+    "window_cloud": 0.08,
+    "close": "P47_3_close.webp",
+    "heat": "P47_3_heat.webp",
+    "glow": 1.29,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-07",
+    "item": "S2B_52VCP_20201007_0_L2A",
+    "scene_cloud": 0.3,
+    "window_cloud": 0.08,
+    "close": "P47_1_close.webp",
+    "heat": "P47_1_heat.webp",
+    "glow": 1.71,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   },
+   {
+    "date": "2020-10-09",
+    "item": "S2A_52VCP_20201009_0_L2A",
+    "scene_cloud": 1.2,
+    "window_cloud": 0.02,
+    "close": "P47_2_close.webp",
+    "heat": "P47_2_heat.webp",
+    "glow": 1.66,
+    "credit": "Contains modified Copernicus Sentinel data 2020"
+   }
+  ],
+  "seconds": 191.7
+ }
+}

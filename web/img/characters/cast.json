@@ -1,0 +1,20 @@
+{
+ "what": "The names on screen for the three characters. Change a name here and every slide follows. Pencil.",
+ "cast": {
+  "older": {
+   "name": "Moe",
+   "camera": "MODIS",
+   "line": "The older satellite detective: MODIS, NASA's older camera, watching fires since 2000."
+  },
+  "newer": {
+   "name": "Vee",
+   "camera": "VIIRS",
+   "line": "The newer satellite detective: VIIRS, NASA's newer camera, on the case since 2012."
+  },
+  "detective": {
+   "name": "Juno",
+   "camera": null,
+   "line": "A kid fire-data detective with a notebook full of questions."
+  }
+ }
+}

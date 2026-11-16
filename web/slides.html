@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- slides.html: the 7-slide demo for the submission (team lead, Nov 15, 4:08 PM).
+     Static slides, 16:9; arrow keys or a click move between them on screen; printed, each slide is one landscape page.
+     No web address is written in this file: the three addresses are read on this laptop from local/addresses.js (through js/beats.js). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ai-assistance" content="Code and analysis written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. Data: NASA FIRMS.">
+<title>Two Cameras, One Calendar: seven slides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="css/slides.css">
+</head>
+<body>
+<main class="deck">
+
+<section class="sl s1 day">
+  <div class="s1-in">
+    <p class="kick">NASA Space Apps 2026 · Challenge: Harmonization of MODIS and VIIRS Hot Spots</p>
+    <h1>Two Cameras, <em>One Calendar</em></h1>
+    <p class="team">Spark Squad, a homeschool family team</p>
+    <img class="pair" src="img/characters/art_both_together_20261114-141029.webp" alt="Moe and Vee, the two satellite cameras, drawn by one of our team">
+    <p class="lead">We built a harmonized burning calendar for any country, in a web app, from NASA's two fire cameras.</p>
+  </div>
+  <div class="hills" aria-hidden="true"></div>
+</section>
+
+<section class="sl s2">
+  <header><p class="kick">The problem</p><h2>Two cameras, one record <em>that jumps</em></h2></header>
+  <div class="row">
+    <div class="txt">
+      <p>Moe is <b>MODIS</b>, the older camera. Vee is <b>VIIRS</b>, the newer one, with sharper eyes.</p>
+      <p>Stitched together, Argentina's 2022 looks like its worst fire year on record: <b>89,310</b> hot spot detections against an earlier biggest year of <b>45,295</b>.</p>
+      <p class="hi">The jump starts exactly where the record switches cameras.</p>
+    </div>
+    <figure class="pic"><img src="img/slides/s2_stitched.png" alt="Argentina's yearly hot spot detections as the record comes: the older camera to 2021, the newer camera from 2022, with 2022 towering at 89,310"></figure>
+  </div>
+</section>
+
+<section class="sl s3">
+  <header><p class="kick">Our harmonization</p><h2>Ten shared years give <em>one scale</em></h2></header>
+  <div class="row">
+    <div class="txt">
+      <p>We learn from ten years when both cameras flew, <b>2012 to 2021</b>. From those years: a conversion number for each month of the year, country by country, wherever the data support it.</p>
+      <p class="math">Argentina, August: 62,467 ÷ 169,528 = <b>0.37</b></p>
+      <p>Multiply or divide, and every year sits on one scale. On one scale, 2022 is above normal (<b>89,043</b> against a typical <b>77,217</b>), far below the tallest years.</p>
+    </div>
+    <figure class="pic"><img src="img/slides/s3_onescale.png" alt="The same years on Vee's scale: the older years lifted in two tones, what Moe counted and what Vee would likely have seen; 2022 at 89,043"></figure>
+  </div>
+</section>
+
+<section class="sl s4">
+  <header><p class="kick">How we know it works</p><h2>Hold a year out, translate it, <em>compare</em></h2></header>
+  <div class="row top">
+    <div class="txt">
+      <p>October 2017: 6,035 × 0.2873 = <b>1,734</b>, against <b>1,921</b> that the older camera really counted: 9.7% low.</p>
+      <p>A typical month in Argentina lands within <b>9.5%</b>; all <b>71</b> countries with a lot of fire within <b>25%</b>.</p>
+      <p>A smarter version also sorts hot spots by fire power: Argentina within <b>7.0%</b>. Built and tested; switching it on is our next step.</p>
+      <p class="fine">Agreement is with the older camera's own count, not with the ground.</p>
+    </div>
+    <div class="two">
+      <figure class="pic"><img src="img/slides/s4_october.png" alt="October 2017 worked through: 6,035 times 0.2873 equals 1,734; the older camera counted 1,921; 9.7% low"></figure>
+      <figure class="pic"><img src="img/slides/s4_bands.png" alt="Seven bands of fire power, faintest to strongest, with how often the older camera also sees a hot spot that strong"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sl s5">
+  <header><p class="kick">What the challenge asked for</p><h2>A burning calendar, <em>in a web app</em></h2></header>
+  <div class="row">
+    <figure class="pic big"><img src="img/slides/s5_globe.png" alt="The web app: a globe to pick a country, its answer in plain words, this month against its usual, and its calendar as year lines"></figure>
+    <div class="txt narrow">
+      <p>Turn the globe and click any of <b>235</b> countries and territories.</p>
+      <p>Its answer in plain words; this month against its historical median; the calendar as year lines or a grid; a CSV download.</p>
+      <p class="addr" data-addr="pageAddress"></p>
+    </div>
+  </div>
+</section>
+
+<section class="sl s6">
+  <header><p class="kick">What one scale changes, and more ways in</p><h2>Stitched, 63 of 65 show a new biggest year. <em>On one scale, 9 do.</em></h2></header>
+  <div class="s6-grid">
+    <figure class="pic wide"><img src="img/slides/s6_onescale.png" alt="Brazil, India, the United States and Canada on one scale: the stitched record years struck; Canada's 2023 stays its biggest year"><figcaption>Canada's 2023 stays its biggest year either way.</figcaption></figure>
+    <figure class="pic"><img src="img/slides/s6_connector.png" alt="The connector: a person asks their own AI how bad Australia's fires were in December 2019, and the answer comes from our record"><figcaption><b>The connector:</b> an MCP server with eleven tools, so your own AI chat app can ask the record.</figcaption></figure>
+    <figure class="pic"><img src="img/slides/s6_volunteer.png" alt="The volunteer page: a real hot spot shown in pictures and heat readings, with five choices"><figcaption><b>Fire, or something else?</b> Real hot spots; NASA's own label is the answer key.</figcaption></figure>
+  </div>
+</section>
+
+<section class="sl s7">
+  <header><p class="kick">Why it matters · how it was made · where to find it</p><h2>Tell a truly unusual season <em>from a change of camera</em></h2></header>
+  <div class="row top">
+    <div class="txt">
+      <p><b>For</b> early-warning teams and emergency responders, scientists and land managers.</p>
+      <p><b>NASA data at the core:</b> NASA FIRMS hot spots from MODIS and VIIRS; NASA GIBS pictures.</p>
+      <p><b>Made with</b> plain HTML, CSS and JavaScript, and a Node.js connector. Code written with AI coding assistants, directed and reviewed by the team; the main numbers recounted by a second AI model family.</p>
+    </div>
+    <div class="qrs">
+      <figure><img src="img/qr/page.svg" alt="QR code for the web app"><figcaption>Explore the burning calendar<span data-addr="pageAddress"></span></figcaption></figure>
+      <figure><img src="img/qr/connector.svg" alt="QR code for the connector's page"><figcaption>Connect your own AI<span data-addr="connectorPage"></span></figcaption></figure>
+      <figure><img src="img/qr/volunteer.svg" alt="QR code for the volunteer page"><figcaption>Fire, or something else?<span data-addr="volunteerAddress"></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+</main>
+<p class="count" aria-live="polite"></p>
+<script src="js/beats.js"></script>
+<script src="js/slides.js"></script>
+</body>
+</html>

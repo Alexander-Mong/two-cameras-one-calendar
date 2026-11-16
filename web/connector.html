@@ -1,0 +1,157 @@
+<!doctype html>
+<!-- connector.html: the page a person lands on from the talk's connector QR code.
+     Self-contained: inline CSS and a few lines of script; the only outside request is the Google Fonts sheet the story already uses. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ai-assistance" content="Code and analysis written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. Data: NASA FIRMS.">
+<title>Ask your own AI about fire</title>
+<meta name="description" content="A connector that lets your AI chat app ask a 26-year satellite fire record, from NASA's two fire cameras put on one scale.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{--ink:#060e19;--night:#0b1726;--land:#112537;--rule:#2c3d50;--rule2:#3d5064;--paper:#f4edda;--dim:#a5b2c2;--gold:#ffcd79;--glow:#ffdda3;--ember:#ff7541;
+  --display:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;--body:"Lexend","Segoe UI",system-ui,sans-serif;--label:"JetBrains Mono",ui-monospace,Consolas,monospace}
+*{box-sizing:border-box}
+html{background:var(--ink)}
+body{margin:0;color:var(--paper);font:400 17px/1.55 var(--body);
+  background:radial-gradient(ellipse at 70% 0%,#173048 0%,#0a1726 45%,var(--ink) 100%) fixed;background-color:var(--ink)}
+.wrap{max-width:760px;margin:0 auto;padding:28px 16px 56px}
+.eyebrow{font:500 13px/1.4 var(--label);letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font:600 34px/1.1 var(--display);margin:0 0 14px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+h2{font:600 23px/1.2 var(--display);margin:0 0 12px;color:var(--paper)}
+p{margin:0 0 12px}
+.lede{font-size:18px;color:var(--paper)}
+.dim{color:var(--dim)}
+section{margin-top:22px;padding:20px 18px;background:#0b1726d9;border:1px solid var(--rule2);border-radius:14px}
+.addr-card{border-color:var(--gold);box-shadow:0 0 0 1px #ffcd7922,0 10px 40px #0008}
+.addr{display:block;width:100%;margin:6px 0 12px;padding:12px;font:500 15px/1.45 var(--label);color:var(--glow);background:var(--ink);
+  border:1px solid var(--rule2);border-radius:10px;word-break:break-all;user-select:all;-webkit-user-select:all}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button.copy{min-height:46px;padding:10px 22px;border:0;border-radius:10px;background:var(--gold);color:var(--ink);font:600 17px/1 var(--display);cursor:pointer}
+button.copy:focus-visible,a:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.copied{font:500 14px var(--label);color:var(--gold);min-height:1em}
+ol,ul{margin:0;padding-left:22px}
+li{margin:0 0 9px}
+code{font:500 14px var(--label);color:var(--glow);background:var(--ink);padding:1px 5px;border-radius:5px;word-break:break-all}
+.q{margin:0 0 16px;padding:0 0 16px;border-bottom:1px solid var(--rule)}
+.q:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}
+.ask{font:600 18px/1.35 var(--display);color:var(--gold);margin:0 0 6px}
+.ans{margin:0;padding-left:12px;border-left:3px solid var(--rule2);color:var(--paper)}
+.tools{list-style:none;padding:0}
+.tools li{margin:0 0 10px}
+.tools code{color:var(--gold)}
+.scope p{margin:0 0 8px}
+.scope b{color:var(--gold);font-weight:600}
+nav.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+nav.links a{display:inline-flex;align-items:center;min-height:46px;padding:10px 16px;border:1px solid var(--gold);border-radius:10px;color:var(--gold);text-decoration:none;font:500 16px var(--body)}
+nav.links a:hover{background:#ffcd7914}
+footer{margin-top:26px;font-size:14px;color:var(--dim)}
+@media (min-width:760px){
+  .wrap{padding:56px 24px 72px}
+  h1{font-size:48px}
+  h2{font-size:26px}
+  section{padding:24px 28px}
+  .addr{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Spark Squad · NASA Space Apps 2026</p>
+  <h1>Ask <em>your own AI</em> about fire</h1>
+  <p class="lede">This is a connector: it lets the AI chat app you already use ask a 26-year satellite fire record, for any of 235 countries and territories, in plain words.</p>
+  <p class="dim">The record comes from NASA's two fire cameras in space, the older MODIS (since 2000) and the newer VIIRS (since 2012), put on one scale, so you can ask "is this place burning more than usual?" and get a straight answer.</p>
+
+  <section class="addr-card" aria-labelledby="addr-h">
+    <h2 id="addr-h">The address to give your AI app</h2>
+    <code class="addr" id="addr"></code>
+    <div class="row">
+      <button class="copy" type="button" id="copy">Copy address</button>
+      <span class="copied" id="copied" role="status" aria-live="polite"></span>
+    </div>
+    <p class="dim" style="margin:12px 0 0">This address is for AI apps, not for a web browser: opening it here shows only a short error, which is normal.</p>
+  </section>
+
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How to add it</h2>
+    <ol>
+      <li>Add it as a custom connector (MCP server) in your app's settings, and paste the address above. Nothing to install, no account, no key.</li>
+      <li>Ask your AI a question about fire in a place, like the ones below.</li>
+    </ol>
+    <p class="dim" style="margin:10px 0 0">Tried so far: a command-line AI (OpenAI's Codex) answered a question with it on November 15, calling three of its tools. Other apps have not been tried yet; any app that takes a custom MCP connector should work the same way.</p>
+  </section>
+
+  <section aria-labelledby="try-h">
+    <h2 id="try-h">Three questions to try</h2>
+    <div class="q">
+      <p class="ask">"How bad were the fires in Australia in December 2019?"</p>
+      <p class="ans">"Australia's December 2019 was far busier than normal, with about three times the usual amount of fire. That's about 13,000 fire detections in December 2019."</p>
+    </div>
+    <div class="q">
+      <p class="ask">"Is Argentina burning right now?"</p>
+      <p class="ans">"On the 26-year record, Argentina's early November is about normal, with almost exactly the usual amount of fire." It also counts what NASA's satellites saw in the last 24 hours.</p>
+    </div>
+    <div class="q">
+      <p class="ask">"Will Argentina have a bad fire season next year?"</p>
+      <p class="ans">"Nothing about next season is certain, but here are the patterns to watch. Argentina's fire season usually runs from July to September, and it's usually highest in August."</p>
+    </div>
+    <p class="dim" style="margin:14px 0 0">Real answers the connector gave on November 14. Your AI may word them its own way; the numbers come from the connector.</p>
+  </section>
+
+  <section aria-labelledby="tools-h">
+    <h2 id="tools-h">What it can do: eleven tools</h2>
+    <ul class="tools">
+      <li><code>fire_now</code> Is it burning right now? NASA's last 24 hours, with the record's answer for the same place.</li>
+      <li><code>fire_answer</code> The answer for a place and a period: a month, a year, the latest month or the last fire season.</li>
+      <li><code>place_record</code> Every year since 2000 for one place, or one year month by month.</li>
+      <li><code>how_sure</code> How far the joined record holds up in that country.</li>
+      <li><code>report_sentence</code> One sentence for a report or an article.</li>
+      <li><code>find_places</code> Search the 235 countries and territories.</li>
+      <li><code>compare</code> Two places, or two periods of one place.</li>
+      <li><code>viirs_scale</code> A year or month on the newer VIIRS camera's scale.</li>
+      <li><code>nasa_recent</code> Straight from NASA: the last 24 hours, 48 hours or 7 days for a country or a map box.</li>
+      <li><code>nasa_archive</code> Straight from NASA, for chosen dates; needs your own free NASA map key, and says how to get one.</li>
+      <li><code>nasa_sources</code> What NASA data it reaches, and NASA's own caution.</li>
+    </ul>
+  </section>
+
+  <section class="scope" aria-labelledby="scope-h">
+    <h2 id="scope-h">What the numbers are</h2>
+    <p><b>Hot spot detections, not fires or land burned.</b> A detection is one 5 km patch of ground where a satellite saw fire on one day, so one big fire counts many times.</p>
+    <p><b>The record, never a forecast.</b> Ask about the future and you get the patterns to watch, not a prediction. For what to do on the ground, follow local authorities and emergency services.</p>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <h2 id="more-h">See more</h2>
+    <nav class="links" aria-label="More from Spark Squad">
+      <a href="./">The web app</a>
+      <a href="./#story/1">The story: how we know</a>
+      <a href="./volunteer/">Fire, or something else? Try it</a>
+    </nav>
+  </section>
+
+  <footer>A prototype built at NASA Space Apps 2026 by Spark Squad, from NASA's public FIRMS fire data. Code and analysis written with AI coding assistants (Claude), directed and reviewed by the team.</footer>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('copy'),s=document.getElementById('copied'),a=document.getElementById('addr');
+  // The connector's address is built from where this page is served, so the page never carries the site's address as text.
+  // On the team's own computer (a local address) it is read from local/addresses.js, a file that is never published.
+  var local=/^(127\.0\.0\.1|localhost|\[::1\])$/.test(location.hostname);
+  if(!local){a.textContent=location.origin+'/spaceapps-connector/mcp';}
+  else{var sc=document.createElement('script');sc.src='local/addresses.js';
+    sc.onload=function(){a.textContent=(window.StoryBeats&&window.StoryBeats.connectorAddress)||'(the address shows on the public page)';};
+    sc.onerror=function(){a.textContent='(the address shows on the public page)';};document.head.appendChild(sc);}
+  function said(t){s.textContent=t;clearTimeout(said.t);said.t=setTimeout(function(){s.textContent='';},2500);}
+  function pick(){var r=document.createRange();r.selectNodeContents(a);var g=window.getSelection();g.removeAllRanges();g.addRange(r);}
+  b.addEventListener('click',function(){
+    var t=a.textContent.trim();
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){said('Copied');},function(){pick();said('Selected: press copy');});}
+    else{pick();try{said(document.execCommand('copy')?'Copied':'Selected: press copy');}catch(e){said('Selected: press copy');}}
+  });
+})();
+</script>
+</body>
+</html>

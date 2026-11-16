@@ -1,0 +1,27 @@
+{
+ "stamp": {
+  "data_version": "layer-v0-practice",
+  "made_at": "2026-11-13T18:45:55",
+  "made_with": "Generated with AI tools (Claude) as throwaway practice code; the team lead directed and reviewed it as it was built; a second AI model family independently reproduced the main numbers and read the code, without redoing NASA's data extraction; no outside expert in satellite fire data has reviewed it."
+ },
+ "band_edges_mw": [
+  2,
+  4,
+  8,
+  16,
+  32,
+  64
+ ],
+ "chance": [
+  0.035,
+  0.064,
+  0.103,
+  0.174,
+  0.279,
+  0.396,
+  0.568
+ ],
+ "k": 1.404,
+ "meaning": "chance that Aqua also flags an S-NPP active cell-day, by the power band of its strongest pass; k = allowance for Aqua-only cell-days. Expected Aqua count = k * sum over bands of (cell-days in band * chance). Learned S-NPP against Aqua, 43 boxes, 2012-2018.",
+ "source": "work/adv_strength_join/run_log.txt (world curve line), one builder, under cross-check"
+}

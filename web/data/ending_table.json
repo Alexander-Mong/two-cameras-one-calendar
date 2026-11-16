@@ -1,0 +1,1876 @@
+{
+ "made": "tools/build_ending_table.cjs, 2026-11-15T14:01:29.919Z",
+ "note": " Counts are satellite fire detections (about 5 km squares where a camera saw fire on a day).",
+ "yardstick": {
+  "place": "Argentina",
+  "untranslated_times": 3.456081081081081,
+  "translated_pct": 9.521827847285618,
+  "translated_months": 119,
+  "same_camera_pct": 2.888832951514906,
+  "same_camera_months": 88,
+  "busy_middle": {
+   "untranslated_times": 5.486942405420666,
+   "translated_pct": 12.352275942115485,
+   "same_camera_pct": 5.029041834384589
+  },
+  "countries": [
+   {
+    "name": "Angola",
+    "untranslated_pct": 375.9415064102564,
+    "untranslated_times": 4.759415064102564,
+    "translated_pct": 6.686409499741185,
+    "same_camera_pct": 3.616852872804012
+   },
+   {
+    "name": "Argentina",
+    "untranslated_pct": 245.60810810810813,
+    "untranslated_times": 3.456081081081081,
+    "translated_pct": 9.521827847285618,
+    "same_camera_pct": 2.888832951514906
+   },
+   {
+    "name": "Australia",
+    "untranslated_pct": 189.76778874776457,
+    "untranslated_times": 2.897677887477646,
+    "translated_pct": 7.261145829783276,
+    "same_camera_pct": 1.8326888934510395
+   },
+   {
+    "name": "Benin",
+    "untranslated_pct": 883.6713286713286,
+    "untranslated_times": 9.836713286713286,
+    "translated_pct": 15.451520061181022,
+    "same_camera_pct": 5.569306930693069
+   },
+   {
+    "name": "Bolivia",
+    "untranslated_pct": 275.39426596280816,
+    "untranslated_times": 3.753942659628082,
+    "translated_pct": 8.76209228127507,
+    "same_camera_pct": 3.9750141964792736
+   },
+   {
+    "name": "Botswana",
+    "untranslated_pct": 215.04424778761063,
+    "untranslated_times": 3.150442477876106,
+    "translated_pct": 13.780125576800762,
+    "same_camera_pct": 3.7694013303769403
+   },
+   {
+    "name": "Brazil",
+    "untranslated_pct": 288.78562875777936,
+    "untranslated_times": 3.887856287577794,
+    "translated_pct": 6.806962865305108,
+    "same_camera_pct": 2.1927118681590567
+   },
+   {
+    "name": "Burkina Faso",
+    "untranslated_pct": 829.5871559633028,
+    "untranslated_times": 9.295871559633028,
+    "translated_pct": 11.714285714285708,
+    "same_camera_pct": 3.648255223387646
+   },
+   {
+    "name": "Cambodia",
+    "untranslated_pct": 523.5992907801418,
+    "untranslated_times": 6.2359929078014185,
+    "translated_pct": 14.088586086850995,
+    "same_camera_pct": 5.900536412401127
+   },
+   {
+    "name": "Cameroon",
+    "untranslated_pct": 527.054794520548,
+    "untranslated_times": 6.27054794520548,
+    "translated_pct": 10.466057592228523,
+    "same_camera_pct": 4.469987228607918
+   },
+   {
+    "name": "Canada",
+    "untranslated_pct": 254.13366659938015,
+    "untranslated_times": 3.5413366659938017,
+    "translated_pct": 14.825582194480624,
+    "same_camera_pct": 3.2633912333991963
+   },
+   {
+    "name": "Central African Republic",
+    "untranslated_pct": 521.7699393748524,
+    "untranslated_times": 6.217699393748523,
+    "translated_pct": 7.970080346661211,
+    "same_camera_pct": 6.884101576603682
+   },
+   {
+    "name": "Chad",
+    "untranslated_pct": 468.96551724137925,
+    "untranslated_times": 5.689655172413793,
+    "translated_pct": 9.01861263596452,
+    "same_camera_pct": 3.278617567895427
+   },
+   {
+    "name": "Chile",
+    "untranslated_pct": 258.9047619047619,
+    "untranslated_times": 3.5890476190476193,
+    "translated_pct": 18.95541622648029,
+    "same_camera_pct": 4.524886877828054
+   },
+   {
+    "name": "China",
+    "untranslated_pct": 455.69823434991974,
+    "untranslated_times": 5.556982343499198,
+    "translated_pct": 13.09044102736962,
+    "same_camera_pct": 6.663624535515517
+   },
+   {
+    "name": "Colombia",
+    "untranslated_pct": 372.92270563082855,
+    "untranslated_times": 4.729227056308286,
+    "translated_pct": 9.079064971998797,
+    "same_camera_pct": 4.743223965763196
+   },
+   {
+    "name": "Côte d'Ivoire",
+    "untranslated_pct": 660.3498576123079,
+    "untranslated_times": 7.603498576123079,
+    "translated_pct": 17.31361710344394,
+    "same_camera_pct": 10.520323284761961
+   },
+   {
+    "name": "Cuba",
+    "untranslated_pct": 499.6436731585246,
+    "untranslated_times": 5.996436731585246,
+    "translated_pct": 12.241052105752217,
+    "same_camera_pct": 5.6000000000000005
+   },
+   {
+    "name": "Democratic Republic of the Congo",
+    "untranslated_pct": 231.0457516339869,
+    "untranslated_times": 3.310457516339869,
+    "translated_pct": 4.126606849917866,
+    "same_camera_pct": 3.609575128025268
+   },
+   {
+    "name": "Ethiopia",
+    "untranslated_pct": 516.6666666666667,
+    "untranslated_times": 6.166666666666668,
+    "translated_pct": 9.185898497715025,
+    "same_camera_pct": 3.9879997050455636
+   },
+   {
+    "name": "Gabon",
+    "untranslated_pct": 356.140350877193,
+    "untranslated_times": 4.56140350877193,
+    "translated_pct": 17.56139774999255,
+    "same_camera_pct": 9.895833333333332
+   },
+   {
+    "name": "Ghana",
+    "untranslated_pct": 725.1436781609195,
+    "untranslated_times": 8.251436781609195,
+    "translated_pct": 14.181686637712666,
+    "same_camera_pct": 8.452457952785531
+   },
+   {
+    "name": "Guatemala",
+    "untranslated_pct": 498.67549668874176,
+    "untranslated_times": 5.986754966887418,
+    "translated_pct": 12.206893228832067,
+    "same_camera_pct": 5.967078189300412
+   },
+   {
+    "name": "Guinea",
+    "untranslated_pct": 307.4671278173472,
+    "untranslated_times": 4.074671278173472,
+    "translated_pct": 10.039310535751056,
+    "same_camera_pct": 3.368494967273545
+   },
+   {
+    "name": "Guinea-Bissau",
+    "untranslated_pct": 297.1525423728814,
+    "untranslated_times": 3.971525423728814,
+    "translated_pct": 11.11150267652793,
+    "same_camera_pct": 4.8510438658221915
+   },
+   {
+    "name": "Guyana",
+    "untranslated_pct": 448.6942405420666,
+    "untranslated_times": 5.486942405420666,
+    "translated_pct": 15.45317980335433,
+    "same_camera_pct": 7.3558648111332
+   },
+   {
+    "name": "Honduras",
+    "untranslated_pct": 513.1578947368421,
+    "untranslated_times": 6.131578947368421,
+    "translated_pct": 16.761492944924903,
+    "same_camera_pct": 7.3643410852713185
+   },
+   {
+    "name": "India",
+    "untranslated_pct": 651.1965476657513,
+    "untranslated_times": 7.511965476657513,
+    "translated_pct": 10.65066394412276,
+    "same_camera_pct": 4.61741776802142
+   },
+   {
+    "name": "Indonesia",
+    "untranslated_pct": 418.8283380926099,
+    "untranslated_times": 5.188283380926099,
+    "translated_pct": 13.716647469225602,
+    "same_camera_pct": 5.232546751397015
+   },
+   {
+    "name": "Iran",
+    "untranslated_pct": 686.3322221318806,
+    "untranslated_times": 7.863322221318806,
+    "translated_pct": 22.96990861741954,
+    "same_camera_pct": 7.279055690072639
+   },
+   {
+    "name": "Iraq",
+    "untranslated_pct": 673.2726423902894,
+    "untranslated_times": 7.7327264239028946,
+    "translated_pct": 24.20834163290558,
+    "same_camera_pct": 8.003074784436631
+   },
+   {
+    "name": "Italy",
+    "untranslated_pct": 415.3395784543325,
+    "untranslated_times": 5.153395784543325,
+    "translated_pct": 21.744578838400333,
+    "same_camera_pct": 8.209208965546553
+   },
+   {
+    "name": "Kazakhstan",
+    "untranslated_pct": 221.98581560283688,
+    "untranslated_times": 3.219858156028369,
+    "translated_pct": 11.713160772466995,
+    "same_camera_pct": 2.338568935427574
+   },
+   {
+    "name": "Kenya",
+    "untranslated_pct": 715.2257412398922,
+    "untranslated_times": 8.15225741239892,
+    "translated_pct": 19.005728921754873,
+    "same_camera_pct": 6.367639281690464
+   },
+   {
+    "name": "Lao PDR",
+    "untranslated_pct": 424.5375733932301,
+    "untranslated_times": 5.245375733932301,
+    "translated_pct": 16.995497745806766,
+    "same_camera_pct": 4.856882916929106
+   },
+   {
+    "name": "Liberia",
+    "untranslated_pct": 318.80585516178735,
+    "untranslated_times": 4.188058551617873,
+    "translated_pct": 20.788294405629046,
+    "same_camera_pct": 10.03493040926196
+   },
+   {
+    "name": "Madagascar",
+    "untranslated_pct": 511.86703778114224,
+    "untranslated_times": 6.118670377811423,
+    "translated_pct": 7.581712756107728,
+    "same_camera_pct": 4.453029686864579
+   },
+   {
+    "name": "Malawi",
+    "untranslated_pct": 649.0196078431372,
+    "untranslated_times": 7.490196078431373,
+    "translated_pct": 16.99918496541494,
+    "same_camera_pct": 7.134554633573103
+   },
+   {
+    "name": "Malaysia",
+    "untranslated_pct": 409.3023255813954,
+    "untranslated_times": 5.093023255813954,
+    "translated_pct": 18.0257492555529,
+    "same_camera_pct": 7.226107226107226
+   },
+   {
+    "name": "Mali",
+    "untranslated_pct": 516.1604560891079,
+    "untranslated_times": 6.161604560891079,
+    "translated_pct": 7.769680976903052,
+    "same_camera_pct": 2.9315551082033218
+   },
+   {
+    "name": "Mexico",
+    "untranslated_pct": 481.6199376947041,
+    "untranslated_times": 5.816199376947041,
+    "translated_pct": 5.7660280353956,
+    "same_camera_pct": 3.50001671456434
+   },
+   {
+    "name": "Mozambique",
+    "untranslated_pct": 500.71088463667184,
+    "untranslated_times": 6.007108846366719,
+    "translated_pct": 9.718271364851056,
+    "same_camera_pct": 3.6286339225572717
+   },
+   {
+    "name": "Myanmar",
+    "untranslated_pct": 535.5596499309074,
+    "untranslated_times": 6.355596499309074,
+    "translated_pct": 10.654593685854168,
+    "same_camera_pct": 5.416012558869702
+   },
+   {
+    "name": "Namibia",
+    "untranslated_pct": 278.7574885158449,
+    "untranslated_times": 3.787574885158449,
+    "translated_pct": 21.613601037301912,
+    "same_camera_pct": 5.394050833255749
+   },
+   {
+    "name": "Nepal",
+    "untranslated_pct": 486.84210526315786,
+    "untranslated_times": 5.868421052631579,
+    "translated_pct": 17.926859417298118,
+    "same_camera_pct": 4.373540856031129
+   },
+   {
+    "name": "Nigeria",
+    "untranslated_pct": 695.0807071483474,
+    "untranslated_times": 7.950807071483474,
+    "translated_pct": 12.129361896174691,
+    "same_camera_pct": 5.473624503686898
+   },
+   {
+    "name": "Pakistan",
+    "untranslated_pct": 691.0714285714286,
+    "untranslated_times": 7.910714285714286,
+    "translated_pct": 13.493823526205043,
+    "same_camera_pct": 5.157191836938038
+   },
+   {
+    "name": "Papua New Guinea",
+    "untranslated_pct": 435.37551332394116,
+    "untranslated_times": 5.353755133239412,
+    "translated_pct": 13.715618206298124,
+    "same_camera_pct": 8.203644194693542
+   },
+   {
+    "name": "Paraguay",
+    "untranslated_pct": 270.1284796573876,
+    "untranslated_times": 3.7012847965738755,
+    "translated_pct": 8.659020066478769,
+    "same_camera_pct": 5.567348251855451
+   },
+   {
+    "name": "Peru",
+    "untranslated_pct": 577.8825465383145,
+    "untranslated_times": 6.778825465383145,
+    "translated_pct": 12.352275942115485,
+    "same_camera_pct": 6.756832143786917
+   },
+   {
+    "name": "Philippines",
+    "untranslated_pct": 763.3865707580237,
+    "untranslated_times": 8.633865707580238,
+    "translated_pct": 13.839202035721248,
+    "same_camera_pct": 6.803685329553508
+   },
+   {
+    "name": "Republic of Congo",
+    "untranslated_pct": 272.09029321098285,
+    "untranslated_times": 3.7209029321098286,
+    "translated_pct": 10.61234221569589,
+    "same_camera_pct": 6.223479490806223
+   },
+   {
+    "name": "Romania",
+    "untranslated_pct": 442.8571428571429,
+    "untranslated_times": 5.428571428571429,
+    "translated_pct": 15.401115401115398,
+    "same_camera_pct": 6.821480406386067
+   },
+   {
+    "name": "Russian Federation",
+    "untranslated_pct": 225.16297456355232,
+    "untranslated_times": 3.2516297456355234,
+    "translated_pct": 13.560580640453122,
+    "same_camera_pct": 2.623915386484319
+   },
+   {
+    "name": "Senegal",
+    "untranslated_pct": 352.7102803738318,
+    "untranslated_times": 4.527102803738318,
+    "translated_pct": 8.942776960632898,
+    "same_camera_pct": 2.9789719626168223
+   },
+   {
+    "name": "Sierra Leone",
+    "untranslated_pct": 269.6804551974236,
+    "untranslated_times": 3.6968045519742363,
+    "translated_pct": 15.53227377190978,
+    "same_camera_pct": 6.9200445985569345
+   },
+   {
+    "name": "South Africa",
+    "untranslated_pct": 285.9370242655545,
+    "untranslated_times": 3.859370242655545,
+    "translated_pct": 6.8274522993101705,
+    "same_camera_pct": 2.380355064576648
+   },
+   {
+    "name": "South Sudan",
+    "untranslated_pct": 373.02714511356066,
+    "untranslated_times": 4.730271451135607,
+    "translated_pct": 7.219673708305292,
+    "same_camera_pct": 3.2519074324848924
+   },
+   {
+    "name": "Spain",
+    "untranslated_pct": 385.7142857142857,
+    "untranslated_times": 4.857142857142858,
+    "translated_pct": 23.24767632586113,
+    "same_camera_pct": 7.462686567164178
+   },
+   {
+    "name": "Sudan",
+    "untranslated_pct": 584.192037470726,
+    "untranslated_times": 6.84192037470726,
+    "translated_pct": 8.953702586951023,
+    "same_camera_pct": 2.5176868952123126
+   },
+   {
+    "name": "Tanzania",
+    "untranslated_pct": 606.7361861398364,
+    "untranslated_times": 7.067361861398364,
+    "translated_pct": 7.039516863866009,
+    "same_camera_pct": 3.377914391288709
+   },
+   {
+    "name": "Thailand",
+    "untranslated_pct": 701.8928262748487,
+    "untranslated_times": 8.018928262748489,
+    "translated_pct": 13.889830030664612,
+    "same_camera_pct": 9.447820770366796
+   },
+   {
+    "name": "Togo",
+    "untranslated_pct": 862.1376811594203,
+    "untranslated_times": 9.621376811594203,
+    "translated_pct": 17.666088873360955,
+    "same_camera_pct": 5.01120391118354
+   },
+   {
+    "name": "Turkey",
+    "untranslated_pct": 440.0710213998692,
+    "untranslated_times": 5.400710213998692,
+    "translated_pct": 12.708686064998572,
+    "same_camera_pct": 6.261510128913445
+   },
+   {
+    "name": "Uganda",
+    "untranslated_pct": 750.9090909090909,
+    "untranslated_times": 8.509090909090908,
+    "translated_pct": 17.38436058204188,
+    "same_camera_pct": 6.887429301222404
+   },
+   {
+    "name": "Ukraine",
+    "untranslated_pct": 445.71943855899025,
+    "untranslated_times": 5.4571943855899026,
+    "translated_pct": 14.623657528621472,
+    "same_camera_pct": 5.029041834384589
+   },
+   {
+    "name": "United States",
+    "untranslated_pct": 257.0652173913044,
+    "untranslated_times": 3.570652173913044,
+    "translated_pct": 9.04161101477959,
+    "same_camera_pct": 4.406025419270925
+   },
+   {
+    "name": "Venezuela",
+    "untranslated_pct": 416.6979362101313,
+    "untranslated_times": 5.166979362101313,
+    "translated_pct": 7.388158344399322,
+    "same_camera_pct": 3.4309338346944847
+   },
+   {
+    "name": "Vietnam",
+    "untranslated_pct": 404.33763046934405,
+    "untranslated_times": 5.043376304693441,
+    "translated_pct": 11.040687373652599,
+    "same_camera_pct": 5.723252323413029
+   },
+   {
+    "name": "Zambia",
+    "untranslated_pct": 460.67533236967324,
+    "untranslated_times": 5.606753323696733,
+    "translated_pct": 9.640831830117225,
+    "same_camera_pct": 2.892776719210116
+   },
+   {
+    "name": "Zimbabwe",
+    "untranslated_pct": 497.59933774834434,
+    "untranslated_times": 5.9759933774834435,
+    "translated_pct": 14.209778277827674,
+    "same_camera_pct": 4.452789699570816
+   }
+  ],
+  "world": {
+   "n": 71,
+   "translated_within25": 71,
+   "untranslated_within25": 0,
+   "untranslated_times_min": 2.897677887477646,
+   "untranslated_times_max": 9.836713286713286,
+   "translated_max": 24.20834163290558,
+   "same_with_data": 71
+  }
+ },
+ "records": {
+  "rule": "matched years: complete in the product AND all twelve months of raw Aqua; at least one such year before 2022 and one after, in all three readings",
+  "busy": 71,
+  "testable": 65,
+  "untestable": [
+   "Burkina Faso",
+   "Guinea-Bissau",
+   "Liberia",
+   "Nepal",
+   "Sierra Leone",
+   "Togo"
+  ],
+  "stitched_after_2021": 63,
+  "one_scale_after_2021": 8,
+  "older_alone_after_2021": 14,
+  "all_three": 8,
+  "all_three_names": [
+   "Angola",
+   "Canada",
+   "Democratic Republic of the Congo",
+   "Guyana",
+   "Lao PDR",
+   "Republic of Congo",
+   "Sudan",
+   "Venezuela"
+  ],
+  "false_pattern": 49,
+  "disagree_names": [
+   "Cuba",
+   "Gabon",
+   "Mozambique",
+   "South Africa",
+   "South Sudan",
+   "Zambia"
+  ],
+  "median_stitched_times": 3.5169157602020262
+ },
+ "small_multiples": [
+  {
+   "file": "Argentina",
+   "name": "Argentina",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 45227,
+     "one": 45227,
+     "own": 45227
+    },
+    {
+     "year": 2004,
+     "asis": 39756,
+     "one": 39756,
+     "own": 39756
+    },
+    {
+     "year": 2005,
+     "asis": 27097,
+     "one": 27097,
+     "own": 27097
+    },
+    {
+     "year": 2006,
+     "asis": 33568,
+     "one": 33568,
+     "own": 33568
+    },
+    {
+     "year": 2007,
+     "asis": 30552,
+     "one": 30552,
+     "own": 30552
+    },
+    {
+     "year": 2008,
+     "asis": 40398,
+     "one": 40398,
+     "own": 40398
+    },
+    {
+     "year": 2009,
+     "asis": 29369,
+     "one": 29369,
+     "own": 29369
+    },
+    {
+     "year": 2010,
+     "asis": 23657,
+     "one": 23657,
+     "own": 23657
+    },
+    {
+     "year": 2011,
+     "asis": 28409,
+     "one": 28409,
+     "own": 28409
+    },
+    {
+     "year": 2012,
+     "asis": 24289,
+     "one": 24289,
+     "own": 24289
+    },
+    {
+     "year": 2013,
+     "asis": 24612,
+     "one": 24612,
+     "own": 24612
+    },
+    {
+     "year": 2014,
+     "asis": 13242,
+     "one": 13242,
+     "own": 13242
+    },
+    {
+     "year": 2015,
+     "asis": 18159,
+     "one": 18159,
+     "own": 18159
+    },
+    {
+     "year": 2016,
+     "asis": 21376,
+     "one": 21376,
+     "own": 21376
+    },
+    {
+     "year": 2017,
+     "asis": 21425,
+     "one": 21425,
+     "own": 21425
+    },
+    {
+     "year": 2018,
+     "asis": 20635,
+     "one": 20635,
+     "own": 20635
+    },
+    {
+     "year": 2019,
+     "asis": 19102,
+     "one": 19102,
+     "own": 19102
+    },
+    {
+     "year": 2020,
+     "asis": 45295,
+     "one": 45295,
+     "own": 45295
+    },
+    {
+     "year": 2021,
+     "asis": 21402,
+     "one": 21402,
+     "own": 21402
+    },
+    {
+     "year": 2022,
+     "asis": 89310,
+     "one": 26952,
+     "own": 27056
+    },
+    {
+     "year": 2023,
+     "asis": 56131,
+     "one": 17285,
+     "own": 16796
+    },
+    {
+     "year": 2024,
+     "asis": 59569,
+     "one": 18845,
+     "own": 20271
+    },
+    {
+     "year": 2025,
+     "asis": 61683,
+     "one": 18889,
+     "own": 20377
+    }
+   ],
+   "stitched_best": 2022,
+   "stitched_times": 1.9717408102439562,
+   "one_best": 2020,
+   "own_best": 2020,
+   "holds": false,
+   "false_record": true,
+   "gaps": []
+  },
+  {
+   "file": "Brazil",
+   "name": "Brazil",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 225741,
+     "one": 225741,
+     "own": 225741
+    },
+    {
+     "year": 2004,
+     "asis": 241785,
+     "one": 241785,
+     "own": 241785
+    },
+    {
+     "year": 2005,
+     "asis": 234845,
+     "one": 234845,
+     "own": 234845
+    },
+    {
+     "year": 2006,
+     "asis": 168453,
+     "one": 168453,
+     "own": 168453
+    },
+    {
+     "year": 2007,
+     "asis": 249292,
+     "one": 249292,
+     "own": 249292
+    },
+    {
+     "year": 2008,
+     "asis": 144644,
+     "one": 144644,
+     "own": 144644
+    },
+    {
+     "year": 2009,
+     "asis": 112242,
+     "one": 112242,
+     "own": 112242
+    },
+    {
+     "year": 2010,
+     "asis": 199257,
+     "one": 199257,
+     "own": 199257
+    },
+    {
+     "year": 2011,
+     "asis": 110655,
+     "one": 110655,
+     "own": 110655
+    },
+    {
+     "year": 2012,
+     "asis": 145179,
+     "one": 145179,
+     "own": 145179
+    },
+    {
+     "year": 2013,
+     "asis": 92750,
+     "one": 92750,
+     "own": 92750
+    },
+    {
+     "year": 2014,
+     "asis": 122449,
+     "one": 122449,
+     "own": 122449
+    },
+    {
+     "year": 2015,
+     "asis": 151124,
+     "one": 151124,
+     "own": 151124
+    },
+    {
+     "year": 2016,
+     "asis": 128565,
+     "one": 128565,
+     "own": 128565
+    },
+    {
+     "year": 2017,
+     "asis": 139410,
+     "one": 139410,
+     "own": 139410
+    },
+    {
+     "year": 2018,
+     "asis": 91634,
+     "one": 91634,
+     "own": 91634
+    },
+    {
+     "year": 2019,
+     "asis": 130985,
+     "one": 130985,
+     "own": 130985
+    },
+    {
+     "year": 2020,
+     "asis": 141197,
+     "one": 141197,
+     "own": 132860
+    },
+    {
+     "year": 2021,
+     "asis": 118467,
+     "one": 118467,
+     "own": 118467
+    },
+    {
+     "year": 2022,
+     "asis": 500906,
+     "one": 134161,
+     "own": 134346
+    },
+    {
+     "year": 2023,
+     "asis": 496275,
+     "one": 130316,
+     "own": 132227
+    },
+    {
+     "year": 2024,
+     "asis": 524026,
+     "one": 141170,
+     "own": 170016
+    },
+    {
+     "year": 2025,
+     "asis": 313755,
+     "one": 82095,
+     "own": 93896
+    }
+   ],
+   "stitched_best": 2024,
+   "stitched_times": 2.1020570254962054,
+   "one_best": 2007,
+   "own_best": 2007,
+   "holds": false,
+   "false_record": true,
+   "gaps": []
+  },
+  {
+   "file": "India",
+   "name": "India",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 26389,
+     "one": 26389,
+     "own": 26389
+    },
+    {
+     "year": 2004,
+     "asis": 31266,
+     "one": 31266,
+     "own": 31266
+    },
+    {
+     "year": 2005,
+     "asis": 31039,
+     "one": 31039,
+     "own": 31039
+    },
+    {
+     "year": 2006,
+     "asis": 31292,
+     "one": 31292,
+     "own": 31292
+    },
+    {
+     "year": 2007,
+     "asis": 34762,
+     "one": 34762,
+     "own": 34762
+    },
+    {
+     "year": 2008,
+     "asis": 33305,
+     "one": 33305,
+     "own": 33305
+    },
+    {
+     "year": 2009,
+     "asis": 43073,
+     "one": 43073,
+     "own": 43073
+    },
+    {
+     "year": 2010,
+     "asis": 36621,
+     "one": 36621,
+     "own": 36621
+    },
+    {
+     "year": 2011,
+     "asis": 34293,
+     "one": 34293,
+     "own": 34293
+    },
+    {
+     "year": 2012,
+     "asis": 44322,
+     "one": 44322,
+     "own": 44322
+    },
+    {
+     "year": 2013,
+     "asis": 33984,
+     "one": 33984,
+     "own": 33984
+    },
+    {
+     "year": 2014,
+     "asis": 35353,
+     "one": 35353,
+     "own": 35353
+    },
+    {
+     "year": 2015,
+     "asis": 32233,
+     "one": 32233,
+     "own": 32233
+    },
+    {
+     "year": 2016,
+     "asis": 43187,
+     "one": 43187,
+     "own": 43187
+    },
+    {
+     "year": 2017,
+     "asis": 40272,
+     "one": 40272,
+     "own": 40272
+    },
+    {
+     "year": 2018,
+     "asis": 42118,
+     "one": 42118,
+     "own": 42118
+    },
+    {
+     "year": 2019,
+     "asis": 32667,
+     "one": 32667,
+     "own": 32667
+    },
+    {
+     "year": 2020,
+     "asis": 33951,
+     "one": 33951,
+     "own": 33951
+    },
+    {
+     "year": 2021,
+     "asis": 51122,
+     "one": 51122,
+     "own": 51122
+    },
+    {
+     "year": 2022,
+     "asis": 270808,
+     "one": 39451,
+     "own": 36321
+    },
+    {
+     "year": 2023,
+     "asis": 282665,
+     "one": 39955,
+     "own": 36873
+    },
+    {
+     "year": 2024,
+     "asis": 272079,
+     "one": 37485,
+     "own": 34753
+    },
+    {
+     "year": 2025,
+     "asis": 308740,
+     "one": 43682,
+     "own": 45990
+    }
+   ],
+   "stitched_best": 2025,
+   "stitched_times": 6.039278588474629,
+   "one_best": 2021,
+   "own_best": 2021,
+   "holds": false,
+   "false_record": true,
+   "gaps": []
+  },
+  {
+   "file": "United_States",
+   "name": "United States",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 35539,
+     "one": 35539,
+     "own": 35539
+    },
+    {
+     "year": 2004,
+     "asis": 42289,
+     "one": 42289,
+     "own": 42289
+    },
+    {
+     "year": 2005,
+     "asis": 45831,
+     "one": 45831,
+     "own": 45831
+    },
+    {
+     "year": 2006,
+     "asis": 39401,
+     "one": 39401,
+     "own": 39401
+    },
+    {
+     "year": 2007,
+     "asis": 41095,
+     "one": 41095,
+     "own": 41095
+    },
+    {
+     "year": 2008,
+     "asis": 37446,
+     "one": 37446,
+     "own": 37446
+    },
+    {
+     "year": 2009,
+     "asis": 35967,
+     "one": 35967,
+     "own": 35967
+    },
+    {
+     "year": 2010,
+     "asis": 34552,
+     "one": 34552,
+     "own": 34552
+    },
+    {
+     "year": 2011,
+     "asis": 38295,
+     "one": 38295,
+     "own": 38295
+    },
+    {
+     "year": 2012,
+     "asis": 37943,
+     "one": 37943,
+     "own": 37943
+    },
+    {
+     "year": 2013,
+     "asis": 29963,
+     "one": 29963,
+     "own": 29963
+    },
+    {
+     "year": 2014,
+     "asis": 31236,
+     "one": 31236,
+     "own": 31236
+    },
+    {
+     "year": 2015,
+     "asis": 39219,
+     "one": 39219,
+     "own": 39219
+    },
+    {
+     "year": 2016,
+     "asis": 35754,
+     "one": 35754,
+     "own": 35754
+    },
+    {
+     "year": 2017,
+     "asis": 41152,
+     "one": 41152,
+     "own": 41152
+    },
+    {
+     "year": 2018,
+     "asis": 32842,
+     "one": 32842,
+     "own": 32842
+    },
+    {
+     "year": 2019,
+     "asis": 30359,
+     "one": 30359,
+     "own": 30359
+    },
+    {
+     "year": 2020,
+     "asis": 36878,
+     "one": 36878,
+     "own": 36878
+    },
+    {
+     "year": 2021,
+     "asis": 39053,
+     "one": 39053,
+     "own": 39053
+    },
+    {
+     "year": 2022,
+     "asis": 139237,
+     "one": 38956,
+     "own": 35754
+    },
+    {
+     "year": 2023,
+     "asis": 126545,
+     "one": 35463,
+     "own": 31038
+    },
+    {
+     "year": 2024,
+     "asis": 139824,
+     "one": 39484,
+     "own": 36157
+    },
+    {
+     "year": 2025,
+     "asis": 137550,
+     "one": 39121,
+     "own": 34296
+    }
+   ],
+   "stitched_best": 2024,
+   "stitched_times": 3.050860771093801,
+   "one_best": 2005,
+   "own_best": 2005,
+   "holds": false,
+   "false_record": true,
+   "gaps": []
+  },
+  {
+   "file": "Australia",
+   "name": "Australia",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 56856,
+     "one": 56856,
+     "own": 56856
+    },
+    {
+     "year": 2004,
+     "asis": 84730,
+     "one": 84730,
+     "own": 84730
+    },
+    {
+     "year": 2005,
+     "asis": 57894,
+     "one": 57894,
+     "own": 57894
+    },
+    {
+     "year": 2006,
+     "asis": 81729,
+     "one": 81729,
+     "own": 81729
+    },
+    {
+     "year": 2007,
+     "asis": 63461,
+     "one": 63461,
+     "own": 63461
+    },
+    {
+     "year": 2008,
+     "asis": 53963,
+     "one": 53963,
+     "own": 53963
+    },
+    {
+     "year": 2009,
+     "asis": 68095,
+     "one": 68095,
+     "own": 68095
+    },
+    {
+     "year": 2010,
+     "asis": 39961,
+     "one": 39961,
+     "own": 39961
+    },
+    {
+     "year": 2011,
+     "asis": 112511,
+     "one": 112511,
+     "own": 112511
+    },
+    {
+     "year": 2012,
+     "asis": 115051,
+     "one": 115051,
+     "own": 115051
+    },
+    {
+     "year": 2013,
+     "asis": 55001,
+     "one": 55001,
+     "own": 55001
+    },
+    {
+     "year": 2014,
+     "asis": 70843,
+     "one": 70843,
+     "own": 70843
+    },
+    {
+     "year": 2015,
+     "asis": 67505,
+     "one": 67505,
+     "own": 67505
+    },
+    {
+     "year": 2016,
+     "asis": 49214,
+     "one": 49214,
+     "own": 49214
+    },
+    {
+     "year": 2017,
+     "asis": 76840,
+     "one": 76840,
+     "own": 76840
+    },
+    {
+     "year": 2018,
+     "asis": 83327,
+     "one": 83327,
+     "own": 83327
+    },
+    {
+     "year": 2019,
+     "asis": 72455,
+     "one": 72455,
+     "own": 72455
+    },
+    {
+     "year": 2020,
+     "asis": 45982,
+     "one": 45982,
+     "own": 43299
+    },
+    {
+     "year": 2021,
+     "asis": 55273,
+     "one": 55273,
+     "own": 55273
+    },
+    {
+     "year": 2022,
+     "asis": 157709,
+     "one": 55202,
+     "own": 49065
+    },
+    {
+     "year": 2023,
+     "asis": 251211,
+     "one": 89051,
+     "own": 99279
+    },
+    {
+     "year": 2024,
+     "asis": 183898,
+     "one": 64657,
+     "own": 66946
+    },
+    {
+     "year": 2025,
+     "asis": 204577,
+     "one": 72316,
+     "own": 73843
+    }
+   ],
+   "stitched_best": 2023,
+   "stitched_times": 2.1834751544967013,
+   "one_best": 2012,
+   "own_best": 2012,
+   "holds": false,
+   "false_record": true,
+   "gaps": []
+  },
+  {
+   "file": "Spain",
+   "name": "Spain",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 2106,
+     "one": 2106,
+     "own": 2106
+    },
+    {
+     "year": 2004,
+     "asis": 2420,
+     "one": 2420,
+     "own": 2420
+    },
+    {
+     "year": 2005,
+     "asis": 2050,
+     "one": 2050,
+     "own": 2050
+    },
+    {
+     "year": 2006,
+     "asis": 1673,
+     "one": 1673,
+     "own": 1673
+    },
+    {
+     "year": 2007,
+     "asis": 1289,
+     "one": 1289,
+     "own": 1289
+    },
+    {
+     "year": 2008,
+     "asis": 1047,
+     "one": 1047,
+     "own": 1047
+    },
+    {
+     "year": 2009,
+     "asis": 1373,
+     "one": 1373,
+     "own": 1373
+    },
+    {
+     "year": 2010,
+     "asis": 819,
+     "one": 819,
+     "own": 819
+    },
+    {
+     "year": 2011,
+     "asis": 1508,
+     "one": 1508,
+     "own": 1508
+    },
+    {
+     "year": 2012,
+     "asis": 1686,
+     "one": 1686,
+     "own": 1686
+    },
+    {
+     "year": 2013,
+     "asis": 1069,
+     "one": 1069,
+     "own": 1069
+    },
+    {
+     "year": 2014,
+     "asis": 850,
+     "one": 850,
+     "own": 850
+    },
+    {
+     "year": 2015,
+     "asis": 1015,
+     "one": 1015,
+     "own": 1015
+    },
+    {
+     "year": 2016,
+     "asis": 990,
+     "one": 990,
+     "own": 990
+    },
+    {
+     "year": 2017,
+     "asis": 1480,
+     "one": 1480,
+     "own": 1480
+    },
+    {
+     "year": 2018,
+     "asis": 461,
+     "one": 461,
+     "own": 461
+    },
+    {
+     "year": 2019,
+     "asis": 889,
+     "one": 889,
+     "own": 889
+    },
+    {
+     "year": 2020,
+     "asis": 703,
+     "one": 703,
+     "own": 703
+    },
+    {
+     "year": 2021,
+     "asis": 888,
+     "one": 888,
+     "own": 888
+    },
+    {
+     "year": 2022,
+     "asis": 4370,
+     "one": 936,
+     "own": 1162
+    },
+    {
+     "year": 2023,
+     "asis": 3404,
+     "one": 752,
+     "own": 729
+    },
+    {
+     "year": 2024,
+     "asis": 3046,
+     "one": 653,
+     "own": 616
+    },
+    {
+     "year": 2025,
+     "asis": 4783,
+     "one": 1013,
+     "own": 1577
+    }
+   ],
+   "stitched_best": 2025,
+   "stitched_times": 1.9764462809917356,
+   "one_best": 2004,
+   "own_best": 2004,
+   "holds": false,
+   "false_record": true,
+   "gaps": []
+  },
+  {
+   "file": "Canada",
+   "name": "Canada",
+   "first": 2003,
+   "last": 2025,
+   "years": [
+    {
+     "year": 2003,
+     "asis": 12102,
+     "one": 12102,
+     "own": 12102
+    },
+    {
+     "year": 2004,
+     "asis": 16475,
+     "one": 16475,
+     "own": 16475
+    },
+    {
+     "year": 2005,
+     "asis": 8779,
+     "one": 8779,
+     "own": 8779
+    },
+    {
+     "year": 2006,
+     "asis": 9228,
+     "one": 9228,
+     "own": 9228
+    },
+    {
+     "year": 2007,
+     "asis": 8768,
+     "one": 8768,
+     "own": 8768
+    },
+    {
+     "year": 2008,
+     "asis": 8749,
+     "one": 8749,
+     "own": 8749
+    },
+    {
+     "year": 2009,
+     "asis": 7183,
+     "one": 7183,
+     "own": 7183
+    },
+    {
+     "year": 2010,
+     "asis": 12069,
+     "one": 12069,
+     "own": 12069
+    },
+    {
+     "year": 2011,
+     "asis": 8882,
+     "one": 8882,
+     "own": 8882
+    },
+    {
+     "year": 2012,
+     "asis": 9343,
+     "one": 9343,
+     "own": 9343
+    },
+    {
+     "year": 2013,
+     "asis": 14568,
+     "one": 14568,
+     "own": 14568
+    },
+    {
+     "year": 2014,
+     "asis": 16990,
+     "one": 16990,
+     "own": 16990
+    },
+    {
+     "year": 2015,
+     "asis": 16025,
+     "one": 16025,
+     "own": 16025
+    },
+    {
+     "year": 2016,
+     "asis": 6776,
+     "one": 6776,
+     "own": 6776
+    },
+    {
+     "year": 2017,
+     "asis": 18945,
+     "one": 18945,
+     "own": 18945
+    },
+    {
+     "year": 2018,
+     "asis": 12836,
+     "one": 12836,
+     "own": 12836
+    },
+    {
+     "year": 2019,
+     "asis": 7514,
+     "one": 7514,
+     "own": 7514
+    },
+    {
+     "year": 2020,
+     "asis": 4372,
+     "one": 4372,
+     "own": 4113
+    },
+    {
+     "year": 2021,
+     "asis": 18157,
+     "one": 18157,
+     "own": 18157
+    },
+    {
+     "year": 2022,
+     "asis": 24101,
+     "one": 8333,
+     "own": 8184
+    },
+    {
+     "year": 2023,
+     "asis": 136212,
+     "one": 50810,
+     "own": 58327
+    },
+    {
+     "year": 2024,
+     "asis": 62423,
+     "one": 22989,
+     "own": 26995
+    },
+    {
+     "year": 2025,
+     "asis": 71991,
+     "one": 27011,
+     "own": 30172
+    }
+   ],
+   "stitched_best": 2023,
+   "stitched_times": 7.189865399841647,
+   "one_best": 2023,
+   "own_best": 2023,
+   "holds": true,
+   "false_record": false,
+   "gaps": []
+  }
+ ],
+ "dropped": [],
+ "world": {
+  "rule": "countries complete on one scale and in raw Aqua (twelve rows) in every year 2003-2025 (CHECK_WORLD.md set A66); one-scale product totals, 2026 extension off",
+  "countries": 66,
+  "years": [
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "totals": [
+   1784774,
+   1743501,
+   1782772,
+   1609730,
+   1731487,
+   1676069,
+   1563891,
+   1618684,
+   1609947,
+   1625609,
+   1498752,
+   1525732,
+   1644574,
+   1571064,
+   1507681,
+   1442013,
+   1520554,
+   1549483.2627985855,
+   1450457,
+   1415059.4627121876,
+   1551195.411529072,
+   1659939.1686474357,
+   1399655.3230591796
+  ],
+  "aqua_totals": [
+   1784774,
+   1743501,
+   1782772,
+   1609730,
+   1731487,
+   1676069,
+   1563891,
+   1618684,
+   1609947,
+   1625609,
+   1498752,
+   1525732,
+   1644574,
+   1571064,
+   1507681,
+   1442013,
+   1520554,
+   1482946,
+   1450457,
+   1360267,
+   1582759,
+   1746220,
+   1424202
+  ],
+  "first5": {
+   "from": 2003,
+   "to": 2007,
+   "mean": 1730452.8
+  },
+  "last5": {
+   "from": 2021,
+   "to": 2025,
+   "mean": 1495261.273189575
+  },
+  "change_pct": -13.591328628577736
+ },
+ "connector": {
+  "source": "round_SAT/mcp/EXAMPLES.md lines 469-595",
+  "question": "How bad were the fires in Australia in December 2019?",
+  "tool": "fire_answer",
+  "args": {
+   "place": "Australia",
+   "period": "December 2019"
+  },
+  "said": [
+   "Australia's December 2019 was far busier than normal, with about three times the usual amount of fire.",
+   "That's about 13,000 fire detections in December 2019.",
+   "Want the rest of 2019 month by month?"
+  ],
+  "place": "Australia",
+  "label": "December 2019",
+  "record_from": "2000-11",
+  "record_to": "2025-12",
+  "detections": 13370,
+  "usual": 4246.3,
+  "years_compared": 25,
+  "verdict": "Far busier than normal",
+  "compared": "about three times the usual",
+  "rank_fraction": 1,
+  "too_little": false,
+  "unit": "A detection is one 5 km patch of ground where a satellite saw fire on one day, so one big fire counts many times.",
+  "months": [
+   {
+    "year": 2000,
+    "value": 5291.424668667986
+   },
+   {
+    "year": 2001,
+    "value": 11102.503428024593
+   },
+   {
+    "year": 2002,
+    "value": 7690
+   },
+   {
+    "year": 2003,
+    "value": 2526
+   },
+   {
+    "year": 2004,
+    "value": 5532
+   },
+   {
+    "year": 2005,
+    "value": 4288
+   },
+   {
+    "year": 2006,
+    "value": 7393
+   },
+   {
+    "year": 2007,
+    "value": 3517
+   },
+   {
+    "year": 2008,
+    "value": 2541
+   },
+   {
+    "year": 2009,
+    "value": 6100
+   },
+   {
+    "year": 2010,
+    "value": 867
+   },
+   {
+    "year": 2011,
+    "value": 5320
+   },
+   {
+    "year": 2012,
+    "value": 8418
+   },
+   {
+    "year": 2013,
+    "value": 3208
+   },
+   {
+    "year": 2014,
+    "value": 3035
+   },
+   {
+    "year": 2015,
+    "value": 2207
+   },
+   {
+    "year": 2016,
+    "value": 3155
+   },
+   {
+    "year": 2017,
+    "value": 6652
+   },
+   {
+    "year": 2018,
+    "value": 6034
+   },
+   {
+    "year": 2019,
+    "value": 13370
+   },
+   {
+    "year": 2020,
+    "value": 1575
+   },
+   {
+    "year": 2021,
+    "value": 3477
+   },
+   {
+    "year": 2022,
+    "value": 2626.493153644638
+   },
+   {
+    "year": 2023,
+    "value": 9160.61985172982
+   },
+   {
+    "year": 2024,
+    "value": 3562.7509655116537
+   },
+   {
+    "year": 2025,
+    "value": 4246.302022848192
+   }
+  ],
+  "engine_value": 13370,
+  "engine_usual": 4246.302022848192,
+  "engine_higher_than": 25
+ },
+ "chat": {
+  "place": "Argentina",
+  "period": "November 1–12, 2026",
+  "answer": "Fire activity across Argentina was about normal in early November on the 26-year satellite record. NASA's older MODIS camera, counted on its own, saw about a third more than usual. Early data.",
+  "ours": 550,
+  "ours_typical": 538,
+  "older": 757,
+  "older_typical": 557
+ },
+ "links": {
+  "page": null,
+  "connector": null,
+  "repo": null,
+  "note": "addresses are not stored here (the public copy must not carry them): js/beats.js and local/addresses.js"
+ }
+}

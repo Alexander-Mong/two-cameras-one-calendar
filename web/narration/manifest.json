@@ -1,0 +1,267 @@
+{
+ "made": "Built by make_manifest.cjs from NARRATION_SCRIPT.md. Steps are the PAGE's presses (slide.press); hold = no press.",
+ "stretches": {
+  "whole": {
+   "from": "s1_p0",
+   "to": "s7_p2"
+  },
+  "middle": {
+   "from": "s2_p1",
+   "to": "s6_p1"
+  }
+ },
+ "explainerLayout": true,
+ "walkLayout": true,
+ "firePowerLayout": false,
+ "walkCount": 2,
+ "steps": [
+  {
+   "slide": 1,
+   "press": 1,
+   "clip": "s1_p0",
+   "part": "INTRO",
+   "cue": "question",
+   "text": "Hi everyone. We're Spark Squad, a homeschool family team, and one of our team drew these two satellites.",
+   "dwell": 8.7,
+   "voiceAfter": 0.3,
+   "audio": null
+  },
+  {
+   "slide": 1,
+   "press": 2,
+   "clip": "s1_p0b",
+   "part": "INTRO",
+   "cue": "challenge",
+   "text": "Here's NASA's challenge. Satellites have tracked fire hot spots for more than twenty years. But the older camera is being replaced by a newer one, and their records can't be compared directly. Our job: harmonize them into one burning calendar, in a web page.",
+   "dwell": 19.1,
+   "voiceAfter": null,
+   "audio": null
+  },
+  {
+   "slide": 1,
+   "press": 3,
+   "clip": "s1_p2",
+   "part": "INTRO",
+   "cue": "Moe",
+   "text": "Hi, I'm . I drew the satellites. This is Moe, short for MODIS. He's the older satellite. His eyes aren't quite as sensitive, so I drew him with glasses. You can see how clearly he could see the hot spots in Argentina, here on this picture.",
+   "dwell": 19.9,
+   "voiceAfter": 1,
+   "audio": null
+  },
+  {
+   "slide": 1,
+   "press": 4,
+   "clip": "s1_p3",
+   "part": "INTRO",
+   "cue": "Vee",
+   "text": "Here's Vee. She has much sharper eyes. As you can tell, she was able to see way more hot spots than Moe could.",
+   "dwell": 10.7,
+   "voiceAfter": 1,
+   "audio": null
+  },
+  {
+   "slide": 1,
+   "press": 5,
+   "song": true,
+   "clip": "s1_p1c",
+   "part": "INTRO",
+   "cue": "song",
+   "text": "(The song. Everyone sings; the words are on the screen. Then press Next.)",
+   "dwell": 6.7,
+   "voiceAfter": null,
+   "audio": null
+  },
+  {
+   "slide": 2,
+   "press": 1,
+   "clip": "s2_p1",
+   "part": "INTRO",
+   "cue": "stitch",
+   "text": "Now, if we just naively stitch the two records together, Moe up to twenty twenty-one and Vee after, it looks like Argentina is burning up.",
+   "dwell": 11.5,
+   "voiceAfter": 1.2,
+   "audio": "s2_p1.m4a"
+  },
+  {
+   "slide": 2,
+   "press": 2,
+   "clip": "s2_p2",
+   "part": "INTRO",
+   "cue": "jump",
+   "text": "But the jump starts right where the record switches cameras. Let's see if it's mostly just sharper eyes.",
+   "dwell": 8.7,
+   "voiceAfter": 0.6,
+   "audio": "s2_p2.m4a"
+  },
+  {
+   "slide": 2,
+   "press": 3,
+   "clip": "s2_p3",
+   "part": "INTRO",
+   "cue": "scale",
+   "text": "We harmonized every year onto one scale. After that, if we look again, twenty twenty-two is still above normal, but it's far below the biggest years.",
+   "dwell": 11.9,
+   "voiceAfter": 0.8,
+   "audio": "s2_p3.m4a"
+  },
+  {
+   "slide": 3,
+   "press": 1,
+   "clip": "s3_p1",
+   "part": "MIDDLE",
+   "cue": "ten",
+   "text": "How do we do this? We took ten years where both cameras watched the same fires: Moe, whose real name is MODIS, and Vee, whose real name is VIIRS.",
+   "dwell": 13.1,
+   "voiceAfter": 1.2,
+   "audio": "s3_p1.m4a"
+  },
+  {
+   "slide": 3,
+   "press": 2,
+   "clip": "s3_p2",
+   "part": "MIDDLE",
+   "cue": "divide",
+   "text": "We found that the gap between how these satellites record fires changes with the seasons. So every month gets its own conversion number. You multiply Vee's count by it to estimate Moe's, or divide Moe's count by it to get Vee's.",
+   "dwell": 17.9,
+   "voiceAfter": 0.8,
+   "audio": "s3_p2.m4a"
+  },
+  {
+   "slide": 3,
+   "press": 3,
+   "clip": "s3_p4",
+   "part": "MIDDLE",
+   "cue": "together",
+   "text": "Either way, the years are harmonized together, and a change in camera no longer looks like a change in fire.",
+   "dwell": 9.5,
+   "voiceAfter": 0.8,
+   "audio": "s3_p4.m4a"
+  },
+  {
+   "slide": 4,
+   "press": 1,
+   "walk": 1,
+   "clip": "s4_w1",
+   "part": "MIDDLE",
+   "cue": "ten",
+   "text": "To check it, we pick a year, here twenty seventeen, hold it out, and work out the numbers from the other nine.",
+   "dwell": 10.3,
+   "voiceAfter": null,
+   "audio": "s4_w1.m4a"
+  },
+  {
+   "slide": 4,
+   "press": 2,
+   "walk": 2,
+   "clip": "s4_w2",
+   "part": "MIDDLE",
+   "cue": "aside",
+   "text": "Then we translate the held-out year. In October, Vee counted six thousand and thirty-five. We estimated one thousand, seven hundred and thirty-four. Moe actually counted one thousand, nine hundred and twenty-one. We were within ten percent.",
+   "dwell": 15.9,
+   "voiceAfter": null,
+   "audio": "s4_w2.m4a"
+  },
+  {
+   "slide": 4,
+   "press": 3,
+   "walk": 0,
+   "clip": "s4_p2",
+   "part": "MIDDLE",
+   "cue": "Pampas",
+   "text": "Sometimes the world has surprises for us. For instance, in January twenty seventeen, our estimate came out low because that summer, after a drought, large wildfires swept through the area. These were big fires, the kind Moe is able to catch easily, so the ratio changed.",
+   "dwell": 19.9,
+   "voiceAfter": 0.6,
+   "audio": "s4_p2.m4a"
+  },
+  {
+   "slide": 4,
+   "press": 4,
+   "walk": 0,
+   "clip": "s4_p3",
+   "part": "MIDDLE",
+   "cue": "smarter",
+   "text": "So, how close are we able to get with our method? Naively stitched together, a typical month in Argentina reads about three and a half times what Moe counted. Our translation lands within about ten percent. Our smarter version, which also sorts fires by heat, lands within about seven.",
+   "dwell": 21.1,
+   "voiceAfter": 0.6,
+   "audio": "s4_p3.m4a"
+  },
+  {
+   "slide": 4,
+   "press": 5,
+   "walk": 0,
+   "clip": "s4_p4",
+   "part": "MIDDLE",
+   "cue": "countries",
+   "text": "And it holds beyond Argentina: in all seventy-one countries with a lot of fire, a typical month lands within twenty-five percent.",
+   "dwell": 9.9,
+   "voiceAfter": null,
+   "audio": "s4_p4.m4a"
+  },
+  {
+   "slide": 5,
+   "press": 1,
+   "clip": "s5_p1",
+   "part": "END",
+   "cue": "stitched",
+   "text": "So why does all this matter? Stitched together naively, it looks like almost all the countries with a lot of fire, sixty-three of sixty-five, show their biggest fire year after twenty twenty-one.",
+   "dwell": 14.3,
+   "voiceAfter": 1.2,
+   "audio": "s5_p1.m4a"
+  },
+  {
+   "slide": 5,
+   "press": 2,
+   "clip": "s5_p2",
+   "part": "END",
+   "cue": "Canada",
+   "text": "After harmonization, only nine do. And for Canada, twenty twenty-three stays its biggest year. The scale keeps a record that's really there.",
+   "dwell": 10.3,
+   "voiceAfter": 0.5,
+   "audio": "s5_p2.m4a"
+  },
+  {
+   "slide": 6,
+   "press": 1,
+   "clip": "s6_p0",
+   "part": "END",
+   "cue": "calendar",
+   "text": "Here's what the challenge asked for: a burning calendar in a web page. Every month since November two thousand, on one scale, for a country you pick, with this month against its usual.",
+   "dwell": 14.7,
+   "voiceAfter": null,
+   "audio": "s6_p0.m4a"
+  },
+  {
+   "slide": 6,
+   "press": 2,
+   "clip": "s6_p1",
+   "part": "END",
+   "cue": "connector",
+   "text": "We also built an MCP connector, a plug-in that lets AI chat apps talk directly to our record. It has eleven tools: find a place, compare two years, check how sure the answer is. So you can just ask it: how bad were Australia's fires in December twenty nineteen? Then watch. It finds the place, reads through all twenty-six Decembers, and answers from the data. There were about three times as many fire detections as a normal December.",
+   "dwell": 32.7,
+   "voiceAfter": 1.2,
+   "audio": "s6_p1.m4a"
+  },
+  {
+   "slide": 7,
+   "press": 1,
+   "clip": "s7_p1",
+   "part": "END",
+   "cue": "label",
+   "text": "Not all hot spots are wildfires. There's industry, and volcanoes, and other places that stay hot for most of the year. So we built a tool to help volunteers identify hot spots, to speed up the process. You can try it yourself by scanning this QR code.",
+   "dwell": 20.3,
+   "voiceAfter": 1,
+   "audio": null
+  },
+  {
+   "slide": 7,
+   "press": 2,
+   "clip": "s7_p2",
+   "part": "END",
+   "cue": "camera",
+   "text": "We're Spark Squad. Before you trust a fire record, check the camera. Our connector and our volunteer page are ready for you to try. Thank you.",
+   "dwell": 11.9,
+   "voiceAfter": 0.6,
+   "audio": null
+  }
+ ]
+}

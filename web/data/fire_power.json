@@ -1,0 +1,514 @@
+{
+ "made": "Built by tools/build_fire_power.cjs from the engine (plain against strength, left-out-year test, months both tested; closer = typical monthly miss more than one point lower).",
+ "countries": 71,
+ "closer": 51,
+ "tie": 19,
+ "worse": 1,
+ "worseNames": [
+  "Ethiopia"
+ ],
+ "middle": {
+  "plain": 12.35,
+  "strength": 10.14
+ },
+ "months": 8207,
+ "rows": [
+  {
+   "name": "Angola",
+   "months": 117,
+   "plain": 6.686,
+   "strength": 4.446,
+   "verdict": "closer"
+  },
+  {
+   "name": "Argentina",
+   "months": 119,
+   "plain": 9.522,
+   "strength": 7.035,
+   "verdict": "closer"
+  },
+  {
+   "name": "Australia",
+   "months": 118,
+   "plain": 7.261,
+   "strength": 3.79,
+   "verdict": "closer"
+  },
+  {
+   "name": "Benin",
+   "months": 112,
+   "plain": 15.452,
+   "strength": 15.715,
+   "verdict": "tie"
+  },
+  {
+   "name": "Bolivia",
+   "months": 118,
+   "plain": 8.762,
+   "strength": 5.667,
+   "verdict": "closer"
+  },
+  {
+   "name": "Botswana",
+   "months": 113,
+   "plain": 13.78,
+   "strength": 8.61,
+   "verdict": "closer"
+  },
+  {
+   "name": "Brazil",
+   "months": 118,
+   "plain": 6.807,
+   "strength": 4.197,
+   "verdict": "closer"
+  },
+  {
+   "name": "Burkina Faso",
+   "months": 95,
+   "plain": 11.714,
+   "strength": 9.114,
+   "verdict": "closer"
+  },
+  {
+   "name": "Cambodia",
+   "months": 118,
+   "plain": 14.089,
+   "strength": 11.71,
+   "verdict": "closer"
+  },
+  {
+   "name": "Cameroon",
+   "months": 119,
+   "plain": 10.466,
+   "strength": 7.725,
+   "verdict": "closer"
+  },
+  {
+   "name": "Canada",
+   "months": 118,
+   "plain": 14.826,
+   "strength": 10.419,
+   "verdict": "closer"
+  },
+  {
+   "name": "Central African Republic",
+   "months": 118,
+   "plain": 7.97,
+   "strength": 8.335,
+   "verdict": "tie"
+  },
+  {
+   "name": "Chad",
+   "months": 117,
+   "plain": 9.019,
+   "strength": 7.774,
+   "verdict": "closer"
+  },
+  {
+   "name": "Chile",
+   "months": 118,
+   "plain": 18.955,
+   "strength": 13.795,
+   "verdict": "closer"
+  },
+  {
+   "name": "China",
+   "months": 118,
+   "plain": 13.09,
+   "strength": 10.143,
+   "verdict": "closer"
+  },
+  {
+   "name": "Colombia",
+   "months": 118,
+   "plain": 9.079,
+   "strength": 8.263,
+   "verdict": "tie"
+  },
+  {
+   "name": "Côte d'Ivoire",
+   "months": 118,
+   "plain": 17.314,
+   "strength": 13.463,
+   "verdict": "closer"
+  },
+  {
+   "name": "Cuba",
+   "months": 118,
+   "plain": 12.241,
+   "strength": 10.612,
+   "verdict": "closer"
+  },
+  {
+   "name": "Democratic Republic of the Congo",
+   "months": 119,
+   "plain": 4.127,
+   "strength": 3.536,
+   "verdict": "tie"
+  },
+  {
+   "name": "Ethiopia",
+   "months": 117,
+   "plain": 9.186,
+   "strength": 10.25,
+   "verdict": "worse"
+  },
+  {
+   "name": "Gabon",
+   "months": 119,
+   "plain": 17.561,
+   "strength": 14.727,
+   "verdict": "closer"
+  },
+  {
+   "name": "Ghana",
+   "months": 118,
+   "plain": 14.182,
+   "strength": 11.096,
+   "verdict": "closer"
+  },
+  {
+   "name": "Guatemala",
+   "months": 119,
+   "plain": 12.207,
+   "strength": 11.574,
+   "verdict": "tie"
+  },
+  {
+   "name": "Guinea",
+   "months": 114,
+   "plain": 10.039,
+   "strength": 7.871,
+   "verdict": "closer"
+  },
+  {
+   "name": "Guinea-Bissau",
+   "months": 98,
+   "plain": 11.112,
+   "strength": 11.444,
+   "verdict": "tie"
+  },
+  {
+   "name": "Guyana",
+   "months": 118,
+   "plain": 15.453,
+   "strength": 15.326,
+   "verdict": "tie"
+  },
+  {
+   "name": "Honduras",
+   "months": 119,
+   "plain": 16.761,
+   "strength": 14.087,
+   "verdict": "closer"
+  },
+  {
+   "name": "India",
+   "months": 119,
+   "plain": 10.651,
+   "strength": 6.426,
+   "verdict": "closer"
+  },
+  {
+   "name": "Indonesia",
+   "months": 118,
+   "plain": 13.717,
+   "strength": 6.594,
+   "verdict": "closer"
+  },
+  {
+   "name": "Iran",
+   "months": 118,
+   "plain": 22.97,
+   "strength": 19.227,
+   "verdict": "closer"
+  },
+  {
+   "name": "Iraq",
+   "months": 118,
+   "plain": 24.208,
+   "strength": 23.343,
+   "verdict": "tie"
+  },
+  {
+   "name": "Italy",
+   "months": 117,
+   "plain": 21.745,
+   "strength": 21.264,
+   "verdict": "tie"
+  },
+  {
+   "name": "Kazakhstan",
+   "months": 117,
+   "plain": 11.713,
+   "strength": 8.503,
+   "verdict": "closer"
+  },
+  {
+   "name": "Kenya",
+   "months": 118,
+   "plain": 19.006,
+   "strength": 14.753,
+   "verdict": "closer"
+  },
+  {
+   "name": "Lao PDR",
+   "months": 114,
+   "plain": 16.995,
+   "strength": 14.197,
+   "verdict": "closer"
+  },
+  {
+   "name": "Liberia",
+   "months": 96,
+   "plain": 20.788,
+   "strength": 18.207,
+   "verdict": "closer"
+  },
+  {
+   "name": "Madagascar",
+   "months": 116,
+   "plain": 7.582,
+   "strength": 5.565,
+   "verdict": "closer"
+  },
+  {
+   "name": "Malawi",
+   "months": 109,
+   "plain": 16.999,
+   "strength": 14.076,
+   "verdict": "closer"
+  },
+  {
+   "name": "Malaysia",
+   "months": 118,
+   "plain": 17.966,
+   "strength": 13.22,
+   "verdict": "closer"
+  },
+  {
+   "name": "Mali",
+   "months": 115,
+   "plain": 7.753,
+   "strength": 6.83,
+   "verdict": "tie"
+  },
+  {
+   "name": "Mexico",
+   "months": 119,
+   "plain": 5.766,
+   "strength": 4.886,
+   "verdict": "tie"
+  },
+  {
+   "name": "Mozambique",
+   "months": 118,
+   "plain": 9.718,
+   "strength": 7.559,
+   "verdict": "closer"
+  },
+  {
+   "name": "Myanmar",
+   "months": 117,
+   "plain": 10.655,
+   "strength": 9.798,
+   "verdict": "tie"
+  },
+  {
+   "name": "Namibia",
+   "months": 116,
+   "plain": 21.614,
+   "strength": 9.16,
+   "verdict": "closer"
+  },
+  {
+   "name": "Nepal",
+   "months": 101,
+   "plain": 17.927,
+   "strength": 15.064,
+   "verdict": "closer"
+  },
+  {
+   "name": "Nigeria",
+   "months": 117,
+   "plain": 12.129,
+   "strength": 11.561,
+   "verdict": "tie"
+  },
+  {
+   "name": "Pakistan",
+   "months": 119,
+   "plain": 13.494,
+   "strength": 10.89,
+   "verdict": "closer"
+  },
+  {
+   "name": "Papua New Guinea",
+   "months": 118,
+   "plain": 13.716,
+   "strength": 10.023,
+   "verdict": "closer"
+  },
+  {
+   "name": "Paraguay",
+   "months": 119,
+   "plain": 8.659,
+   "strength": 6.296,
+   "verdict": "closer"
+  },
+  {
+   "name": "Peru",
+   "months": 118,
+   "plain": 12.352,
+   "strength": 10.17,
+   "verdict": "closer"
+  },
+  {
+   "name": "Philippines",
+   "months": 118,
+   "plain": 13.839,
+   "strength": 12.214,
+   "verdict": "closer"
+  },
+  {
+   "name": "Republic of Congo",
+   "months": 118,
+   "plain": 10.612,
+   "strength": 11.106,
+   "verdict": "tie"
+  },
+  {
+   "name": "Romania",
+   "months": 117,
+   "plain": 15.401,
+   "strength": 14.535,
+   "verdict": "tie"
+  },
+  {
+   "name": "Russian Federation",
+   "months": 118,
+   "plain": 13.561,
+   "strength": 6.412,
+   "verdict": "closer"
+  },
+  {
+   "name": "Senegal",
+   "months": 109,
+   "plain": 8.943,
+   "strength": 6.588,
+   "verdict": "closer"
+  },
+  {
+   "name": "Sierra Leone",
+   "months": 96,
+   "plain": 15.532,
+   "strength": 12.674,
+   "verdict": "closer"
+  },
+  {
+   "name": "South Africa",
+   "months": 118,
+   "plain": 6.827,
+   "strength": 4.665,
+   "verdict": "closer"
+  },
+  {
+   "name": "South Sudan",
+   "months": 118,
+   "plain": 7.22,
+   "strength": 7.759,
+   "verdict": "tie"
+  },
+  {
+   "name": "Spain",
+   "months": 118,
+   "plain": 23.088,
+   "strength": 16.018,
+   "verdict": "closer"
+  },
+  {
+   "name": "Sudan",
+   "months": 115,
+   "plain": 8.954,
+   "strength": 7.022,
+   "verdict": "closer"
+  },
+  {
+   "name": "Tanzania",
+   "months": 116,
+   "plain": 7.04,
+   "strength": 6.315,
+   "verdict": "tie"
+  },
+  {
+   "name": "Thailand",
+   "months": 118,
+   "plain": 13.89,
+   "strength": 11.343,
+   "verdict": "closer"
+  },
+  {
+   "name": "Togo",
+   "months": 106,
+   "plain": 17.666,
+   "strength": 15.295,
+   "verdict": "closer"
+  },
+  {
+   "name": "Turkey",
+   "months": 116,
+   "plain": 12.709,
+   "strength": 9.785,
+   "verdict": "closer"
+  },
+  {
+   "name": "Uganda",
+   "months": 119,
+   "plain": 17.384,
+   "strength": 13.568,
+   "verdict": "closer"
+  },
+  {
+   "name": "Ukraine",
+   "months": 114,
+   "plain": 14.624,
+   "strength": 10.555,
+   "verdict": "closer"
+  },
+  {
+   "name": "United States",
+   "months": 119,
+   "plain": 9.042,
+   "strength": 5.606,
+   "verdict": "closer"
+  },
+  {
+   "name": "Venezuela",
+   "months": 118,
+   "plain": 7.317,
+   "strength": 6.765,
+   "verdict": "tie"
+  },
+  {
+   "name": "Vietnam",
+   "months": 116,
+   "plain": 11.041,
+   "strength": 10.381,
+   "verdict": "tie"
+  },
+  {
+   "name": "Zambia",
+   "months": 118,
+   "plain": 9.641,
+   "strength": 7.528,
+   "verdict": "closer"
+  },
+  {
+   "name": "Zimbabwe",
+   "months": 116,
+   "plain": 14.21,
+   "strength": 9.987,
+   "verdict": "closer"
+  }
+ ]
+}

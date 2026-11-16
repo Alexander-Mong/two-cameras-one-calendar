@@ -1,0 +1,188 @@
+{
+ "what": "Every character and decoration picture in the story, by role. Pencil.",
+ "how": "file: the new drawing's path, relative to the app folder (e.g. img/characters/older_idle.png); null = use the fallback (Fire Detectives art in img/fire_detectives/). Each picture is fitted inside boxWidth x boxHeight (stage pixels: the stage is 1920 x 1080) without distortion or cropping, bottom-anchored. A file that fails to load falls back too. Optional 'accent': a color like #2f5bd8 to use for that camera instead of reading it from the drawing.",
+ "slots": {
+  "older_idle": {
+   "file": "img/characters/art_older_idle_20261114-120850.webp",
+   "alt": "The older satellite, floating, friendly",
+   "where": "Slide 1 (cast line), the title, the lift-off; small guide beside MODIS's numbers on slides 3, 4, 5, 6 and the extras. Its main accent sets the older camera's color (--cam-older) unless 'accent' is given",
+   "boxWidth": 154,
+   "boxHeight": 96,
+   "anchor": "bottom center",
+   "fallback": [
+    "moe_wave"
+   ]
+  },
+  "older_looking": {
+   "file": "img/characters/art_older_looking_20261114-120850.webp",
+   "alt": "The older satellite looking hard at the ground, searching",
+   "where": "Slide 1: drawn large over the wetland while only the older camera's view shows",
+   "boxWidth": 240,
+   "boxHeight": 150,
+   "anchor": "bottom center",
+   "fallback": [
+    "moe_think"
+   ]
+  },
+  "older_puzzled": {
+   "file": "img/characters/art_older_puzzled_20261114-120850.webp",
+   "alt": "The older satellite a little puzzled or squinting",
+   "where": "Slide 1, last press: drawn large beside the newer camera's view",
+   "boxWidth": 240,
+   "boxHeight": 150,
+   "anchor": "bottom center",
+   "fallback": [
+    "moe_confused"
+   ]
+  },
+  "older_sign": {
+   "file": "img/characters/art_older_sign_20261114-120850.webp",
+   "alt": "The older satellite holding up a blank sign",
+   "where": "Slide 2, both presses: above its half of the chart (the years to 2021)",
+   "boxWidth": 176,
+   "boxHeight": 110,
+   "anchor": "bottom center",
+   "fallback": [
+    "moe_point"
+   ]
+  },
+  "newer_idle": {
+   "file": "img/characters/art_newer_idle_20261114-141023.webp",
+   "alt": "The newer satellite, floating, friendly",
+   "where": "Slide 1 (cast line), the title, the lift-off; small guide beside VIIRS's numbers on slides 3, 4 and the extras. Its main accent sets the newer camera's color (--cam-newer) unless 'accent' is given",
+   "boxWidth": 96,
+   "boxHeight": 96,
+   "anchor": "bottom center",
+   "fallback": [
+    "vee_wave"
+   ]
+  },
+  "newer_looking": {
+   "file": "img/characters/art_newer_looking_20261114-141025.webp",
+   "alt": "The newer satellite looking hard at the ground, searching",
+   "where": "Slide 1: drawn large over the wetland before the newer camera's view is shown",
+   "boxWidth": 150,
+   "boxHeight": 150,
+   "anchor": "bottom center",
+   "fallback": [
+    "vee_think"
+   ]
+  },
+  "newer_surprised": {
+   "file": "img/characters/art_newer_surprised_20261114-141026.webp",
+   "alt": "The newer satellite surprised or proud: 'I see so many!'",
+   "where": "Slide 1, last press: drawn large while its own view shows",
+   "boxWidth": 150,
+   "boxHeight": 150,
+   "anchor": "bottom center",
+   "fallback": [
+    "vee_surprised"
+   ]
+  },
+  "newer_sign": {
+   "file": "img/characters/art_newer_sign_20261114-141028.webp",
+   "alt": "The newer satellite holding up a blank sign",
+   "where": "Slide 2, both presses: above its half of the chart (the years from 2022)",
+   "boxWidth": 110,
+   "boxHeight": 110,
+   "anchor": "bottom center",
+   "fallback": [
+    "vee_point"
+   ]
+  },
+  "detective_thinking": {
+   "file": null,
+   "alt": "The detective thinking, with the notebook",
+   "where": "Slide 1, second press; slide 2, first press: asking the question in a speech bubble",
+   "boxWidth": 90,
+   "boxHeight": 132,
+   "anchor": "bottom center",
+   "fallback": [
+    "juno_think"
+   ]
+  },
+  "detective_aha": {
+   "file": null,
+   "alt": "The detective with an 'aha!' face",
+   "where": "Slide 2, second press: 'Aha! Put them on one scale first.'",
+   "boxWidth": 90,
+   "boxHeight": 132,
+   "anchor": "bottom center",
+   "fallback": [
+    "juno_happy"
+   ]
+  },
+  "both_together": {
+   "file": null,
+   "alt": "Both satellites side by side, happy, like teammates",
+   "where": "The title, the landing into slide 6, and small beside 'one scale' on slides 6 and 7",
+   "boxWidth": 260,
+   "boxHeight": 130,
+   "anchor": "bottom center",
+   "fallback": [
+    "moe_happy",
+    "vee_happy"
+   ]
+  },
+  "flame": {
+   "file": null,
+   "alt": "A small flame",
+   "where": "Not placed yet (decoration)",
+   "boxWidth": 64,
+   "boxHeight": 64,
+   "anchor": "bottom center",
+   "fallback": []
+  },
+  "earth": {
+   "file": null,
+   "alt": "The Earth",
+   "where": "Not placed yet (decoration)",
+   "boxWidth": 120,
+   "boxHeight": 120,
+   "anchor": "bottom center",
+   "fallback": [
+    "03_earth.webp"
+   ]
+  },
+  "magnifier": {
+   "file": null,
+   "alt": "A magnifying glass",
+   "where": "Not placed yet (decoration)",
+   "boxWidth": 64,
+   "boxHeight": 64,
+   "anchor": "bottom center",
+   "fallback": []
+  },
+  "calendar": {
+   "file": null,
+   "alt": "A calendar",
+   "where": "Not placed yet (decoration)",
+   "boxWidth": 120,
+   "boxHeight": 120,
+   "anchor": "bottom center",
+   "fallback": [
+    "08_calendar.webp"
+   ]
+  },
+  "clock": {
+   "file": null,
+   "alt": "A clock",
+   "where": "Not placed yet (decoration)",
+   "boxWidth": 120,
+   "boxHeight": 120,
+   "anchor": "bottom center",
+   "fallback": []
+  },
+  "detective_point": {
+   "file": null,
+   "alt": "The kid detective pointing at something on the board",
+   "where": "Slide 2, second press: pointing at where the jump starts",
+   "boxWidth": 90,
+   "boxHeight": 132,
+   "anchor": "bottom center",
+   "fallback": [
+    "juno_point"
+   ]
+  }
+ }
+}

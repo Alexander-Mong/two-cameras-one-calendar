@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- The one demo: the page (bar, three rooms).
+     Serve this folder with tools\serve.py and open it in a browser. Every address here is relative.
+     The working title lives in ONE constant: TITLE at the top of js/app.js; the page title, the bar and "How we know" all read it. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ai-assistance" content="Code and analysis written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. Data: NASA FIRMS.">
+<title>Loading</title>
+<link rel="stylesheet" href="css/night.css">
+<link rel="stylesheet" href="css/story.css">
+<link rel="stylesheet" href="css/story_ending.css">
+</head>
+<body>
+<header id="bar">
+  <span class="title" id="title"></span>
+  <button id="place-btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="picker"><span id="place-name">Argentina</span> <b aria-hidden="true">▾</b></button>
+  <nav id="tabs" aria-label="Rooms">
+    <a class="tab" href="#answer" data-room="answer">The answer</a>
+    <a class="tab" href="#story/1" data-room="story">How we know</a>
+    <a class="tab" href="#record/calendar" data-room="record">The record</a>
+  </nav>
+</header>
+<div id="picker" role="dialog" aria-label="Choose a place" hidden>
+  <label class="sr-only" for="picker-q">Search for a country</label>
+  <input id="picker-q" type="search" placeholder="Type a country name" autocomplete="off">
+  <ul class="choices" id="picker-list"></ul>
+</div>
+<div id="units" hidden></div>
+<main>
+  <section id="room-answer" class="room" aria-label="The answer"><p class="loading">Opening the record…</p></section>
+  <section id="room-story" class="room" aria-label="How we know" hidden><div id="story-root"></div></section>
+  <section id="room-record" class="room" aria-label="The record" hidden></section>
+</main>
+<script src="parts/engine_and_data/engine/hs_engine.js"></script>
+<script src="parts/engine_and_data/adapters.js"></script>
+<script src="js/readings.js"></script>
+<script src="js/beats.js"></script>
+<script src="js/story_ending.js"></script>
+<script src="js/story.js"></script>
+<script src="js/answer.js"></script>
+<script src="js/record_depth.js"></script>
+<script src="js/record.js"></script>
+<script src="js/record_world.js"></script>
+<script src="js/app.js"></script>
+<p class="ai-note" style="margin:0;padding:10px 16px 14px;text-align:center;font:500 12px/1.4 system-ui,Segoe UI,Arial,sans-serif;opacity:.65">Code and analysis written with AI coding assistants (Claude), directed and reviewed by Spark Squad. Data: NASA FIRMS.</p>
+</body>
+</html>
