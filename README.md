@@ -21,6 +21,7 @@ The seven-slide demo is in this repository: [demo/Two_Cameras_One_Calendar_7_sli
 | The story we used in our talk | https://dashboard.alexmong.com/spaceapps/#story/1 |
 | The connector: ask your own AI chat app | https://dashboard.alexmong.com/spaceapps/connector.html |
 | The volunteer page: "Fire, or something else?" | https://dashboard.alexmong.com/spaceapps/volunteer/ |
+| Our song about the two fire cameras: the words, to read and download | https://dashboard.alexmong.com/spaceapps/song.html |
 
 ![The globe page: click a country and see its fire, month by month, on one scale](web/img/ending/explore_thumb.png)
 

@@ -404,7 +404,7 @@
         P('None of them is connected to this page. What we put side by side: each place\'s miss in past tests, and both cameras\' answers when they disagree.')) +
       sec(HOW_QUESTIONS[8], P('Not a forecast: it says what happened, not what comes next. Not a map of today, and not advice about safety: it\'s monthly history for whole countries. Not a count of fires or of land burned.') +
         P('NASA\'s own caution about these data, word for word:') + '<blockquote>' + esc(NASA_CAUTION) + '</blockquote>') +
-      sec(HOW_QUESTIONS[9], P(esc(title) + ' was built at NASA Space Apps 2026 by team Spark Squad from NASA\'s public FIRMS data. Parts were prepared before the event and are listed on the project page.') +
+      sec(HOW_QUESTIONS[9], P(esc(title) + ' was built at NASA Space Apps 2026 by team Spark Squad from NASA\'s public FIRMS data.') +
         P('AI tools wrote the code under the team\'s direction and review. A second AI model family independently reproduced the main numbers. No outside expert in satellite fire data has reviewed it.') +
         '<p class="note">Data: hot-spot files by country from NASA&#39;s public fire-data service, FIRMS, 2000 to 2025 (MODIS Collection 6.1 on Terra and Aqua; VIIRS 375 m on S-NPP and NOAA-20); Argentina 2026 from FIRMS area files. Country outlines: Natural Earth (public domain), simplified. This project\'s code calculates the counts; the world view uses a table prepared from the same code.</p>') +
       '</div>';

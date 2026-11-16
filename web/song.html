@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- song.html: the team's song about the two fire cameras: its words, the recording and two downloads. Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ai-assistance" content="Code and analysis written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. Data: NASA FIRMS.">
+<title>Our song about the two fire cameras</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="css/song.css">
+</head>
+<body>
+<main class="song">
+  <header>
+    <h1>Our song about the two fire cameras</h1>
+    <p class="sub">Sung by our team at NASA Space Apps 2026.</p>
+  </header>
+  <section class="listen" aria-label="Listen and download">
+    <p class="wait" id="wait">The recording is on its way.</p>
+    <audio id="player" controls preload="none" hidden><source src="media/song.m4a" type="audio/mp4">Your browser cannot play this recording; use the download button.</audio>
+    <div class="btns">
+      <a class="btn" id="dl-audio" href="media/song.m4a" download="two_cameras_song.m4a" hidden>Download the song (audio)</a>
+      <a class="btn" href="media/song_words.pdf" download="two_cameras_song_words.pdf">Download the words (PDF)</a>
+    </div>
+  </section>
+  <section class="words" aria-label="The words">
+    <span class="note a" aria-hidden="true">♪</span><span class="note b" aria-hidden="true">♫</span>
+    <div class="grid">
+    <div class="v v0"><p>Round the earth by night and day,<br>
+MODIS and VIIRS are scanning,<br>
+Gathering up the signs of fires.<br>
+So humans can take warning.</p></div>
+    <div class="v v1"><img class="who" src="img/characters/art_older_idle_20261114-120850.webp" alt="Moe, the older camera (MODIS), drawn by one of our team"><p>MODIS is the older tool,<br>
+Gliding the sky by satellite.<br>
+A photo path but with some gaps,<br>
+At the equator - missing insight.</p></div>
+    <div class="v v2"><img class="who" src="img/characters/art_newer_idle_20261114-141023.webp" alt="Vee, the newer camera (VIIRS), drawn by one of our team"><p>VIIRS, with pixels extra sharp<br>
+Does her daily scannings.<br>
+With a clearer view at night,<br>
+For seeing fire warnings.</p></div>
+    <div class="v v3"><p>Combine the data. Get more clues.<br>
+Study history's records.<br>
+That's how we predict the threats,<br>
+and take appropriate measures.</p></div>
+    </div>
+    <p class="credit">Music: Folk Tune from Newfoundland, Canada · Words: Myrna Mong</p>
+  </section>
+  <nav class="links" aria-label="More from Spark Squad"><a href="explore.html">The web app</a><a href="index.html#story/1">The story</a><a href="connector.html">Ask your own AI (the connector)</a><a href="volunteer/">Fire, or something else?</a></nav>
+  <p class="ai">Page code written with AI coding assistants (Claude), directed and reviewed by Spark Squad. The song, its words and the voice are the team's own.</p>
+  <div class="hills" aria-hidden="true"></div>
+</main>
+<script src="js/song.js"></script>
+</body>
+</html>

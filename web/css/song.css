@@ -1,0 +1,66 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
+/* song.css: the song page, in the look of the story's song screen (sunny sky, hills, verse cards). */
+:root{--ink:#1b2433;--fire:#f26b21;--card:rgba(255,253,246,.85);--edge:#e3d6b4;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;--body:"Lexend","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:linear-gradient(#bfe0f6,#fdf5e6 75%);color:var(--ink);font-family:var(--body)}
+.song{position:relative;max-width:1400px;margin:0 auto;padding:22px 28px 140px;display:flex;flex-direction:column;gap:18px;min-height:100vh}
+header{text-align:center}
+h1{margin:0;font:700 40px/1.1 var(--display);color:var(--ink)}
+.sub{margin:6px 0 0;font:500 18px var(--body);color:#3b4a5e}
+.listen{display:flex;flex-direction:column;align-items:center;gap:12px}
+.wait{margin:0;font:500 18px var(--body);color:#3b4a5e}
+audio{width:min(560px,100%);height:54px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;background:#fff8e6;border:2px solid var(--ink);box-shadow:0 3px 0 var(--ink);color:var(--ink);font:600 17px var(--body);text-decoration:none}
+.btn:hover,.btn:focus-visible{background:#ffe7b8}
+[hidden]{display:none!important}
+.words{position:relative;z-index:2}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px}
+.v{display:flex;align-items:center;gap:22px;background:var(--card);border:2px solid var(--edge);border-radius:22px;padding:16px 24px;box-shadow:0 6px 0 rgba(160,130,80,.18)}
+.v p{margin:0;font:600 24px/1.4 var(--body);white-space:nowrap}
+.v .who{flex:none;width:110px;height:auto}
+.v2 .who{width:100px}
+.credit{margin:14px 0 0;text-align:center;font:500 16px var(--body);color:#3b4a5e}
+.note{position:absolute;font:700 54px var(--display);color:var(--fire);opacity:.55}
+.note.a{left:-6px;top:-46px}.note.b{right:-6px;top:-52px}
+.links{position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;font:600 16px var(--body)}
+.links a{color:#9a3a0c}
+.ai{position:relative;z-index:2;margin:0;text-align:center;font:500 13px var(--body);color:#3b4a5e}
+.hills{position:absolute;left:0;right:0;bottom:0;height:120px;z-index:1;background:radial-gradient(120% 140% at 30% 120%,#7cc46a 60%,transparent 61%),radial-gradient(120% 140% at 80% 130%,#a9d97f 60%,transparent 61%)}
+/* phone first: verses stack, player and buttons full width */
+@media (max-width:760px){
+  .song{padding:16px 16px 110px}
+  h1{font-size:28px}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .v{padding:12px 14px;gap:12px}
+  .v p{font-size:17px;white-space:normal}
+  .v .who{width:70px}
+  .btns{flex-direction:column;width:100%}.btn{text-align:center;width:100%}
+  audio{width:100%}
+  .note{font-size:36px}
+}
+/* the words, printed: one landscape page */
+@media print{
+  @page{size:11in 8.5in;margin:.35in}
+  html,body{background:#fdf8ee}
+  .song{min-height:0;padding:0;gap:10px}
+  .listen,.links,.ai,.hills{display:none!important}
+  h1{font-size:28px}.sub{display:none}
+  .v p{font-size:18px}
+  .words{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media print{
+  .song{justify-content:center;min-height:7.6in;gap:18px}
+  h1{font-size:36px}
+  .grid{gap:26px 30px}
+  .v{padding:22px 26px}
+  .v p{font-size:24px}
+  .v .who{width:120px}
+  .credit{font-size:18px;margin-top:18px}
+  .note{display:none}
+}
+@media print{.song{min-height:7.2in;max-width:none}.v p{font-size:21px}.v .who{width:96px}.v{padding:18px 22px;gap:16px}.grid{gap:22px 26px}}
+@media print{html,body{height:auto}.song{min-height:0;height:auto;padding-top:.5in}.v p{font-size:19px}.v .who{width:84px}.grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+/* phone: the character above its verse so each sung line stays whole */
+@media (max-width:760px){.v{flex-direction:column;align-items:flex-start}.v p{font-size:16px;white-space:nowrap}.v .who{width:60px}}
