@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // server.cjs: the fire record's Model Context Protocol server over stdio (the local front end). JSON-RPC 2.0, one message per line.
 // Usage: node server.cjs   (a chat app starts it; it talks on stdin/stdout, logs on stderr)
 'use strict';

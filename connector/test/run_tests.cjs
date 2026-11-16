@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // run_tests.cjs: starts the MCP server (server/server.cjs) as a child process, speaks the protocol to it over stdio, and runs every check in
 // checks.cjs (all six tools for Argentina, Ghana, Greece and an unknown place, plus the hard cases) against values read directly from the
 // vendored engine and Readings. Prints PASS or FAIL and writes the same lines to TEST_OUTPUT.txt.

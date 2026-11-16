@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 //
 // Do the cameras' temperature readings separate NASA-fire places from not-fire places? Tabulates each fact
 // against NASA's label and gives a separation score (AUC: 0.5 = coin toss, 1.0 = perfect; computed on these

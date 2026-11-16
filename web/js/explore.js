@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 /* explore.js: the burning calendar for any country, picked on a globe (team lead, Nov 15, 1:34 PM).
    Reads the engine, the adapters and the readings read-only, and data/world_table.json + data/world_shapes.json. Every number comes from them.
    The globe's colors are each country's latest month against its usual (the world table's own verdict word, the page's wording). */
@@ -77,7 +78,7 @@
     const pos = R.positions(r), s = R.screen(r, pos.month || 'latest'), name = R.displayName(st.file);
     if (s.refusal) { $('answer').innerHTML = `<p class="xp-name">${esc(name)}</p><p class="xp-msg">${esc(s.refusal)}</p>`; $('cal').innerHTML = ''; $('cap').textContent = ''; $('csv').hidden = true; return; }
     const f = s.f, ours = f.ours || {};
-    const usual = ours.value != null && ours.typical != null ? `<p class="xp-vs"><b>This month against its usual:</b> ${fmt(ours.value)} hot spot detections; the usual is ${fmt(ours.typical)} (the historical median: the middle of the other years).</p>` : '';
+    const usual = ours.value != null && ours.typical != null ? `<p class="xp-vs"><b>Latest month against its usual:</b> ${fmt(ours.value)} hot spot detections; the usual is ${fmt(ours.typical)} (the historical median: the middle of the other years).</p>` : '';
     $('answer').innerHTML = `<p class="xp-name">${esc(name)} <span>· ${esc(s.label)}</span></p><p class="xp-q">${esc(s.question)}</p><p class="xp-a">${esc(s.answer)}</p>` +
       (s.weak ? `<p class="xp-weak">${esc(s.weak)}</p>` : '') + (s.tooLittle ? `<p class="xp-weak">${esc(s.tooLittle)}</p>` : '') + usual +
       (s.modis && s.modis.text ? `<p class="xp-note">${esc(s.modis.text)}</p>` : '') +

@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // run_http_tests.cjs: starts server/http_server.cjs on a free local port, runs every check in checks.cjs over HTTP (POST /mcp), then the
 // abuse cases: oversized body, bad JSON, wrong content type, a flood of requests, a foreign Origin or Host, wrong methods, and a look for
 // stack traces or paths in every response. Writes the lines to TEST_OUTPUT_HTTP.txt.

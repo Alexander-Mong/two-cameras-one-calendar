@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // build_tables.cjs -> data/world_table.json: one row per country file, from the engine run over every file in Node, read through js/readings.js.
 // Then compares the busy group, the nine failures and the middle busy country with the claims sheet and the world table lane, and PRINTS
 // any difference (never smooths it).   Usage: node tools/build_tables.cjs

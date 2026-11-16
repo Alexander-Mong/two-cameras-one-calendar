@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // readings.js: the ONE home for the two readings, the gates, the words and "your sentence" (DESIGN.md sections 5 to 7, amendments A1 to A3,
 // A8, A11, A13, and the coordinator's additions of Nov 14: the exact record-word gate and the per-place latest period).
 // Every number here is read from an engine result (HSEngine.query) or an adapter (HSAdapters);

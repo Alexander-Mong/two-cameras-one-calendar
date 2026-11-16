@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // build_ending_table.cjs -> data/ending_table.json: every number the new ending's five screens show, computed from the engine and the country data.
 // Ending builder, night of Nov 14, 2026.
 // Usage: node tools/build_ending_table.cjs      (no network; reads the engine, js/readings.js and data/world_table.json; writes data/ending_table.json)

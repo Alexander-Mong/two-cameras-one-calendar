@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // app.js: state (place, period, room), the engine opened once, one query per place, links, the bar and the place picker.
 // The page never computes a number the engine returns; see js/readings.js.
 (function () {

@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // nasa.cjs: three tools that reach NASA FIRMS directly (nasa_recent, nasa_archive, nasa_sources), for the stdio and the hosted connector.
 // Node 20+, no outside packages. Talks to ONE host only (firms.modaps.eosdis.nasa.gov). Never stores, prints or logs a map key.
 // Wiring: see ../NASA_DIRECT.md.

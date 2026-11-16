@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // build_scale_vee.cjs: data/scale_vee.json, the numbers for StoryBeats.historyScale = 'vee' (team lead's question, 12:39 AM: lift Moe's
 // years UP to Vee's scale instead of bringing Vee's DOWN to Moe's). the default stays 'moe'.
 // Usage: node tools/build_scale_vee.cjs   (then node tools/check_numbers.cjs)

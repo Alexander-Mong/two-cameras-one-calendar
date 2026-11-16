@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 //
 // Picks service for the hot spot volunteer page. Node only (http, fs, path): no packages.
 // Stores ONE line per pick in a plain file: {"place","pick","t" (UTC, to the minute),"session"}. Nothing else.

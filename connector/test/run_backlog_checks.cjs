@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // run_backlog_checks.cjs: backlog checks (P1-1 .. P2-5 plus preserve) against server/server.cjs over stdio.
 // Same pattern as run_tests.cjs. Writes TEST_OUTPUT_BACKLOG.txt. Usage: node test/run_backlog_checks.cjs   (Node 20+, no packages)
 'use strict';

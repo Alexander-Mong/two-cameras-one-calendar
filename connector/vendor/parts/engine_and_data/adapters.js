@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // Made Nov 13, 2026 by an AI agent (Claude) for this NASA Space Apps team. License: Apache-2.0 (the event's default), pending the team lead's choice.
 // Pencil. Credit: The team lead directed and reviewed it as it was built; a second AI model family independently reproduced the main numbers and read the code, without redoing NASA's data extraction; no outside expert in satellite fire data has reviewed it. Part F1. adapters.js turns HSEngine answers into EXACTLY the shapes in ../PARTS_CONTRACT.md:
 //   Answer, YearShape, Calendar, YearTotals, Stitched, HiddenYear (from an engine result) and TwoCameras (from data/two_cameras/*.json).

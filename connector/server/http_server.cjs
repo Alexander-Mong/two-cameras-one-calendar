@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // http_server.cjs: the fire record's Model Context Protocol server over Streamable HTTP (the hosted front end). Same tools as server.cjs
 // (both use protocol.cjs). Stateless: no sessions, no event stream; POST /mcp takes one JSON-RPC message or a batch and answers application/json.
 // Read-only, and built to sit behind a reverse proxy: binds 127.0.0.1 by default, caps the body, limits each address's request rate,

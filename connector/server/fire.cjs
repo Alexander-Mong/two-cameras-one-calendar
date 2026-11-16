@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // fire.cjs: the six tools' answers, read from the vendored engine and Readings (../vendor).
 // Every number comes from HSEngine.query or Readings at run time; the only words typed here are glue and the plain refusals.
 'use strict';

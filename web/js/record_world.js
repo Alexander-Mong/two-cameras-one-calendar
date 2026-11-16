@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // record_world.js: the record's world tab. The map is the place picker AND the picture of where the join can be trusted ("Name a country").
 // Classes are carried by pattern or outline as well as color; a search box does the same as a tap, by name (the keyboard path).
 // Scores come from data/world_table.json (built by tools/build_tables.cjs from the engine).

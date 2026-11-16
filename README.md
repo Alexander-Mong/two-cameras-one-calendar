@@ -8,9 +8,11 @@ Built for the NASA Space Apps Challenge 2026, challenge "Harmonization of MODIS 
 
 ## How AI was used
 
-This project was made with AI tools, and we say where. Claude models (Anthropic), working through Claude Code, wrote the code, the analysis scripts and the scripts that build the data tables, under the team's direction and review; a second AI model family, OpenAI's, through the Codex command-line tool, independently recounted the main numbers and fact-checked our talk. The Fire Detectives lesson pictures were made with an AI image tool, and each one carries a visible "AI-generated art" mark; the satellite characters and the scientist are hand-drawn by team members. The idea and every decision were the team's, and no AI-generated audio or video is part of this project. The full statement is in [AI_USE.md](AI_USE.md), and a machine-readable version, folder by folder, is in [AI_USE.json](AI_USE.json).
+This project was made with AI tools, and we say where. Claude models (Anthropic), working through Claude Code, wrote the code, the analysis scripts and the scripts that build the data tables, under the team's direction and review; a second AI model family, OpenAI's, through the Codex command-line tool, independently recounted the main numbers and fact-checked our talk. The Fire Detectives lesson pictures were made with an AI image model run in ComfyUI, and each one carries a visible "AI-generated art" mark; the satellite characters and the scientist are hand-drawn by team members. The idea and every decision were the team's, and no AI-generated audio or video is part of this project. The full statement is in [AI_USE.md](AI_USE.md), and a machine-readable version, folder by folder, is in [AI_USE.json](AI_USE.json).
 
 ## Try it
+
+The seven-slide demo is in this repository: [demo/Two_Cameras_One_Calendar_7_slides.pdf](demo/Two_Cameras_One_Calendar_7_slides.pdf).
 
 | What | Where |
 |---|---|
@@ -72,7 +74,7 @@ We also built a smarter version that sorts Vee's hot spots by fire power. With e
 | `demo/` | The seven-slide demo as a PDF (`Two_Cameras_One_Calendar_7_slides.pdf`). The same slides are a web page at `web/slides.html`. |
 | `experiments/` | A short summary of six experiments we ran on the method: [experiments/README.md](experiments/README.md). |
 | `METHOD.md` | The math in plain words, with worked examples. |
-| `DATA_SOURCES.md` | Every data source, tool and font, with its terms as our files state them. |
+| `DATA_SOURCES.md` | Every data source, tool and font, with its terms as far as we could confirm them. |
 | `AI_USE.md` | How AI was used, plainly and completely. |
 | `AI_USE.json` | The same, machine-readable, one entry per folder. |
 | `LICENSE` | Apache License 2.0, for the code. |
@@ -120,11 +122,9 @@ It recomputes the numbers on the main screens from the data and the engine, chec
 - **Pictures on the volunteer page:** NASA GIBS (Global Imagery Browse Services), and stored close views made from Copernicus Sentinel-2. Contains modified Copernicus Sentinel data 2020.
 - **Country outlines:** Natural Earth (public domain).
 - **Fonts:** Fredoka, Lexend and JetBrains Mono, loaded from Google Fonts.
-- **Art:** the two satellite characters and the scientist were drawn by hand by team members. The Fire Detectives lesson pictures shown in the story were made with an AI image tool; each picture carries a visible "AI-generated art" mark.
+- **Art:** the two satellite characters and the scientist were drawn by hand by team members. The Fire Detectives lesson pictures shown in the story were made with an AI image model run in ComfyUI; each picture carries a visible "AI-generated art" mark.
 
 The full list, with terms: [DATA_SOURCES.md](DATA_SOURCES.md).
-
-The code comments still carry the working notes from the build weekend: dates, times and who asked for what. We left them in so the history is plain to see.
 
 ## License
 

@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 //
 // Tests for server.cjs. Node only. usage: node picks_server/test_picks.cjs
 'use strict';

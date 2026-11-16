@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // build_fire_power.cjs: data/fire_power.json, the numbers behind slide 3's "smarter version" press (team lead, 10:43 PM).
 //   Usage: node tools/build_fire_power.cjs   (then node tools/check_numbers.cjs)
 // For every country with a lot of fire (data/world_table.json: busy, with a typical miss), the engine is run both ways

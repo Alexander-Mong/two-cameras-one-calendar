@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 /* story_ending.js: the new ending of the story (Ending A, ruled by the team lead at 9:38 PM): five screens, self-contained, for the story to wire in.
  Ending builder, night of Nov 14, 2026. Wiring: SUNDAY/review/ENDING_BUILD_NOTES.md.
 

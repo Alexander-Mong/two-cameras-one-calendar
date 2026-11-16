@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // check_numbers.cjs: PASS or FAIL for every row of DESIGN.md section 8 (and, from Nov 14 morning, the new words of VOICE_AND_COPY_0704.md), the Ghana May 2022 row (A3), a "busiest year IS printed" case (A11),
 // the coordinator's additions (latest period per place; record gate exact form; table sums unrounded), read through js/readings.js and the
 // copied engine.   Usage: node tools/check_numbers.cjs

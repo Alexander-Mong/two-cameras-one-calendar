@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // viirs.cjs: viirs_scale, the record read on the newer camera's scale ("what would VIIRS have counted in 2005?").
 // The team lead's ruling (Nov 14, 2026, about 2:30 PM): "Yes, build it". Method: round_SAT\reverse_join\REVERSE_JOIN.md.
 // Every month of our record divided by its own conversion number (S-NPP onto MODIS Aqua, learned 2012 to 2021) gives S-NPP's scale;

@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 //
 // Recompute every number the page shows from the data, with code separate from the page's.
 //  1. From the NASA rows themselves (work/app_hot_spot_search/data/World2020/*.bin): each place's month-by-month

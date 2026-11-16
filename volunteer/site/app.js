@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 //
 // ---- settings -------------------------------------------------------------
 const MAIN_URL = '';   // the team's main page; empty = no link on the ending card

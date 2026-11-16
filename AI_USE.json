@@ -17,8 +17,12 @@
       "role": "found word times to cut the team's recorded voice for the talk (no audio is in this repository)"
     },
     {
-      "name": "ComfyUI (AI image generation)",
-      "role": "made the Fire Detectives lesson pictures; each carries a visible AI mark"
+      "name": "FLUX.2 klein 4B (Black Forest Labs, Apache 2.0), an AI image model, run in ComfyUI",
+      "role": "made the Fire Detectives lesson pictures; each carries a visible AI mark",
+      "links": [
+        "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+        "https://github.com/comfyanonymous/ComfyUI"
+      ]
     }
   ],
   "not_ai_generated": [
@@ -32,14 +36,14 @@
   "folders": {
     "web/": {
       "holds": "the web app (globe page, fuller page and story, connector page, seven-slide demo page), its engine, data tables, pictures and number checks",
-      "ai_use": "Code, data-table build scripts and number checks written by Claude through Claude Code; page text drafted with Claude and edited by the team. Pictures in img/fire_detectives/ and img/explainer/ are AI-generated (ComfyUI) and carry a visible mark; img/characters/ is hand-drawn by team members; img/ending/ and img/slides/ are screen captures of the project's pages; img/qr/ are QR codes.",
+      "ai_use": "Code, data-table build scripts and number checks written by Claude through Claude Code; page text drafted with Claude and edited by the team. Pictures in img/fire_detectives/ and img/explainer/ are AI-generated (FLUX.2 klein 4B, an AI image model by Black Forest Labs, run in ComfyUI) and carry a visible mark; img/characters/ is hand-drawn by team members; img/ending/ and img/slides/ are screen captures of the project's pages; img/qr/ are QR codes.",
       "tools": [
         "Claude Code (Claude models)",
         "OpenAI Codex CLI (checking)",
-        "ComfyUI (lesson pictures only)"
+        "FLUX.2 klein 4B run in ComfyUI (lesson pictures only)"
       ],
       "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's.",
-      "in_file_metadata": "header comments in code files; made_with in data files; <meta name=\"ai-assistance\"> in every HTML page"
+      "in_file_metadata": "one-line header comment in every code file (.js, .cjs, .css, .py) saying it was written with AI coding assistants under the team's direction; <meta name=\"ai-assistance\"> in every HTML page; data files (.json) carry no per-file note; they are covered by this file and AI_USE.md"
     },
     "connector/": {
       "holds": "the MCP connector (Node.js), its tests and a copy of the engine and data",
@@ -49,7 +53,7 @@
         "OpenAI Codex CLI (review)"
       ],
       "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's.",
-      "in_file_metadata": "header comments in code files; made_with in data files"
+      "in_file_metadata": "one-line header comment in every code file (.js, .cjs, .css, .py) saying it was written with AI coding assistants under the team's direction; data files (.json) carry no per-file note; they are covered by this file and AI_USE.md"
     },
     "volunteer/": {
       "holds": "the volunteer page 'Fire, or something else?', its data, its build scripts, and a picks service that is not deployed",
@@ -58,7 +62,7 @@
         "Claude Code (Claude models)"
       ],
       "directed_and_reviewed_by": "Directed and reviewed by the team, Spark Squad. The idea and every decision were the team's.",
-      "in_file_metadata": "header comments in code files; <meta name=\"ai-assistance\"> in the page"
+      "in_file_metadata": "one-line header comment in every code file (.js, .cjs, .css, .py) saying it was written with AI coding assistants under the team's direction; <meta name=\"ai-assistance\"> in the page; data files (.json) carry no per-file note; they are covered by this file and AI_USE.md"
     },
     "experiments/": {
       "holds": "a summary of six experiments on the method",

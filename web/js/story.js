@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 /* story.js: room 2, "How we know": seven click-through scenes that are also the talk's slides.
  Builder B, the night of Nov 13, 2026. Design: ONE_DEMO/DESIGN.md (section 9 outranks 4 to 8).
    Contract: window.Story = { mount(el, ctx), go(n), count, slides, clicks() }: count = scenes with the extras (9), slides = the talk's (7),

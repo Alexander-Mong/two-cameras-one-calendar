@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 //
 // Pure functions: every number and sentence the page shows about a place comes from here,
 // so tools/check_places.cjs can recompute it from data/places.json.

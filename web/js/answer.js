@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // answer.js: room 1, the first screen (VOICE_AND_COPY_0704.md section 1; it wins over DESIGN.md).
 // Every word with a number in it comes from Readings.screen / Readings.seriesFor (which read the engine);
 // nothing is computed here except bar heights for drawing. Measured numbers are shown at once; only bars move (and not with motion off).

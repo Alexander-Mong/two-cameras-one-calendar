@@ -1,6 +1,6 @@
 # Data sources, tools and fonts
 
-**Short answer:** every fire number comes from NASA FIRMS. The volunteer page also shows pictures from NASA GIBS and from Copernicus Sentinel-2. Country outlines come from Natural Earth. Below, each source's terms are given as our project files record them; where our files do not state the terms, this list says so instead of guessing.
+**Short answer:** every fire number comes from NASA FIRMS. The volunteer page also shows pictures from NASA GIBS and from Copernicus Sentinel-2. Country outlines come from Natural Earth. Below, each source's terms are given as far as we could confirm them; where we could not, this list says so instead of guessing.
 
 ## NASA data
 
@@ -14,7 +14,7 @@ What we used:
 - **Area files for 2026** (Argentina's newest months): the standard processing sets `MODIS_SP`, `VIIRS_SNPP_SP`, `VIIRS_NOAA20_SP` and, for the newest days, the near-real-time sets `MODIS_NRT`, `VIIRS_SNPP_NRT`, `VIIRS_NOAA20_NRT`.
 - **Recent-detection files** (the last 24 hours, 48 hours or 7 days), fetched by the connector only when someone asks. They need no key. Older dates through the connector need the asker's own free NASA map key.
 
-Terms, as our files record them: NASA promotes the full and open sharing of its data, and asks for credit to NASA FIRMS naming the product and collection. Our files mark these lines to be rechecked on NASA's own FIRMS and Earthdata pages.
+Terms: NASA promotes the full and open sharing of its data, and asks that users credit NASA FIRMS and name the product and collection, as we do here. We could not confirm the exact current wording on NASA's FIRMS and Earthdata pages.
 
 How we used it: we counted detections into squares of about 5 km per day, for each country and month, and built every number from those counts. The page also quotes NASA's own caution about these data, word for word.
 
@@ -45,7 +45,7 @@ Credit, on every such picture and on the page: **"Contains modified Copernicus S
 
 Country outlines (1:10m admin-0 countries), used to cut 2026 rows to a country's border and, simplified, to draw the world map and the globe.
 
-Terms, as our files record them: "Natural Earth is a public domain map dataset."
+Terms: "Natural Earth is a public domain map dataset."
 
 ## Related work named on the page
 
@@ -62,17 +62,17 @@ The page's "How we know" section names other public fire tools and research as p
 | ffmpeg, and Whisper speech-to-text run on our own computer | Cut the recorded voice for the talk (no audio is in this repository) |
 | Python `qrcode` package, and OpenCV | Made the QR codes and read them back to check them |
 
-The web app and the connector use no outside library: plain HTML, CSS and JavaScript in the browser, and Node.js's own modules in the connector. Our project files do not record the license of each tool above.
+The web app and the connector use no outside library: plain HTML, CSS and JavaScript in the browser, and Node.js's own modules in the connector. Each tool is used under its own license; we do not list those licenses here.
 
 ## Fonts
 
-Fredoka, Lexend and JetBrains Mono, loaded from Google Fonts when the page opens. The pages fall back to fonts already on the visitor's computer if Google Fonts cannot be reached. Our project files do not record these fonts' licenses.
+Fredoka, Lexend and JetBrains Mono, loaded from Google Fonts when the page opens. The pages fall back to fonts already on the visitor's computer if Google Fonts cannot be reached. Their licenses are on each font's Google Fonts page; we do not restate them here.
 
 ## Art and music
 
 - **The two satellite characters (Moe and Vee) and the scientist** were drawn by hand by team members for this project.
-- **The Fire Detectives lesson pictures** (the young detective, the clouds, and the lesson pages shown at the start of the story) were made with an AI image tool. See [AI_USE.md](AI_USE.md).
+- **The Fire Detectives lesson pictures** (the young detective, the clouds, and the lesson pages shown at the start of the story) were made with an AI image model, FLUX.2 klein 4B by Black Forest Labs (Apache 2.0, https://huggingface.co/black-forest-labs/FLUX.2-klein-4B), run in ComfyUI (https://github.com/comfyanonymous/ComfyUI). See [AI_USE.md](AI_USE.md).
 - **Charts, maps and the globe** are drawn by the page's own code from NASA data. There is no NASA logo anywhere.
 - **The song** on the story's first slide uses a folk tune from Newfoundland, Canada, with words by a team member, credited on that screen. Nothing plays; the team sang it live.
 
-No license is given here for the art, the song's words or the data. That is an open choice for the team.
+The Apache License 2.0 covers the code only. It does not cover the art, the song's words or the data; no license is granted for them in this repository.

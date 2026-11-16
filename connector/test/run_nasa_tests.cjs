@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // run_nasa_tests.cjs: checks for server/nasa.cjs against saved NASA samples (no network), plus --live: one real keyless fetch and the three example answers.
 // Usage: node test/run_nasa_tests.cjs [--live]   Writes test/TEST_OUTPUT_NASA.txt (or TEST_OUTPUT_NASA_LIVE.txt).
 'use strict';

@@ -76,7 +76,7 @@ One limit of that test: the fire-power curve shared by all countries was learned
 - **Agreement is with Moe, not with the ground.** The test shows how well we match the older camera, the only one with real counts in both eras. It does not say which camera is closer to what happened on the ground.
 - **Counts are detections**, not fires and not land burned.
 - **Nothing here is a forecast.**
-- **The record** runs through December 2025, with early data for Argentina this month. The newest days can still change.
+- **The record** runs as far as December 2025; Argentina also has early data through November 12, 2026. The newest days can still change.
 - **No outside expert** in satellite fire data has reviewed this work.
 
 ## Where the code is

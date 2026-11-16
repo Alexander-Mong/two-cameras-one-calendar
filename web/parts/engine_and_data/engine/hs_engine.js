@@ -1,5 +1,6 @@
-// Made Nov 13, 2026 by an AI agent (Claude) for this NASA Space Apps team. License: Apache-2.0 (the event's default), pending the team lead's choice.
-// Pencil. Credit: The team lead directed and reviewed it as it was built; a second AI model family independently reproduced the main numbers and read the code, without redoing NASA's data extraction; no outside expert in satellite fire data has reviewed it. Part F1 (CONSOLIDATE/F_parts/engine_and_data). Runs unchanged in a browser (script tag -> window.HSEngine,
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
+// Made Nov 13, 2026 by an AI agent (Claude) for this NASA Space Apps team. License: Apache-2.0.
+// Credit: The team directed and reviewed it as it was built; a second AI model family independently reproduced the main numbers and read the code, without redoing NASA's data extraction; no outside expert in satellite fire data has reviewed it. Part F1 (CONSOLIDATE/F_parts/engine_and_data). Runs unchanged in a browser (script tag -> window.HSEngine,
 // or import for its side effect -> globalThis.HSEngine) and in Node (require -> module.exports).
 // Counts are "lit squares": 0.05-degree squares (about 5 km) with at least one detected hot spot on a UTC day, counted once that day.
 //

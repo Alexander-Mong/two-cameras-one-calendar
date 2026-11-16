@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // record_depth.js: the monthly record's picture (VOICE_AND_COPY_0704.md section 4): one year in front as twelve gold bars, the earlier years
 // standing behind it in depth, and a "laid over each other" view. Hand-made SVG, no outside code. Ideas and some geometry from the practice
 // builds in ..\work\demo_B\ (Stack) and ..\work\wild_E\ (ridges).

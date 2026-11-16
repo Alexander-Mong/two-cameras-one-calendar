@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // protocol.cjs: the Model Context Protocol core shared by both front ends (server.cjs over stdio, http_server.cjs over Streamable HTTP):
 // initialize, ping, tools/list, tools/call, the six record tools' descriptions (fire_now and the nasa_ tools come from now.cjs and nasa.cjs) and the instructions to the connected model. No outside packages.
 //

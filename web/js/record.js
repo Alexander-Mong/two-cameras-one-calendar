@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // record.js: room 3, the record (DESIGN.md section 4, room 3, with A4, A6, A7, A8; the world map is in record_world.js).
 // Numbers come from Readings and the engine/adapters; this file only draws them.
 (function (root) {

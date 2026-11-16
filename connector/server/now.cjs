@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // now.cjs: fire_now, one answer for "is it burning right now, and is that normal?": NASA's 24-hour file (nasa.cjs) together with the
 // 26-year record's answer for the same place (fire.cjs). The delight pass, item 1.
 'use strict';

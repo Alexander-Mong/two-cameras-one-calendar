@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // checks.cjs: the tool checks both front ends must pass (stdio in run_tests.cjs, HTTP in run_http_tests.cjs). Expected values are read here,
 // independently, from the vendored engine and Readings (../vendor).
 'use strict';

@@ -1,3 +1,4 @@
+# Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md.
 """Build round_SAT/volunteer/data/places.json from the 2020 world hot-spot cut.
 
 

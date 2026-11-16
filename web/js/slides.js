@@ -1,4 +1,5 @@
-/* slides.js: move between the seven slides (arrow keys, click); fill the addresses from this laptop's local/addresses.js. Pencil. */
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
+/* slides.js: move between the seven slides (arrow keys, click); fill the addresses from this laptop's local/addresses.js. */
 (function () {
   'use strict';
   const sl = [...document.querySelectorAll('.sl')], count = document.querySelector('.count');

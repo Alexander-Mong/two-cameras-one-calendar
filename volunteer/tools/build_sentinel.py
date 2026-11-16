@@ -1,3 +1,4 @@
+# Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md.
 """Stored sharp pictures from open Sentinel-2 L2A (Copernicus, on AWS open data, no login).
 
 

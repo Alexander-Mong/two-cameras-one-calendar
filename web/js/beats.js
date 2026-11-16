@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 /* beats.js: the rehearsal lines for the story room, one plain data object. Shown only with ?notes=1 (a strip under the stage).
  The order of ideas follows round_SAT/TEACHING_ORDER.md (11:58 AM): each slide
    answers ONE question (its headline), and its first line picks up the bridge the slide before left. Each line is the one on screen,

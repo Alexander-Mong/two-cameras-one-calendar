@@ -1,3 +1,4 @@
+/* Written with AI coding assistants (Anthropic Claude), directed and reviewed by the team, Spark Squad. See AI_USE.md. */
 // make_examples.cjs: runs three real exchanges against the server over stdio and writes them, request and response, to ../EXAMPLES.md.
 //   Usage: node test/make_examples.cjs
 'use strict';
